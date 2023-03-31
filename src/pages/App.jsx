@@ -1,8 +1,9 @@
+import { Header } from '../moduls/header/Header'
 
 function App() {
   return (
     <div className="App">
-      hello!
+      <Header />
     </div>
   );
 }
