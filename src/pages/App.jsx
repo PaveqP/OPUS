@@ -1,4 +1,5 @@
-import { Registration } from "../pages/Registration/Registration"
+import { Registration } from "./registration/Registration"
+import "../pages/App.scss"
 
 function App() {
   return (
