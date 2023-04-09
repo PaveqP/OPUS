@@ -1,4 +1,5 @@
 import { Logo } from "../../UI/logo/Logo"
+import { Help } from "../../UI/help/Help"
 import "../../moduls/headerRegistration/HeaderRegistration.scss"
 
 function HeaderRegistration() {
@@ -14,10 +15,7 @@ function HeaderRegistration() {
                 <Logo />
             </div>
             <div className="header-reg__help">
-                <a href="">
-                    <img src={require("../../UI/utils/img/help.png")} alt="#" className="help__img" />
-                    <span className="help__text">справка</span>
-                </a>
+                <Help />
             </div>
         </div>
     )
