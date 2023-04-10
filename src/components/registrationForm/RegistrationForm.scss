@@ -1,10 +1,11 @@
 .form {
+    width: 710px;
     display: flex;
     flex-direction: column;
 }
 
 .form__title {
-    flex: 0 1 auto;
+    flex: 1 1 auto;
     align-self: flex-end;
     font-family: Inter;
     font-size: 40px;
@@ -13,21 +14,21 @@
     letter-spacing: 0em;
     text-align: left;
     color: white;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 .form__main {
-    flex: 0 1 auto;
+    flex: 1 1 auto;
     align-self: flex-end;
-    min-width: 710px;
-    min-height: 450px;
+    width: 100%;
+
     background-color: #D9D9D9;
     border-radius: 20px;
     padding-left: 30px;
 }
 
 .userName {
-    width: 650px;
+    width: 95%;
     border-bottom: 5px solid #3A3A3A;
     background-color: #D9D9D9;
     font-family: Inter;
@@ -36,11 +37,11 @@
     line-height: 29px;
     letter-spacing: 0em;
     text-align: left;
-    margin-top: 130px;
+    padding-top: 130px;
 }
 
 .userPass {
-    width: 650px;
+    width: 95%;
     border-bottom: 5px solid #3A3A3A;
     background-color: #D9D9D9;
     font-family: Inter;
@@ -49,7 +50,7 @@
     line-height: 29px;
     letter-spacing: 0em;
     text-align: left;
-    margin-top: 30px;
+    padding-top: 30px;
 }
 
 
@@ -65,7 +66,7 @@
 
 .reg__button {
     text-align: center;
-    width: 650px;
+    width: 95%;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
@@ -75,4 +76,5 @@
     border-radius: 20px;
     background: url(../../UI/utils/img/mainreg.png);
     margin-top: 150px;
+    margin-bottom: 30px;
 }
