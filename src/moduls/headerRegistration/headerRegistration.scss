@@ -7,6 +7,7 @@
 .header-reg__backtomain {
     align-self: center;
     flex: 0 1 auto;
+    padding-left: 50px;
 }
 
 .header-reg__logo {
@@ -17,22 +18,5 @@
 .header-reg__help {
     align-self: center;
     flex: 0 1 auto;
-}
-
-.backtomain__text {
-    font-family: Inter;
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 39px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #FFFFFF;
-
-
-}
-
-.bactomain__img {
-    margin-top: 10px;
-    margin-right: 20px;
-    margin-left: 50px;
+    padding-right: 50px;
 }
