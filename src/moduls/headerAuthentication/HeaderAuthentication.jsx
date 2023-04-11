@@ -1,18 +1,18 @@
 import { Logo } from "../../UI/logo/Logo"
 import { Help } from "../../UI/help/Help"
 import { Backtomain } from "../../UI/backtomain/Backtomain"
-import "../../moduls/headerRegistration/HeaderRegistration.scss"
+import "./HeaderAuthentication.scss"
 
-function HeaderRegistration() {
+function HeaderAuthentication() {
     return (
-        <div className="header-reg">
-            <div className="header-reg__backtomain">
+        <div className="header-authen">
+            <div className="header-authen__backtomain">
                 <Backtomain />
             </div>
-            <div className="header-reg__logo">
+            <div className="header-authen__logo">
                 <Logo />
             </div>
-            <div className="header-reg__help">
+            <div className="header-authen__help">
                 <Help />
             </div>
         </div >
@@ -20,6 +20,6 @@ function HeaderRegistration() {
 
 }
 
-export { HeaderRegistration }
+export { HeaderAuthentication }
 
 

@@ -1,21 +1,21 @@
-.header-reg {
+.header-authen {
     background: linear-gradient(to right, #272626, #4D2FA2);
     display: flex;
     justify-content: space-between;
 }
 
-.header-reg__backtomain {
+.header-authen__backtomain {
     align-self: center;
     flex: 0 1 auto;
     padding-left: 50px;
 }
 
-.header-reg__logo {
+.header-authen__logo {
     align-self: center;
     flex: 0 1 auto;
 }
 
-.header-reg__help {
+.header-authen__help {
     align-self: center;
     flex: 0 1 auto;
     padding-right: 50px;
