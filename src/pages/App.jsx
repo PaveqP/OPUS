@@ -1,4 +1,4 @@
-import { Registration } from "./registration/Registration"
+import { Registration } from "./Registration/Registration"
 import "../pages/App.scss"
 
 function App() {

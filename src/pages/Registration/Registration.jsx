@@ -1,6 +1,6 @@
-import { HeaderRegistration } from "../../moduls/headerRegistration/HeaderRegistration"
+import { HeaderRegistration } from "../../moduls/headerRegistration/headerRegistration"
 import { MainRegistration } from "../../moduls/mainRegistration/MainRegistration"
-import "../../pages/registration/Registration.scss"
+import "../../pages/Registration/Registration.scss"
 
 
 function Registration() {
