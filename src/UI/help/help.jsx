@@ -1,4 +1,4 @@
-import "../../UI/help/Help.scss"
+import "./Help.scss"
 
 function Help() {
     return (
