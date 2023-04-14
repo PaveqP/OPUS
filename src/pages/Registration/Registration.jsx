@@ -1,13 +1,13 @@
-import { HeaderRegistration } from "../../moduls/headerRegistration/headerRegistration"
-import { MainRegistration } from "../../moduls/mainRegistration/MainRegistration"
-import "../../pages/Registration/Registration.scss"
+import { HeaderAuthentication } from "../../moduls/headerAuthentication/HeaderAuthentication"
+import { MainRegistration } from "../../moduls/mainRegistartion/MainRegistration"
+import "./Registration.scss"
 
 
 function Registration() {
     return (
-        <div className="reg">
+        <div className="registration">
             <div className="container">
-                <HeaderRegistration />
+                <HeaderAuthentication />
                 <MainRegistration />
             </div>
         </div>

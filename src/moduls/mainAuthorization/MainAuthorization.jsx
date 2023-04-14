@@ -1,10 +1,10 @@
-import "../../moduls/mainRegistration/MainRegistration.scss"
-import { RegistrationForm } from "../../components/registrationForm/RegistrationForm"
+import "./MainAuthorization.scss"
+import { AuthorizationForm } from "../../components/authorizationForm/AuthorizationForm"
 
-function MainRegistration() {
+function MainAuthorization() {
     return (
-        <div className="main-reg">
-            <div className="main-reg__text">
+        <div className="main-autho">
+            <div className="main-autho__text">
                 <div className="text__title">
                     Возможность
                     <div className="text__description">
@@ -33,13 +33,13 @@ function MainRegistration() {
                     </div>
                 </div>
             </div>
-            <div className="main-reg__stick">
+            <div className="main-autho__stick">
             </div>
-            <div className="main-reg__form">
-                <RegistrationForm />
+            <div className="main-autho__form">
+                <AuthorizationForm />
             </div>
         </div>
     )
 }
 
-export { MainRegistration }
+export { MainAuthorization }
