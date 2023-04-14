@@ -1,37 +1,33 @@
-import "../../components/authorizationForm/AuthorizationForm.scss"
+import "./AuthorizationForm.scss"
+import { InputAuth } from "../../UI/inputAuth/InputAuth"
 
 function AuthorizationForm() {
     return (
-        <div className="form">
-            <div className="form__row">
-                <div className="form__title">
+        <div className="authform">
+            <div className="authform__row">
+                <div className="authform__title">
                     Авторизация
                 </div>
-                <div className="form__main">
-                    <div className="main__row">
-                        <div className="main__icon">
-                            <img src={require("../../UI/utils/img/formicon.png")} alt="#"></img>
+                <div className="authform__main">
+                    <div className="authform-main__row">
+                        <div className="authform-main__input">
+                            <InputAuth type={"text"} placeholder={"Логин"} name={"login"} />
                         </div>
-                        <input
-                            className="main__name"
-                            type="text"
-                            name="userName"
-                            placeholder="логин"
-                        />
-                        <input
-                            className="main__pass"
-                            type="password"
-                            name="userPass"
-                            placeholder="пароль"
-                        />
-                        <button className="main__button">ВОЙТИ</button>
-                        <div className="main__or">
-                            ИЛИ
+                        <div className="authform-main__input">
+                            <InputAuth type={"password"} placeholder={"Пароль"} name={"pass"} />
                         </div>
-                        <div className="main__vk">
-                            <a href="">
-                                <img src={require("../../UI/utils/img/vk.png")} alt="#"></img>
-                            </a>
+                        <div className="authform-main__actions">
+                            <div className="authform-actions__row">
+                                <button className="authform-actions__button">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+                                <div className="authform-actions__or">
+                                    ИЛИ
+                                </div>
+                                <div className="authform-actions__vk">
+                                    <a href="">
+                                        <img src={require("../../UI/utils/img/vk.png")} alt="#"></img>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

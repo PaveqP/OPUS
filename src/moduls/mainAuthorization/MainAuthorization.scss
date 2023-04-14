@@ -1,28 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
 
-.main {
-    background: url("../../UI/utils/img/appbackground.png");
+.mainauth {
+    background: #272727;
 }
 
-.main-row {
+.mainauth__row {
     display: flex;
     justify-content: space-between;
 }
 
-.main__text {
+.mainauth__textauth {
     flex: 0 1 auto;
-    padding-top: 230px;
-    padding-left: 100px;
-    border: 3px solid white;
+    align-self: center;
+    padding-left: 60px;
 }
 
-.text__row {
+.textauth__row {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
-.text__title {
-    flex: 0 1 auto;
+.textauth__title {
+    padding-top: 45px;
+    padding-bottom: 45px;
     font-family: Inter;
     font-size: 40px;
     font-weight: 700;
@@ -30,10 +31,20 @@
     letter-spacing: 0em;
     text-align: left;
     color: #FFFFFF;
+    border-bottom: 5px solid #D9D9D9;
 
 }
 
-.text__description {
+.textauth__title:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.textauth__title:first-child {
+    padding-top: 0;
+}
+
+.textauth__description {
     font-family: Inter;
     font-size: 24px;
     font-weight: 500;
@@ -44,17 +55,17 @@
 
 }
 
-.main__stick {
+.mainauth__stick {
     flex: 0 1 auto;
+    align-self: center;
     width: 0.25%;
     height: 900px;
     background-color: #D9D9D9;
-    border-radius: 10px;
-    margin: 60px 0px 60px 0px;
+    margin: 65px 0;
 }
 
-.main__form {
+.mainauth__form {
     flex: 0 1 auto;
-    padding-right: 100px;
-    padding-top: 230px;
+    align-self: center;
+    padding-right: 60px;
 }

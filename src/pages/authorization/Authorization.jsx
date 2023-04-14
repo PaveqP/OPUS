@@ -1,4 +1,4 @@
-import { HeaderRegistration } from "../../moduls/headerRegistration/HeaderRegistration"
+import { HeaderAuthorization } from "../../moduls/headerAuthorization/HeaderAuthorization"
 import { MainAuthorization } from "../../moduls/mainAuthorization/MainAuthorization"
 import "../../pages/authorization/Authorization.scss"
 
@@ -7,7 +7,7 @@ function Authorization() {
     return (
         <div className="authorization">
             <div className="container">
-                <HeaderRegistration />
+                <HeaderAuthorization />
                 <MainAuthorization />
             </div>
         </div>

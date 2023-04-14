@@ -1,4 +1,4 @@
-import "../../components/registrationForm/RegistrationForm.scss"
+import "./RegistrationForm.scss"
 import { InputAuth } from "../../UI/inputAuth/InputAuth"
 
 function RegistrationForm() {
@@ -20,10 +20,10 @@ function RegistrationForm() {
                             <InputAuth type={"text"} placeholder={"Логин"} name={"login"} />
                         </div>
                         <div className="regform-main__input">
-                            <InputAuth type={"text"} placeholder={"Пароль"} name={"pass"} />
+                            <InputAuth type={"password"} placeholder={"Пароль"} name={"pass"} />
                         </div>
                         <div className="regform-main__input">
-                            <InputAuth type={"text"} placeholder={"Пароль еще раз"} name={"pass"} />
+                            <InputAuth type={"password"} placeholder={"Пароль еще раз"} name={"pass"} />
                         </div>
                         <div className="regform-main__actions">
                             <div className="regform-actions__row">

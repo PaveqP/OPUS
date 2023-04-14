@@ -1,6 +1,6 @@
 import "./ToRegistration.scss"
 
-function ToRegistartion() {
+function ToRegistration() {
     return (
         <div className="toregistration">
             <a href="">
@@ -11,4 +11,4 @@ function ToRegistartion() {
     )
 }
 
-export { ToRegistartion }
+export { ToRegistration }
