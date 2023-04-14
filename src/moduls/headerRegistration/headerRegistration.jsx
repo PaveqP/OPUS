@@ -1,23 +1,21 @@
 import { Logo } from "../../UI/logo/Logo"
-import { Help } from "../../UI/help/Help"
-import "../../moduls/headerRegistration/headerRegistration.scss"
+import { Backtomain } from "../../UI/backtomain/Backtomain"
+import { ToAuthorization } from "../../UI/toAuthorization/ToAuthorization"
+import "./HeaderRegistration.scss"
 
 function HeaderRegistration() {
     return (
         <div className="header-reg">
             <div className="header-reg__backtomain">
-                <a href="">
-                    <img src={require("../../UI/utils/img/Arrow.png")} alt="#" className="bactomain__img" />
-                    <span className="backtomain__text">главная</span>
-                </a>
+                <Backtomain />
             </div>
             <div className="header-reg__logo">
                 <Logo />
             </div>
-            <div className="header-reg__help">
-                <Help />
+            <div className="header-reg__toauthorization">
+                <ToAuthorization />
             </div>
-        </div>
+        </div >
     )
 
 }

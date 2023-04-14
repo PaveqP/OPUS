@@ -1,29 +1,37 @@
-import "../../components/authorizationForm/AuthorizationForm.scss"
+import "./AuthorizationForm.scss"
+import { InputAuth } from "../../UI/inputAuth/InputAuth"
 
 function AuthorizationForm() {
     return (
-        <div className="form">
-            <div className="form__title">
-                Авторизация
+        <div className="authform">
+            <div className="authform__row">
+                <div className="authform__title">
+                    Авторизация
+                </div>
+                <div className="authform__main">
+                    <div className="authform-main__row">
+                        <div className="authform-main__input">
+                            <InputAuth type={"text"} placeholder={"Логин"} name={"login"} />
+                        </div>
+                        <div className="authform-main__input">
+                            <InputAuth type={"password"} placeholder={"Пароль"} name={"pass"} />
+                        </div>
+                        <div className="authform-main__actions">
+                            <div className="authform-actions__row">
+                                <button className="authform-actions__button">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+                                <div className="authform-actions__or">
+                                    ИЛИ
+                                </div>
+                                <div className="authform-actions__vk">
+                                    <a href="">
+                                        <img src={require("../../UI/utils/img/vk.png")} alt="#"></img>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className="form__main">
-                <input
-                    className="userName"
-                    type="text"
-                    name="userName"
-                    placeholder="логин"
-                />
-                <br />
-                <input
-                    className="userPass"
-                    type="password"
-                    name="userPass"
-                    placeholder="пароль"
-                />
-                <br />
-                <button className="autho__button">ВОЙТИ</button>
-            </div>
-
         </div>
     )
 

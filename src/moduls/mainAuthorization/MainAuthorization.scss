@@ -1,32 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
 
-.main-autho {
+.mainauth {
+    background: #272727;
+}
+
+.mainauth__row {
     display: flex;
     justify-content: space-between;
-    background: url(../../UI/utils/img/mainreg.png);
 }
 
-.main-autho__stick {
-    width: 0.25%;
-    height: 900px;
-    background-color: #D9D9D9;
-    border-radius: 10px;
-    margin: 60px 0px 60px 0px;
+.mainauth__textauth {
+    flex: 0 1 auto;
+    align-self: center;
+    padding-left: 60px;
 }
 
-.main-autho__form {
-    padding-right: 100px;
-    padding-top: 230px;
-}
-
-.main-autho__text {
+.textauth__row {
     display: flex;
     flex-direction: column;
-    padding-top: 230px;
-    padding-left: 100px;
+    justify-content: space-between;
 }
 
-.text__title {
+.textauth__title {
+    padding-top: 45px;
+    padding-bottom: 45px;
     font-family: Inter;
     font-size: 40px;
     font-weight: 700;
@@ -34,11 +31,20 @@
     letter-spacing: 0em;
     text-align: left;
     color: #FFFFFF;
-    padding-bottom: 5rem;
+    border-bottom: 5px solid #D9D9D9;
 
 }
 
-.text__description {
+.textauth__title:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.textauth__title:first-child {
+    padding-top: 0;
+}
+
+.textauth__description {
     font-family: Inter;
     font-size: 24px;
     font-weight: 500;
@@ -47,4 +53,19 @@
     text-align: left;
     color: #D8D8D8;
 
+}
+
+.mainauth__stick {
+    flex: 0 1 auto;
+    align-self: center;
+    width: 0.25%;
+    height: 900px;
+    background-color: #D9D9D9;
+    margin: 65px 0;
+}
+
+.mainauth__form {
+    flex: 0 1 auto;
+    align-self: center;
+    padding-right: 60px;
 }

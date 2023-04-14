@@ -1,5 +1,5 @@
+import { Registration } from "./registration/Registration"
 
-import { Registration } from "./Registration/Registration"
 import { Authorization } from "./authorization/Authorization"
 
 import "../pages/App.scss"
