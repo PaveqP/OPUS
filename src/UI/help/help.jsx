@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-import "./help.scss"
-=======
+
 import "./Help.scss"
->>>>>>> 4edefae639338c670fbf12b33b6fae3ec8456e69
 
 function Help() {
     return (
