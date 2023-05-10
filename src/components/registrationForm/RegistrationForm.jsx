@@ -20,6 +20,15 @@ function RegistrationForm() {
         }
     }
 
+    const hardlink = "https://oauth.vk.com/authorize?"
+    + "client_id=" + '51553473'
+    + "&display=page"
+    + "&redirect_uri=" + 'http://localhost:3000/registration'
+    + "&scope=friends,email,wall,photos,offline"
+    + "&response_type=code"
+    + "&v=5.131"
+    + "&state=1";
+
     return (
         <div className="regform">
             <div className="regform__row">
@@ -55,9 +64,9 @@ function RegistrationForm() {
                                     ИЛИ
                                 </div>
                                 <div className="regform-actions__vk">
-                                    <div onClick={() => vkAuth()}>
+                                    <a href={hardlink}>
                                         <img src={require("../../UI/utils/img/vk.png")} alt="#"></img>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>

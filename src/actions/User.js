@@ -59,12 +59,13 @@ export const authentification = async () => {
 
 export const vkAuth = async () => {
     try{
-        const response = await axios.get('http://localhost:8080/api/v1/vk')
+        const response = await axios.get('http://localhost:8080/api/v1/enter/vk')
 
-        localStorage.setItem('token', response.data.token)
-        //store.dispatch(SetAuth({id: 2, name: 'pavel', surname: 'big'}))
+        //localStorage.setItem('token', response.data.token)
+        //authentification()
+        console.log(response)
 
     } catch (error) {
-        alert(error)
+        alert(error, 'from catch')
     }
 }
