@@ -1,5 +1,9 @@
+.help__row {
+    display: flex;
+    align-items: center;
+}
+
 .help__text {
-    display: inline-block;
     font-family: Inter;
     font-size: 32px;
     font-weight: 400;
@@ -7,6 +11,5 @@
     letter-spacing: 0em;
     text-align: left;
     color: #FFFFFF;
-    padding-top: 12px;
-    padding-left: 20px;
+    padding-left: 35px;
 }

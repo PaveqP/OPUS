@@ -1,0 +1,32 @@
+.header-lk {
+    background: rgba(69, 69, 69, 0.49);
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-lk__backtomain {
+    align-self: center;
+    flex: 0 1 auto;
+    padding-left: 50px;
+}
+
+.header-lk__help {
+    align-self: center;
+    flex: 0 1 auto;
+}
+
+.header-lk__logo {
+    align-self: center;
+    flex: 0 1 auto;
+}
+
+.header-lk__openlk {
+    align-self: center;
+    flex: 0 1 auto;
+}
+
+.header-lk__exit {
+    align-self: center;
+    flex: 0 1 auto;
+    padding-right: 50px;
+}
