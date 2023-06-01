@@ -1,9 +1,11 @@
 .openlk__row {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .openlk__text {
+    flex: 0 1 auto;
     display: inline-block;
     font-family: Inter;
     font-size: 32px;
@@ -12,5 +14,9 @@
     letter-spacing: 0em;
     text-align: left;
     color: #FFFFFF;
-    padding-right: 30px;
+    padding-right: 10px;
+}
+
+.openlk__img {
+    flex: 0 1 auto;
 }

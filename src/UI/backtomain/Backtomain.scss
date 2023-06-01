@@ -1,9 +1,11 @@
 .backtomain__row {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .backtomain__text {
+    flex: 0 1 auto;
     display: inline-block;
     font-family: Inter;
     font-size: 32px;
@@ -12,5 +14,9 @@
     letter-spacing: 0em;
     text-align: left;
     color: #FFFFFF;
-    padding-left: 35px;
+    padding-left: 10px;
+}
+
+.bactomain__img {
+    flex: 0 1 auto;
 }

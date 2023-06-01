@@ -1,10 +1,12 @@
 .exit__row {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .exit__text {
-    display: inline-block;
+    flex: 0 1 auto;
+    //display: inline-block;
     font-family: Inter;
     font-size: 32px;
     font-weight: 400;
@@ -12,5 +14,9 @@
     letter-spacing: 0em;
     text-align: left;
     color: #FFFFFF;
-    padding-right: 35px;
+    padding-right: 10px;
+}
+
+.exit__img {
+    flex: 0 1 auto;
 }

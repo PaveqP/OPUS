@@ -5,8 +5,10 @@ function Exit() {
         <div className="exit">
             <a href="">
                 <div className="exit__row">
-                    <span className="exit__text">Выйти</span>
-                    <img src={require("../../UI/utils/img/exit.png")} alt="#" className="exit__img" />
+                    <div className="exit__text">Выйти</div>
+                    <div className="exit__img">
+                        <img src={require("../../UI/utils/img/exit.png")} alt="#" />
+                    </div>
                 </div>
             </a>
         </div>

@@ -1,9 +1,11 @@
 .help__row {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .help__text {
+    flex: 0 1 auto;
     font-family: Inter;
     font-size: 32px;
     font-weight: 400;
@@ -11,5 +13,9 @@
     letter-spacing: 0em;
     text-align: left;
     color: #FFFFFF;
-    padding-left: 35px;
+    padding-left: 10px;
+}
+
+.help__img {
+    flex: 0 1 auto;
 }

@@ -10,20 +10,22 @@ import './HeaderLk.scss'
 function HeaderLk() {
     return (
         <div className="header-lk">
-            <div className="header-lk__backtomain">
-                <Backtomain />
-            </div>
-            <div className="header-lk__help">
-                <Help />
-            </div>
-            <div className="header-lk__logo">
-                <Logo />
-            </div>
-            <div className="header-lk__openlk">
-                <OpenLk />
-            </div>
-            <div className="header-lk__exit">
-                <Exit />
+            <div className="header-lk__row">
+                <div className="header-lk__backtomain">
+                    <Backtomain />
+                </div>
+                <div className="header-lk__help">
+                    <Help />
+                </div>
+                <div className="header-lk__logo">
+                    <Logo />
+                </div>
+                <div className="header-lk__openlk">
+                    <OpenLk />
+                </div>
+                <div className="header-lk__exit">
+                    <Exit />
+                </div>
             </div>
         </div >
     )
