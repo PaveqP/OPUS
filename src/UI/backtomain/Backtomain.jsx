@@ -4,8 +4,12 @@ function Backtomain() {
     return (
         <div className="backtomain">
             <a href="">
-                <img src={require("../../UI/utils/img/arrowleft.png")} alt="#" className="bactomain__img" />
-                <span className="backtomain__text">Главная</span>
+                <div className="backtomain__row">
+                    <div className="backtomain__img">
+                        <img src={require("../../UI/utils/img/arrowleft.png")} alt="#" />
+                    </div>
+                    <div className="backtomain__text">Главная</div>
+                </div>
             </a>
         </div>
     )

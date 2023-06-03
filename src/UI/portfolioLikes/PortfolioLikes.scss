@@ -1,0 +1,27 @@
+.portfoliolikes {
+    background: linear-gradient(162.45deg, #9000FF 12.01%, #CD41E1 112.2%);
+    border-radius: 9px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.likes__row {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.likes__img {
+    flex: 0 1 auto;
+}
+
+.likes__number {
+    flex: 0 1 auto;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    color: white;
+    align-self: center;
+}

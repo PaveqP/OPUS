@@ -1,6 +1,8 @@
 function Logo() {
     return (
-        <img src={require("../utils/img/logo.png")} alt="#" />
+        <div className="logo">
+            <img src={require("../utils/img/logo.png")} alt="#" />
+        </div>
     )
 }
 
