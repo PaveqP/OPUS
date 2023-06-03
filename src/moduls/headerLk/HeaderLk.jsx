@@ -5,10 +5,18 @@ import { Logo } from '../../UI/logo/Logo'
 import { OpenLk } from '../../UI/openLk/OpenLk'
 import { CloseLk } from '../../UI/closeLk/CloseLk'
 import { Link } from 'react-router-dom'
+import { logout } from '../../store/userReducer'
 import './HeaderLk.scss'
+import { useDispatch } from 'react-redux'
 
 
 function HeaderLk() {
+    const dispatch = useDispatch()
+
+    const Logout = () => {
+        dispatch(logout())
+    }
+
     return (
         <div className="header-lk">
             <div className="header-lk__row">
@@ -24,11 +32,9 @@ function HeaderLk() {
                 <div className="header-lk__openlk">
                     <OpenLk />
                 </div>
-                <Link to='/login'>
-                <div className="header-lk__exit">
+                <div className="header-lk__exit" onClick={() => Logout()}>
                     <Exit />
                 </div>
-                </Link>
             </div>
         </div >
     )
