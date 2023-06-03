@@ -1,3 +1,8 @@
+.toauthorization__row {
+    display: flex;
+    align-items: center;
+}
+
 .toauthorization__text {
     display: inline-block;
     font-family: Inter;
@@ -7,9 +12,5 @@
     letter-spacing: 0em;
     text-align: left;
     color: #FFFFFF;
-}
-
-.toauthorization__img {
-    padding-top: 10px;
-    padding-left: 20px;
+    padding-right: 20px;
 }
