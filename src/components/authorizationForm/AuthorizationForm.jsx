@@ -34,9 +34,9 @@ function AuthorizationForm() {
                                     ИЛИ
                                 </div>
                                 <div className="authform-actions__vk">
-                                    <div onClick={() => vkAuth()}>
+                                    <a href='#'>
                                         <img src={require("../../UI/utils/img/vk.png")} alt="#"></img>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
