@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Main } from "./main/Main";
 import { SetAuth } from "../store/userReducer";
 import { authentification } from "../actions/User";
+import {LK, Lk} from './lk/Lk'
 
 function App() {
 	const isAuth = useSelector(state => state.user.isAuth)
@@ -38,7 +39,7 @@ function App() {
 			</Routes>
 				:
 			<Routes>
-				<Route exact path="/" element={<Main/>}/>
+				<Route exact path="/" element={<Lk/>}/>
 				<Route path="/login" element={<Navigate replace to="/" />} />
 				<Route path="/registration" element={<Navigate replace to="/" />} />
 			</Routes>
