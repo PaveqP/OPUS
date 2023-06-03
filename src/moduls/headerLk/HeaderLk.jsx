@@ -4,6 +4,7 @@ import { Help } from '../../UI/help/Help'
 import { Logo } from '../../UI/logo/Logo'
 import { OpenLk } from '../../UI/openLk/OpenLk'
 import { CloseLk } from '../../UI/closeLk/CloseLk'
+import { Link } from 'react-router-dom'
 import './HeaderLk.scss'
 
 
@@ -23,9 +24,11 @@ function HeaderLk() {
                 <div className="header-lk__openlk">
                     <OpenLk />
                 </div>
+                <Link to='/login'>
                 <div className="header-lk__exit">
                     <Exit />
                 </div>
+                </Link>
             </div>
         </div >
     )
