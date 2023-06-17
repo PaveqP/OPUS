@@ -5,6 +5,11 @@ function MainRegistration() {
     return (
         <div className="mainreg">
             <div className="mainreg__row">
+                <div className="mainreg__form">
+                    <RegistrationForm />
+                </div>
+                <div className="mainreg__stick">
+                </div>
                 <div className="mainreg__textreg">
                     <div className="textreg__row">
                         <div className="textreg__title">
@@ -35,11 +40,6 @@ function MainRegistration() {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="mainreg__stick">
-                </div>
-                <div className="mainreg__form">
-                    <RegistrationForm />
                 </div>
             </div>
         </div>
