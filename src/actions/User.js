@@ -15,6 +15,7 @@ export const registartion = async (name, surname, email, password) => {
         //alert("Okay")
         //setTimeout(authorization(email, password), 5000)
         //setTimeout(authentification(), 10000)
+        alert('Вы успешно зарегистрированы')
     } catch (e) {
         alert("Not okay")
     }
