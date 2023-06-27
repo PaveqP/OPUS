@@ -1,4 +1,4 @@
-import "../../components/registrationForm/RegistrationForm.scss"
+import "./RegistrationForm.scss"
 import { InputAuth } from "../../UI/inputAuth/InputAuth"
 
 function RegistrationForm() {

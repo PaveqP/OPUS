@@ -1,6 +1,6 @@
 import { Registration } from "./registration/Registration"
 import { Authorization } from "./authorization/Authorization"
-import "../pages/App.scss"
+import "./App.scss"
 
 function App() {
   return (

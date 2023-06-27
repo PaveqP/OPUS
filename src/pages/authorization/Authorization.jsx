@@ -1,6 +1,6 @@
 import { HeaderRegistration } from "../../moduls/headerRegistration/HeaderRegistration"
 import { MainAuthorization } from "../../moduls/mainAuthorization/MainAuthorization"
-import "../../pages/authorization/Authorization.scss"
+import "./Authorization.scss"
 
 
 function Authorization() {
