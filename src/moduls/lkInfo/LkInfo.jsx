@@ -1,17 +1,17 @@
 import "./LkInfo.scss"
-import { InfoBase } from "../../components/infoBase/InfoBase"
-import { InfoSkills } from "../../components/infoSkills/InfoSkills"
+import { BaseInfo } from "../../components/baseInfo/BaseInfo"
+import { SkillsInfo } from "../../components/skillsInfo/SkillsInfo"
 
 function LkInfo() {
     return (
         <div className="lkinfo">
-            <div className="info__background">
-                <div className="info__row">
-                    <div className="info__base">
-                        <InfoBase />
+            <div className="lkinfo__container">
+                <div className="lkinfo__row">
+                    <div className="lkinfo__base">
+                        <BaseInfo />
                     </div>
-                    <div className="info__skills">
-                        <InfoSkills />
+                    <div className="lkinfo__skills">
+                        <SkillsInfo />
                     </div>
                 </div>
             </div>

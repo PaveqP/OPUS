@@ -1,23 +1,12 @@
-.lkinfo {
-    padding: 50px 30px 20px 30px;
-    background: linear-gradient(to right, #272626, #3E3A53);
+.lkinfo__container {
+    padding: 85px 97px 83px 94px;
 }
 
-.info__background {
-    background-color: #D9D9D9;
-    padding: 20px 35px 25px 35px;
-}
-
-
-.info__row {
+.lkinfo__row {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-.info__base {
-    flex: 0 1 auto;
-}
-
-.info__skills {
-    flex: 0 1 auto;
+.lkinfo__base {
+    margin-right: 230px;
 }
