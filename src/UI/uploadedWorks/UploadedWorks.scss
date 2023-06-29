@@ -1,0 +1,31 @@
+.uploadedworks {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.works__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.works__number {
+    flex: 0 1 auto;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    color: #9001FF;
+}
+
+.works__text {
+    flex: 0 1 auto;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #9001FF;
+    text-align: center;
+}

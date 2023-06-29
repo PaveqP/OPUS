@@ -1,0 +1,79 @@
+.base__data {
+    border-right: 3px solid #D9D9D9;
+}
+
+.data__row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 300px;
+}
+
+.avatar {
+    width: 240px;
+    height: 306px;
+}
+
+.data__avatar {
+    flex: 0 1 auto;
+}
+
+.data__login {
+    flex: 0 1 auto;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    color: #363535;
+    padding-top: 10px;
+    overflow-wrap: break-word;
+}
+
+.data__name {
+    flex: 0 1 auto;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: black;
+    padding-top: 10px;
+    overflow-wrap: break-word;
+}
+
+.data__age {
+    flex: 0 1 auto;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #363535;
+    padding-top: 10px;
+    overflow-wrap: break-word;
+}
+
+.data__city {
+    flex: 0 1 auto;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #363535;
+    padding-top: 10px;
+    overflow-wrap: break-word;
+}
+
+.data__exp {
+    flex: 0 1 auto;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #363535;
+    padding-top: 10px;
+    overflow-wrap: break-word;
+}
