@@ -13,12 +13,14 @@
     padding-left: 62px;
     padding-bottom: 46px;
     padding-right: 62px;
+    min-height: 100vh;
 }
 
 
 .regform__row {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .regform__header {
@@ -112,7 +114,8 @@
     box-shadow: 0px 0px 4px #272626;
     border-radius: 5px;
     background: linear-gradient(91.7deg, #322C4C 1.47%, #681BE6 98.59%);
-    padding: 19px 145px 19px 144px;
+    padding: 19px 0px 19px 0px;
+    width: 100%;
     margin-bottom: 19px;
 }
 
@@ -168,6 +171,6 @@
     line-height: 24px;
     text-align: center;
     color: #000000;
-    padding: 17px 217px 17px 220px;
-
+    padding: 17px 0px 17px 0px;
+    width: 100%;
 }

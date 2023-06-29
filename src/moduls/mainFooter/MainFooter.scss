@@ -1,0 +1,166 @@
+.mainfooter {
+    background: linear-gradient(100.1deg, #322C4C 54.92%, #5D27CA 97.8%);
+}
+
+.mainfooter__container {
+    padding: 38px 169px 75px 54px;
+}
+
+.mainfooter__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainfooter__basic {
+    flex: 0 1 auto;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.basic__row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.basic__point {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50% 50%;
+    background-color: #D9D9D9;
+    margin-right: 18px;
+}
+
+.basic__logo {
+    margin-bottom: 25px;
+}
+
+.basic-main {
+    flex: 0 1 auto;
+    display: inline-block;
+    margin-bottom: 28px;
+}
+
+.basic-lk {
+    flex: 0 1 auto;
+    display: inline-block;
+    margin-bottom: 29px;
+}
+
+.basic-information {
+    flex: 0 1 auto;
+    display: inline-block;
+}
+
+
+
+
+
+.mainfooter__contacs {
+    flex: 0 1 auto;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.contacs__row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contacs__primary {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    margin-bottom: 63px;
+}
+
+.contacs__1 {
+    margin-bottom: 28px;
+}
+
+.contacs__2 {
+    margin-bottom: 28px;
+}
+
+.mainfooter__team {
+    flex: 0 1 auto;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.team__row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.team__primary {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    margin-bottom: 63px;
+}
+
+.team__1 {
+    margin-bottom: 28px;
+}
+
+.team__2 {
+    margin-bottom: 28px;
+}
+
+.mainfooter__cooperation {
+    flex: 0 1 auto;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.cooperation__row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cooperation__primary {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    margin-bottom: 63px;
+}
+
+.cooperation__1 {
+    margin-bottom: 28px;
+}
+
+.cooperation__2 {
+    margin-bottom: 28px;
+}
