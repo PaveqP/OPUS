@@ -31,8 +31,7 @@ function PinnedWork(props) {
                     </div>
                 </div>
             </div>
-
-            <div className="pinnedwork__default" >
+            <div className="pinnedwork__default">
                 <div className="pinnedwork__default-row">
                     <div className="pinnedwork__default-image">
                         <img src={require('../../UI/utils/img/pinnedwork_placeholder.png')} alt="" />
