@@ -3,6 +3,17 @@
     border: 1px solid #E9E9E9;
     padding: 16px 23px;
     resize: none;
-    width: 1200px;
+    width: 1100px;
     height: 280px;
+}
+
+@media (max-width:1750px){
+    .aboutme__main {
+        border-radius: 25px;
+        border: 1px solid #E9E9E9;
+        padding: 16px 23px;
+        resize: none;
+        width: 970px;
+        height: 280px;
+    }
 }

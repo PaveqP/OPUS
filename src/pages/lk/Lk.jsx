@@ -20,7 +20,7 @@ function Lk() {
                         <LkInfo />
                     </div>
                     <div className="lkseparator">
-                        <img src={require("../../UI/utils/img/separator.png")} alt="#"></img>
+                        <img className="lkseparator__img" src={require("../../UI/utils/img/separator.png")} alt="#" ></img>
                     </div>
                     <div className="lkstatistic">
                         <LkStatistic />

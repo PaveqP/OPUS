@@ -27,6 +27,7 @@
     margin-right: 460%;
 }
 
+
 .specialization-text__settings {
     flex: 0 1 auto;
     background-color: #FFF;
@@ -102,4 +103,25 @@
     font-family: Inter;
     font-weight: 500;
     padding: 11px 46px;
+}
+
+
+@media (max-width:1750px){
+    .specialization-text__title {
+        flex: 0 1 auto;
+        color: #363535;
+        font-size: 24px;
+        font-family: Inter;
+        font-weight: 500;
+        margin-right: 756px;
+    }
+
+    .abilities-text__title {
+        flex: 0 1 auto;
+        color: #363535;
+        font-size: 24px;
+        font-family: Inter;
+        font-weight: 500;
+        margin-right: 858px;
+    }
 }

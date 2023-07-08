@@ -4,9 +4,15 @@
 
 .lkinfo__row {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .lkinfo__base {
     margin-right: 230px;
+}
+
+@media (max-width:1750px){
+    .lkinfo__base {
+        margin-right: 50px;
+    }
 }
