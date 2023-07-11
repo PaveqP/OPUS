@@ -2,14 +2,4 @@ import { Config, Connect, ConnectEvents} from '@vkontakte/superappkit';
 import { APP_ID } from './config';
 
 
-Config.init({
-  appId: APP_ID, 
-});
-
-export const redirectAuthHandler = () => Connect.redirectAuth({
-    url: 'https://localhost:80/login',
-    state: '',
-    source: '',
-    action: undefined,
-    screen: undefined,
-  })
+///// https://oauth.vk.com/authorize?client_id=	51690796&redirect_uri=http://localhost:3000callback&scope=12&display=mobile&response_type=token

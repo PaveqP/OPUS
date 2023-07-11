@@ -4,7 +4,7 @@ import { MiniLogo } from "../../UI/miniLogo/MiniLogo"
 import { useState } from "react";
 import { registartion } from "../../actions/User";
 import { Link } from "react-router-dom";
-import {redirectAuthHandler} from '../../vkActions/vkConfig'
+//import {redirectAuthHandler} from '../../vkActions/vkConfig'
 
 function RegistrationForm() {
 
@@ -84,7 +84,8 @@ function RegistrationForm() {
                                     <div className="regform-actions__or">
                                         ИЛИ
                                     </div>
-                                    <button className="regform-actions__buttonvk" onClick={() => redirectAuthHandler()}>
+                                    <a href="https://oauth.vk.com/authorize?client_id=	51690796&redirect_uri=http://localhost:3000/logincallback&scope=12&display=mobile&response_type=token">
+                                    <button className="regform-actions__buttonvk">
                                         <div className="buttonvk__row">
                                             <div className="buttonvk__img">
                                                 <img src={require("../../UI/utils/img/vk.png")} alt="#"></img>
@@ -94,6 +95,7 @@ function RegistrationForm() {
                                             </div>
                                         </div>
                                     </button>
+                                    </a>
                                     <div className="regform-actions__or">
                                         ИЛИ
                                     </div>
