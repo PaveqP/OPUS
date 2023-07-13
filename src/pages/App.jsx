@@ -6,7 +6,7 @@ import "../pages/App.scss"
 import { useDispatch, useSelector } from "react-redux";
 import { Main } from "./main/Main";
 import { SetAuth } from "../store/userReducer";
-import { authentification } from "../actions/User";
+import { VkCheck, authentification } from "../actions/User";
 import {Lk} from './lk/Lk'
 
 function App() {
@@ -19,6 +19,7 @@ function App() {
 	console.log(user, 'from APP')
 
 	useEffect(() => {
+		VkCheck()
 		if (localStorage.getItem('token'))
 		{
 			dispatch(SetAuth(authentification()))

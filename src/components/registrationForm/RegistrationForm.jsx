@@ -84,7 +84,7 @@ function RegistrationForm() {
                                     <div className="regform-actions__or">
                                         ИЛИ
                                     </div>
-                                    <a href="https://oauth.vk.com/authorize?client_id=	51690796&redirect_uri=http://localhost:3000/logincallback&scope=12&display=mobile&response_type=token">
+                                    <a href="https://oauth.vk.com/authorize?client_id=51690796&display=page&redirect_uri=http://localhost:3000/login&scope=friends&response_type=token&v=5.131&state=okay">
                                     <button className="regform-actions__buttonvk">
                                         <div className="buttonvk__row">
                                             <div className="buttonvk__img">
