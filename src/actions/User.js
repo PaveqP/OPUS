@@ -58,20 +58,6 @@ export const authentification = async () => {
 }
 
 //https://api.vk.com/oauth/access_token?v=5.21&client_id=<app_id>&client_secret=<app_secret>&grant_type=client_credentials
-export const VkCheck = () => {
-    try {
-        const response = axios.get(`https://api.vk.com/oauth/access_token=vk1.a.xQiejHg-_Sk5uFCmJNAUiYsOhIQeIGhx2cGhuWfUoYcPcXv6SItlJVR0F_ktpqSVtskG0h4otpVEyPpZoaChiyPaoxECiaU4OADuUXrkPi_ct3iclHzW7ZoUAcYNbRPOBv5avVl-C_TuB4rQraBnEZBe1jseAKd_5Drx9JyDWybp5GYSke4LX3tp0MUAMsbHv=5.21&client_id=51690796&client_secret=ir10cf3tC8p69BMNn2h1&grant_type=client_credentials`, 
-        {
-        })
-
-        //store.dispatch(SetAuth(response.data))
-        console.log(response)
-        
-    } catch (error) {
-        alert(error, "auth")
-    }
-}
-
 
 /*
 export const vkAuth = async () => {

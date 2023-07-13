@@ -4,6 +4,7 @@ import { MiniLogo } from "../../UI/miniLogo/MiniLogo"
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { authorization } from "../../actions/User";
+import { ACCESS_TOKEN_LINK } from "../../vkActions/vkConfig";
 
 function AuthorizationForm() {
 
@@ -57,17 +58,19 @@ function AuthorizationForm() {
                                         ИЛИ
                                     </div>
 
-                                    <button className="authform-actions__buttonvk">
+                                    <a href={ACCESS_TOKEN_LINK}>
+                                        <button className="authform-actions__buttonvk">
 
-                                        <div className="buttonvk__row">
-                                            <div className="buttonvk__img">
-                                                <img src={require("../../UI/utils/img/vk.png")} alt="#"></img>
+                                            <div className="buttonvk__row">
+                                                <div className="buttonvk__img">
+                                                    <img src={require("../../UI/utils/img/vk.png")} alt="#"></img>
+                                                </div>
+                                                <div className="buttonvk__text">
+                                                    Войти через ВК
+                                                </div>
                                             </div>
-                                            <div className="buttonvk__text">
-                                                Войти через ВК
-                                            </div>
-                                        </div>
-                                    </button>
+                                        </button>
+                                    </a>
 
                                     <div className="authform-actions__or">
                                         ИЛИ

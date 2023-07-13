@@ -4,14 +4,8 @@ import "./UploadedWorks.scss"
 function UploadedWorks(props) {
     return (
         <div className="uploadedworks">
-            <div className="works__row">
-                <div className="works__number">
-                    {props.number}
-                </div>
-                <div className="works__text">
-                    Работ <br /> загружено
-                </div>
-            </div>
+            <div className="uploadedworks__number">{props.text}</div>
+            <div className="uploadedworks__text">Работ загружено</div>
         </div>
     )
 }
