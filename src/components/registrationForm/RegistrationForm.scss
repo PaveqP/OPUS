@@ -13,12 +13,14 @@
     padding-left: 62px;
     padding-bottom: 46px;
     padding-right: 62px;
+    min-height: 100vh;
 }
 
 
 .regform__row {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .regform__header {
@@ -169,6 +171,6 @@
     line-height: 24px;
     text-align: center;
     color: #000000;
-    padding: 17px 217px 17px 220px;
-
+    padding: 17px 0px 17px 0px;
+    width: 100%;
 }

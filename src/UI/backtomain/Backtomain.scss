@@ -1,20 +1,14 @@
 .backtomain__row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .backtomain__text {
     flex: 0 1 auto;
-    display: inline-block;
+    color: #000;
+    font-size: 20px;
     font-family: Inter;
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 39px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #FFFFFF;
-    padding-left: 10px;
+    margin-left: 10px;
 }
 
 .bactomain__img {

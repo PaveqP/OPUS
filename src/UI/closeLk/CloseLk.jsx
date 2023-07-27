@@ -5,8 +5,10 @@ function CloseLk() {
         <div className="closelk">
             <a href="">
                 <div className="closelk__row">
-                    <span className="closelk__text">закрыт</span>
-                    <img src={require("../../UI/utils/img/closelk.png")} alt="#" className="closelk__img" />
+                    <div className="closelk__img">
+                        <img src={require("../../UI/utils/img/closelk.png")} alt="#" />
+                    </div>
+                    <div className="closelk__text">Профиль закрыт</div>
                 </div>
             </a>
         </div>

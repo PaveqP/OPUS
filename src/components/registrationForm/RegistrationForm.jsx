@@ -4,9 +4,7 @@ import { MiniLogo } from "../../UI/miniLogo/MiniLogo"
 import { useEffect, useState } from "react";
 import { registartion } from "../../actions/User";
 import { Link } from "react-router-dom";
-import { vkAuth } from "../../actions/User";
-//import { vkToken } from "../../actions/User"
-import { AppId, redirect_uri, scope } from "../../config";
+import { ACCESS_TOKEN_LINK } from "../../vkActions/vkConfig";
 
 function RegistrationForm() {
 
@@ -87,8 +85,8 @@ function RegistrationForm() {
                                     <div className="regform-actions__or">
                                         ИЛИ
                                     </div>
-                                    <button className="regform-actions__buttonvk" onClick={ async () => await vkAuth()}>
-                                        <a href={`https://oauth.vk.com/authorize?client_id=${AppId}&display=popup&redirect_uri=http://localhost:3000/registration&scope=${scope}&response_type=token&v=5.131`}>
+                                    <a href={ACCESS_TOKEN_LINK}>
+                                    <button className="regform-actions__buttonvk">
                                         <div className="buttonvk__row">
 
                                             <div className="buttonvk__img">
@@ -99,8 +97,8 @@ function RegistrationForm() {
                                             </div>
                                             
                                         </div>
-                                        </a>
                                     </button>
+                                    </a>
                                     <div className="regform-actions__or">
                                         ИЛИ
                                     </div>

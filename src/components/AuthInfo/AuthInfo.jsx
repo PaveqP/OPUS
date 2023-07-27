@@ -1,5 +1,4 @@
 import "./AuthInfo.scss"
-import { Link } from "react-router-dom"
 
 function AuthInfo() {
     return (
