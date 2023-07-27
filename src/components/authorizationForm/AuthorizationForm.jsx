@@ -1,11 +1,15 @@
 import "./AuthorizationForm.scss"
 import { InputAuth } from "../../UI/inputAuth/InputAuth"
 import { MiniLogo } from "../../UI/miniLogo/MiniLogo"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { authorization } from "../../actions/User";
+import { vkAuth } from "../../actions/User";
+//import { vkToken } from "../../actions/User"
+import { AppId, redirect_uri, scope } from "../../config";
 
 function AuthorizationForm() {
+
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -60,12 +64,14 @@ function AuthorizationForm() {
                                     <button className="authform-actions__buttonvk">
 
                                         <div className="buttonvk__row">
+                                        <a href={`https://oauth.vk.com/authorize?client_id=${AppId}&display=popup&redirect_uri=http://localhost:3000/registration&scope=${scope}&response_type=token&v=5.131`}>
                                             <div className="buttonvk__img">
                                                 <img src={require("../../UI/utils/img/vk.png")} alt="#"></img>
                                             </div>
                                             <div className="buttonvk__text">
                                                 Войти через ВК
                                             </div>
+                                        </a>
                                         </div>
                                     </button>
 

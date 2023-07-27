@@ -1,11 +1,15 @@
 import "./RegistrationForm.scss"
 import { InputAuth } from "../../UI/inputAuth/InputAuth"
 import { MiniLogo } from "../../UI/miniLogo/MiniLogo"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { registartion } from "../../actions/User";
 import { Link } from "react-router-dom";
+import { vkAuth } from "../../actions/User";
+//import { vkToken } from "../../actions/User"
+import { AppId, redirect_uri, scope } from "../../config";
 
 function RegistrationForm() {
+
 
     const [name, setName] = useState('');
     const [surname, setSurname] = useState('');
@@ -83,15 +87,19 @@ function RegistrationForm() {
                                     <div className="regform-actions__or">
                                         ИЛИ
                                     </div>
-                                    <button className="regform-actions__buttonvk">
+                                    <button className="regform-actions__buttonvk" onClick={ async () => await vkAuth()}>
+                                        <a href={`https://oauth.vk.com/authorize?client_id=${AppId}&display=popup&redirect_uri=http://localhost:3000/registration&scope=${scope}&response_type=token&v=5.131`}>
                                         <div className="buttonvk__row">
+
                                             <div className="buttonvk__img">
                                                 <img src={require("../../UI/utils/img/vk.png")} alt="#"></img>
                                             </div>
                                             <div className="buttonvk__text">
                                                 Войти через ВК
                                             </div>
+                                            
                                         </div>
+                                        </a>
                                     </button>
                                     <div className="regform-actions__or">
                                         ИЛИ

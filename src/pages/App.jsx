@@ -15,14 +15,21 @@ function App() {
 	const dispatch = useDispatch()
 
 	const token = localStorage.getItem('token')
-	console.log(isAuth, "from APP")
-	console.log(user, 'from APP')
+	const vkToken = localStorage.getItem('vkToken')
+	console.log(isAuth, "auth state from APP")
+	console.log(user, 'user from APP')
+	console.log(vkToken, 'vktoken from app')
 
 	useEffect(() => {
+
 		if (localStorage.getItem('token'))
 		{
 			dispatch(SetAuth(authentification()))
 		}
+		if (localStorage.getItem('vkToken')){
+			dispatch(SetAuth(user))
+		}
+
 	}, [])
   
   return (

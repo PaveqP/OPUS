@@ -4,7 +4,7 @@ import { Help } from '../../UI/help/Help'
 import { Logo } from '../../UI/logo/Logo'
 import { OpenLk } from '../../UI/openLk/OpenLk'
 import { CloseLk } from '../../UI/closeLk/CloseLk'
-import { logout } from '../../store/userReducer'
+import { VkLogout, logout } from '../../store/userReducer'
 import { useDispatch } from 'react-redux'
 import './HeaderLk.scss'
 
@@ -14,7 +14,10 @@ function HeaderLk() {
     const dispatch = useDispatch()
 
     const Logout = () => {
+        
         dispatch(logout())
+        dispatch(VkLogout())
+        console.log('logout called')
     }
 
     return (
@@ -32,7 +35,7 @@ function HeaderLk() {
                 <div className="header-lk__openlk">
                     <OpenLk />
                 </div>
-                <div className="header-lk__exit" onClick={() => Logout()}>
+                <div className="header-lk__exit" onClick={() => Logout()} >
                     <Exit />
                 </div>
             </div>
