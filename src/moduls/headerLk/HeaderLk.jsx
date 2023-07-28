@@ -16,7 +16,7 @@ function HeaderLk() {
     const Logout = () => {
         
         dispatch(logout())
-        dispatch(VkLogout())
+
         console.log('logout called')
     }
 

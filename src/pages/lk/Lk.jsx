@@ -4,6 +4,7 @@ import { LkStatistic } from '../../moduls/lkStatistic/LkStatistic'
 import { MainFooter } from '../../moduls/mainFooter/MainFooter'
 import { Lklkpinnedwork } from '../../moduls/lkPinnedWork/LkPinnedWork'
 import { LkWorks } from '../../moduls/lkWorks/LkWorks'
+import { AddWork } from '../../moduls/addWork/AddWork'
 import "./Lk.scss"
 
 
@@ -41,6 +42,9 @@ function Lk() {
                         <MainFooter />
                     </div>
                 </div>
+            </div>
+            <div className="lk__addwork" style={{ display: "none" }}>
+                <AddWork />
             </div>
         </div>
     )
