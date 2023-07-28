@@ -6,7 +6,6 @@ import { SetVkSuccess } from "../store/userReducer";
 import { SetVkFail } from "../store/userReducer";
 
 import {store} from '../store/index'
-import { AppId, AppKey, redirect_uri, scope } from "../config";
 
 export const registartion = async (name, surname, email, password) => {
     try {
@@ -61,26 +60,4 @@ export const authentification = async () => {
     }
 }
 
-export const vkAuth = () => {
-    let vkUser = {}
 
-    let url = window.location.hash.split('&')
-    let user = []
-    
-    for(let set in url){
-        user = url[set].split('=')
-        if(user[0] === '#access_token'){
-            vkUser['access_token'] = user[1]
-        } else{
-            vkUser[user[0]] = user[1]
-        }
-    }
-
-    localStorage.setItem('vkToken', vkUser.access_token)
-
-    if (localStorage.getItem('vkToken')){
-        store.dispatch(SetVkAuth(vkUser))
-        console.log(localStorage.getItem('vkToken'), 'current token')
-        console.log(vkUser, 'vkUser from now')
-    }
-}

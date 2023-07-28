@@ -3,7 +3,20 @@ import { Logo } from "../../UI/logo/Logo"
 import { Backtomain } from "../../UI/backtomain/Backtomain"
 import { Exit } from "../../UI/exit/Exit"
 
+import { logout } from '../../store/userReducer'
+import { useDispatch } from 'react-redux'
+
 function MainHeader() {
+
+    const dispatch = useDispatch()
+
+    const Logout = () => {
+        
+        dispatch(logout())
+
+        console.log('logout called')
+    }
+
     return (
         <div className="mainheader">
             <div className="mainheader__container">
@@ -22,7 +35,7 @@ function MainHeader() {
                             <div className="navigation__help">
                                 <a href="#" className="navigation-help__text">Справка</a>
                             </div>
-                            <div className="navigation__exit">
+                            <div className="navigation__exit" onClick={() => Logout()}>
                                 <Exit />
                             </div>
                         </div>
