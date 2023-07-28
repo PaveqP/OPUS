@@ -1,14 +1,8 @@
-<<<<<<< HEAD
 import { Authorization } from "./authorization/Authorization"
 import { Registration } from "./Registration/Registration";
 import { ReactDOM, useEffect } from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
-=======
 
-
-import { Authorization } from "./authorization/Authorization"
-
->>>>>>> layout
 import "../pages/App.scss"
 import { useDispatch, useSelector } from "react-redux";
 import { Main } from "./main/Main";
