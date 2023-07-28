@@ -1,0 +1,87 @@
+.authinfo {
+    background: linear-gradient(135.84deg, #252424 21.75%, #6321DA 122.37%);
+    height: 100%;
+    padding-top: 25px;
+    padding-right: 38px;
+    padding-bottom: 7px;
+    padding-left: 100px;
+}
+
+.authinfo__row {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.authinfo__header {
+    flex: 0 1 auto;
+    align-self: flex-end;
+}
+
+.authinfo-header__text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.authinfo__main {
+    flex: 1 1 auto;
+    align-self: flex-start;
+    margin-top: 80px;
+}
+
+.authinfo-main__row {
+    display: flex;
+    flex-direction: column;
+}
+
+.authinfo-main__title {
+    flex: 0 1 auto;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: #FFFFFF;
+    margin-bottom: 23px;
+}
+
+.authinfo-main__name {
+    flex: 0 1 auto;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    color: #FFFFFF;
+    margin-bottom: 35px;
+    margin-left: 60px;
+}
+
+.authinfo-main__description {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #D8D8D8;
+    margin-top: 17px;
+    margin-left: 24px;
+}
+
+.authinfo__footer {
+    flex: 0 1 auto;
+    align-self: center;
+}
+
+.authinfo-footer__text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+}

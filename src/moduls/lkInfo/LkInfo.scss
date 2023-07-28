@@ -1,0 +1,18 @@
+.lkinfo__container {
+    padding: 85px 97px 83px 94px;
+}
+
+.lkinfo__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lkinfo__base {
+    margin-right: 230px;
+}
+
+@media (max-width:1750px){
+    .lkinfo__base {
+        margin-right: 50px;
+    }
+}
