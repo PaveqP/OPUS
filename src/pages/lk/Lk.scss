@@ -1,0 +1,19 @@
+.lk {
+    width: 100%;
+    position: relative;
+}
+
+.lk__row {
+    display: flex;
+    flex-direction: column;
+}
+
+.lkseparator {
+    align-self: center;
+}
+
+.lk__addwork {
+    position: absolute;
+    top: 200px;
+    left: 21%;
+}

@@ -1,98 +1,175 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
 
-
 .authform {
-    width: 710px;
-
+    background: linear-gradient(212.18deg, #252424 19.58%, #6321DA 109.93%);
 }
+
+.authform__container {
+    background: #FFFFFF;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 15px 15px 0px;
+    padding-top: 14px;
+    padding-left: 62px;
+    padding-bottom: 46px;
+    padding-right: 62px;
+    min-height: 100vh;
+}
+
 
 .authform__row {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
-.authform__title {
+.authform__header {
     flex: 0 1 auto;
-    align-self: flex-end;
-    font-family: Inter;
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 48px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: white;
-    padding-bottom: 10px;
+}
+
+.authform-header__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.authform-header__logo {
+    flex: 0 1 auto;
+}
+
+.authform-header__backtomain {
+    flex: 0 1 auto;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
 }
 
 .authform__main {
     flex: 0 1 auto;
-    align-self: flex-end;
-    width: 100%;
-    background-color: #D9D9D9;
-    border-radius: 20px;
+    align-self: center;
+    margin-top: 54px;
 }
 
 .authform-main__row {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+}
+
+.authform-main__title {
+    flex: 0 1 auto;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: #162938;
+    margin-bottom: 43px;
 }
 
 .authform-main__input {
     flex: 0 1 auto;
-    align-self: center;
-    width: 95%;
-    padding-bottom: 25px;
+    align-self: flex-start;
+    width: 100%;
+    margin-bottom: 18px;
 }
 
-.authform-main__input:first-child {
-    padding-top: 80px;
+.authform-main__input:nth-child(6) {
+    margin-bottom: 0px;
 }
 
-.authform-main__input:nth-child(5) {
-    padding-bottom: 0;
+.authform-main__name {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #162938;
+    margin-bottom: 13px;
 }
 
 .authform-main__actions {
     flex: 0 1 auto;
-    align-self: center;
-    padding-top: 35px;
-    padding-bottom: 60px;
-    padding: 60px 65px;
+    margin-top: 210px;
 }
 
 .authform-actions__row {
     display: flex;
+    flex-direction: column;
 }
 
-.authform-actions__button {
+.authform-actions__buttonenter {
     flex: 0 1 auto;
     align-self: center;
     text-align: center;
-    font-family: Inter;
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 39px;
-    letter-spacing: 0em;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
     color: #FFFFFF;
-    border-radius: 20px;
-    background: #272727;
-    padding: 10px 25px;
+    box-shadow: 0px 0px 4px #272626;
+    border-radius: 5px;
+    background: linear-gradient(91.7deg, #322C4C 1.47%, #681BE6 98.59%);
+    padding: 19px 0px 19px 0px;
+    width: 100%;
+    margin-bottom: 19px;
 }
 
 .authform-actions__or {
-    flex: 0 1 auto;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(22, 41, 56, 0.7);
     align-self: center;
-    font-family: Inter;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 29px;
-    letter-spacing: 0em;
-    text-align: left;
-    padding: 0 15px;
-
+    margin-bottom: 19px;
 }
 
-.authform-actions__vk {
+.authform-actions__buttonvk {
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(39, 135, 245, 0.85);
+    border-radius: 5px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+    padding: 8px 158px 8px 129px;
+    margin-bottom: 19px;
+}
+
+.buttonvk__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonvk__img {
     flex: 0 1 auto;
-    align-self: center;
+}
+
+.buttonvk__text {
+    flex: 0 1 auto;
+    margin-left: 17px;
+}
+
+.authform-actions__buttonreg {
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(87, 43, 185, 0.85);
+    border-radius: 5px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+    padding: 17px 0px 17px 0px;
+    width: 100%;
 }

@@ -1,6 +1,7 @@
 
-import {Lk} from './lk/Lk'
 import { Authorization } from "./authorization/Authorization"
+import {Lk} from './lk/Lk'
+import { Settings } from "./settings/Settings"
 import "../pages/App.scss"
 
 function App() {
