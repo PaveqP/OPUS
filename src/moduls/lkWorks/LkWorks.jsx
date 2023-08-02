@@ -1,5 +1,5 @@
 import "./LkWorks.scss"
-import { AddWork } from "../../UI/addWork/AddWork"
+import { AddWorkButton } from "../../UI/addWorkButton/AddWorkButton"
 import { Work } from "../../UI/work/Work"
 
 function LkWorks() {
@@ -56,7 +56,7 @@ function LkWorks() {
                                 likes={"228"}
                                 views={"228"}
                             />
-                            <AddWork />
+                            <AddWorkButton />
                         </div>
                     </div>
                 </div>

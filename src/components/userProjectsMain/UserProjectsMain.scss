@@ -1,0 +1,64 @@
+.userprojectmain{
+    background: var(--unnamed, #FFF);
+    border-radius: 20px 20px 0px 0px;
+    width:100%;
+}
+
+.upm__container{
+    padding:40px;
+}
+
+.upm__column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upm__title{
+    margin-bottom: 47px;
+    color: var(--material-theme-black, #000);
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.upm__number{
+    margin-bottom: 47px;
+    color: #B133B4;
+    font-family: Manrope;
+    font-size: 256px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 256px */
+}
+
+.upm__descrition{
+    margin-bottom: 24px;
+    color: var(--material-theme-sys-light-on-primary-container, #21005D);
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.upm__add{
+    width:100%;
+}
+
+.upm-add__button{
+    padding: 20px 0;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #671CE5 0%, #2F2B43 100%);
+    text-align: center;
+    width: 100%;
+    color: var(--unnamed, #FFF);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
