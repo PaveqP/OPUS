@@ -7,7 +7,7 @@ import "../pages/App.scss"
 function App() {
   return (
     <div className="App">
-      <Settings />
+      <Registration />
     </div>
   );
 }
