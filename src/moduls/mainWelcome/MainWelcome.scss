@@ -1,0 +1,42 @@
+.mainwelcome{
+    width: 55%;
+}
+
+
+.mw__container{
+    
+    padding:70px 0px 0px 100px;
+}
+
+.mw__column{
+    display:flex;
+    flex-direction: column;
+}
+
+.mw__title{
+    width: 100%;
+    margin-bottom: 60px;
+    color: var(--unnamed, #FFF);
+    font-family: Manrope;
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 128px */
+}
+
+.mw__description{
+    width: 100%;
+}
+
+.mw-description__row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mw-description__projects{
+    width:50%;
+}
+
+.mw-description__statistics{
+    width: 43%;
+}
