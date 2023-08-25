@@ -1,17 +1,37 @@
+const SET_AUTH = "SET_AUTH"
+const LOGOUT = "LOGOUT"
+
+
 const defaultState = {
-    id: '1',
+    currentUser: {},
     isAuth: false,
-    name: 'hello',
-    profile: 'it',
-    age: '20',
-    gender: 'man',
-    avatar: 'src//',
-    descript: 'none',
+
 }
 
 export const userReducer = (state = defaultState, action) => {
     switch(action.type){
+        case SET_AUTH:
+            return{
+                ...state,
+                currentUser: action.payload,
+                isAuth: true,
+            }
+
+        case LOGOUT:
+            localStorage.removeItem('token')
+            localStorage.removeItem('vkToken')
+            return{
+                ...state,
+                currentUser: {},
+                isAuth: false,
+            }
+
         default:
             return state
     }
 }
+
+export const SetAuth = data => ({type: SET_AUTH, payload: data})
+
+export const logout = () => ({type: LOGOUT})
+

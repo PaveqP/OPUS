@@ -1,15 +1,54 @@
+import { useEffect, useState } from "react"
 import "./GeneralSettings.scss"
+import { Link } from "react-router-dom"
+import { useSelector } from "react-redux"
+
+import { setUserGeneralSettings } from "../../actions/EditUser"
 
 function GeneralSettings() {
+
+    const [login, setLogin] = useState('')
+    const [email, setEmail] = useState('')
+    const [name, setName] = useState('')
+    const [city, setCity] = useState('')
+
+    const userModel = useSelector(state => state.user.currentUser)
+
+    useEffect(() => {
+        
+    })
+
+    function handleLoginChange(e) {
+        setLogin(e.target.value);
+    }
+    function handleNameChange(e) {
+        setName(e.target.value);
+    }
+    function handleEmailChange(e) {
+        setEmail(e.target.value);
+    }
+    function handleCityChange(e) {
+        setCity(e.target.value);
+    }
+
+    const updateData = (id, firstname, nickname) => {
+        if(id, nickname, firstname){
+            setUserGeneralSettings(id, firstname, nickname, userModel.email)
+        } else{
+            alert('Пожалуйста, укажите все обязательные поля')
+        }
+    }
+
+
     return (
         <div className="generalsettings">
             <div className="gs__container">
                 <div className="gs__column">
                     <div className="gs__navigation">
                         <div className="gs-navigation__row">
-                            <a className="gs-navigation__general" href="#">Общие</a>
-                            <a className="gs-navigation__profile" href="#">Профиль</a>
-                            <a className="gs-navigation__personal" href="#">Личные данные</a>
+                            <Link className="gs-navigation__general" to='/generalsettings'>Общие</Link>
+                            <Link className="gs-navigation__profile" to='/profilesettings'>Профиль</Link>
+                            <Link className="gs-navigation__personal" to='/personalsettings'>Личные данные</Link>
                         </div>
                     </div>
                     <div className="gs__description">
@@ -27,13 +66,25 @@ function GeneralSettings() {
                                         <div className="gsform-login__text">
                                             Логин: <span className="gsform__redstar">*</span>
                                         </div>
-                                        <input type="text" className="gsform-login__input" />
+                                        <input 
+                                            type="text" 
+                                            className="gsform-login__input" 
+                                            value={login}
+                                            placeholder={userModel.nickname ? userModel.nickname : 'Введите логин'}
+                                            onChange={handleLoginChange}
+                                        />
                                     </div>
                                     <div className="gsform-left__name">
                                         <div className="gsform-name__text">
                                             Имя: <span className="gsform__redstar">*</span>
                                         </div>
-                                        <input type="text" className="gsform-name__input" />
+                                        <input 
+                                            type="text" 
+                                            className="gsform-name__input" 
+                                            value={name}
+                                            placeholder={(userModel.firstname && userModel.lastname) ? userModel.firstname + ' ' + userModel.lastname: 'Введите имя'}
+                                            onChange={handleNameChange}
+                                        />
                                     </div>
                                     <div className="gsform-left__private">
                                         <div className="gsform-private__row">
@@ -61,16 +112,32 @@ function GeneralSettings() {
                                         <div className="gsform-email__text">
                                             Email: <span className="gsform__redstar">*</span>
                                         </div>
-                                        <input type="text" className="gsform-email__input" />
+                                        <input 
+                                            type="text" 
+                                            disabled="disabled"
+                                            className="gsform-email__input" 
+                                            value={userModel.email}
+                                            placeholder={userModel.email ? userModel.email : 'Введите email'}
+                                            onChange={handleEmailChange}
+                                        />
                                     </div>
                                     <div className="gsform-right__city">
                                         <div className="gsform-city__text">
                                             Город:
                                         </div>
-                                        <input type="text" className="gsform-city__input" />
+                                        <input 
+                                            type="text" 
+                                            className="gsform-city__input" 
+                                            value={city}
+                                            placeholder={'Введите город'}
+                                            onChange={handleCityChange}
+                                        />
                                     </div>
                                     <div className="gsform-right__save">
-                                        <button className="gsform-save__button">Сохранить</button>
+                                        <button 
+                                            className="gsform-save__button"
+                                            onClick={() => updateData(userModel.id, name, login, email)}
+                                        >Сохранить</button>
                                     </div>
                                     <div className="gsform-right__newpass">
                                         <div className="gsform-newpass__text">

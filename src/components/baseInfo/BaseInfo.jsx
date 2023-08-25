@@ -3,16 +3,27 @@ import { Avatar } from "../../UI/avatar/Avatar"
 import { UserData } from "../../UI/userData/UserData"
 import { LkContacs } from "../lkContacs/LkContacs"
 import { LkSettings } from "../lkSettings/LkSetiings"
+import { Link } from "react-router-dom"
+import { useSelector } from "react-redux"
+
 
 function BaseInfo() {
+
+    const userModel = useSelector(state => state.user.currentUser)
+
     return (
         <div className="baseinfo">
             <div className="baseinfo__row">
                 <div className="baseinfo__avatar">
-                    <Avatar img={require("../../UI/utils/img/defaultavatar.png")} />
+                    {userModel.photo ?
+                        <Avatar img={userModel.photo} />
+                        :
+                        <Avatar img={require("../../UI/utils/img/defaultavatar.png")} />
+                    }
+                    
                 </div>
                 <div className="baseinfo__data">
-                    <UserData login={"Genius_User"} name={"Vladimir"} surname={"PUTIN"} />
+                    <UserData login={userModel.nickname ? userModel.nickname : 'defaultUser'} name={userModel.firstname} surname={userModel.lastname} />
                 </div>
                 <div className="baseinfo__contacs">
                     <LkContacs />
@@ -21,7 +32,9 @@ function BaseInfo() {
                     <LkSettings />
                 </div>
                 <div className="baseinfo__edit">
-                    <button className="baseinfo-edit__button">Редактировать</button>
+                    <Link to='/generalsettings'>
+                        <button className="baseinfo-edit__button">Редактировать</button>
+                    </Link>
                 </div>
             </div>
         </div>

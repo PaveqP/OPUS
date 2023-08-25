@@ -1,4 +1,5 @@
 import "./PersonalSettings.scss"
+import { Link } from "react-router-dom"
 
 function PersonalSettings() {
     return (
@@ -7,9 +8,9 @@ function PersonalSettings() {
                 <div className="ps__column">
                     <div className="ps__navigation">
                         <div className="ps-navigation__row">
-                            <a className="ps-navigation__general" href="#">Общие</a>
-                            <a className="ps-navigation__profile" href="#">Профиль</a>
-                            <a className="ps-navigation__personal" href="#">Личные данные</a>
+                            <Link className="ps-navigation__general" to='/generalsettings'>Общие</Link>
+                            <Link className="ps-navigation__profile" to='/profilesettings'>Профиль</Link>
+                            <Link className="ps-navigation__personal" to='/personalsettings'>Личные данные</Link>
                         </div>
                     </div>
                     <div className="ps__description">

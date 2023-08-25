@@ -2,6 +2,7 @@ import "./ProfileSettings.scss"
 import { Avatar } from "../../UI/avatar/Avatar"
 import { Ability } from "../../UI/ability/Ability"
 import { ChooseAbility } from "../../UI/chooseAbility/ChooseAbility"
+import { Link } from "react-router-dom"
 
 function ProfileSettings() {
     return (
@@ -10,9 +11,9 @@ function ProfileSettings() {
                 <div className="profs__column">
                     <div className="profs__navigation">
                         <div className="profs-navigation__row">
-                            <a className="profs-navigation__general" href="#">Общие</a>
-                            <a className="profs-navigation__profile" href="#">Профиль</a>
-                            <a className="profs-navigation__personal" href="#">Личные данные</a>
+                            <Link className="profs-navigation__general" to='/generalsettings'>Общие</Link>
+                            <Link className="profs-navigation__profile" to='/profilesettings'>Профиль</Link>
+                            <Link className="profs-navigation__personal" to='/personalsettings'>Личные данные</Link>
                         </div>
                     </div>
                     <div className="profs__description">

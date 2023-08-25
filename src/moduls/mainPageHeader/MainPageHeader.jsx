@@ -1,5 +1,6 @@
 import "./MainPageHeader.scss"
 import { Logo } from "../../UI/logo/Logo"
+import { Link } from "react-router-dom"
 
 function MainPageHeader() {
     return (
@@ -24,9 +25,11 @@ function MainPageHeader() {
                                 <button className="mph-lk__portfoliobutton">Пополнить портфолио</button>
                             </div>
                             <div className="mph-lk__lk">
-                                <button className="mph-lk__lkbutton">
-                                    <img src={require("../../UI/utils/img/lk.png")} alt="#" />
-                                </button>
+                                <Link to='/login'>
+                                    <button className="mph-lk__lkbutton">
+                                        <img src={require("../../UI/utils/img/lk.png")} alt="#" />
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </div>

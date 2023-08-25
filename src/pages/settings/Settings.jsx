@@ -5,16 +5,27 @@ import { GeneralSettings } from "../../moduls/generalSettings/GeneralSettings"
 import { PersonalSettings } from "../../moduls/personalSettings/PersonalSettings"
 import { ProfileSettings } from "../../moduls/profileSettings/ProfileSettings"
 
-function Settings() {
+function Settings({type}) {
     return (
         <div className="settings">
             <div className="settings__row">
                 <div className="settings__header">
                     <MainHeader />
                 </div>
-                <div className="settings__main">
-                    <ProfileSettings />
-                </div>
+                {type === 'general' ?
+                    <div className="settings__main">
+                        <GeneralSettings />
+                    </div>
+                : type === 'personal' ?
+                    <div className="settings__main">
+                        <PersonalSettings />
+                    </div>
+                : 
+                    <div className="settings__main">
+                        <ProfileSettings />
+                    </div>
+                }
+                
                 <div className="settings__footer">
                     <MainFooter />
                 </div>

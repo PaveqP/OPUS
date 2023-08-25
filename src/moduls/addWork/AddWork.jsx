@@ -2,7 +2,7 @@ import "./AddWork.scss"
 import { AddWorkLink } from "../../UI/addWorkLink/AddWorkLink"
 import { AddWorkImage } from "../../UI/addWorkmage/AddWorkImage"
 
-function AddWork() {
+function AddWork({setShowModal, showModal}) {
     return (
         <div className="addwork">
             <div className="addwork__container">
@@ -10,7 +10,7 @@ function AddWork() {
                     <div className="addwork__title">
                         <div className="addwork-title__wrapper">
                             <div className="addwork-title__exit">
-                                <button className="add-exit__button">
+                                <button className="add-exit__button" onClick={() => setShowModal(!showModal)}>
                                     <img src={require("../../UI/utils/img/addworkexit.png")} alt="#" />
                                 </button>
                             </div>
