@@ -1,12 +1,13 @@
 import "./RegistrationForm.scss"
 import { InputAuth } from "../../UI/inputAuth/InputAuth"
 import { MiniLogo } from "../../UI/miniLogo/MiniLogo"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { registartion } from "../../actions/User";
 import { Link } from "react-router-dom";
 import { ACCESS_TOKEN_LINK } from "../../vkActions/vkConfig";
 
 function RegistrationForm() {
+
 
     const [name, setName] = useState('');
     const [surname, setSurname] = useState('');
@@ -87,12 +88,14 @@ function RegistrationForm() {
                                     <a href={ACCESS_TOKEN_LINK}>
                                     <button className="regform-actions__buttonvk">
                                         <div className="buttonvk__row">
+
                                             <div className="buttonvk__img">
                                                 <img src={require("../../UI/utils/img/vk.png")} alt="#"></img>
                                             </div>
                                             <div className="buttonvk__text">
                                                 Войти через ВК
                                             </div>
+                                            
                                         </div>
                                     </button>
                                     </a>

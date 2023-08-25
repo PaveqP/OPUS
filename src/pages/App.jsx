@@ -2,13 +2,13 @@ import { Authorization } from "./authorization/Authorization"
 import { Registration } from "./Registration/Registration";
 import { ReactDOM, useEffect } from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
-
+import { Lk } from './lk/Lk'
+import { Settings } from "./settings/Settings"
 import "../pages/App.scss"
 import { useDispatch, useSelector } from "react-redux";
 import { Main } from "./main/Main";
 import { SetAuth } from "../store/userReducer";
 import { authentification } from "../actions/User";
-import {Lk} from './lk/Lk'
 
 function App() {
 	const isAuth = useSelector(state => state.user.isAuth)
@@ -16,14 +16,21 @@ function App() {
 	const dispatch = useDispatch()
 
 	const token = localStorage.getItem('token')
-	console.log(isAuth, "from APP")
-	console.log(user, 'from APP')
+	const vkToken = localStorage.getItem('vkToken')
+	console.log(isAuth, "auth state from APP")
+	console.log(user, 'user from APP')
+	console.log(vkToken, 'vktoken from app')
 
 	useEffect(() => {
+
 		if (localStorage.getItem('token'))
 		{
 			dispatch(SetAuth(authentification()))
 		}
+		if (localStorage.getItem('vkToken')){
+			dispatch(SetAuth(user))
+		}
+
 	}, [])
   
   return (
@@ -40,6 +47,9 @@ function App() {
 				:
 				<Routes>
 				<Route exact path="/" element={<Lk/>}/>
+				<Route path="/generalsettings" element={<Settings type='general'/>}/>
+				<Route path="/personalsettings" element={<Settings type='personal'/>}/>
+				<Route path="/profilesettings" element={<Settings type='profile'/>}/>
 				<Route path="/login" element={<Navigate replace to="/" />} />
 				<Route path="/registration" element={<Navigate replace to="/" />} />
 				</Routes>

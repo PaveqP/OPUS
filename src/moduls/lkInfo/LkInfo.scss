@@ -4,14 +4,14 @@
 
 .lkinfo__row {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .lkinfo__base {
     margin-right: 230px;
 }
 
-@media (max-width:1750px){
+@media (max-width:1750px) {
     .lkinfo__base {
         margin-right: 50px;
     }

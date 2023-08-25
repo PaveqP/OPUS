@@ -1,10 +1,15 @@
 import "./LkWorks.scss"
-import { AddWork } from "../../UI/addWork/AddWork"
+import { AddWorkButton } from "../../UI/addWorkButton/AddWorkButton"
 import { Work } from "../../UI/work/Work"
+import { useSelector } from "react-redux"
 
-function LkWorks() {
+function LkWorks({setShowModal, showModal}) {
+
+    const userModel = useSelector(state => state.user.currentUser)
+
     return (
         <div className="lkworks">
+        
             <div className="lkworks__container">
                 <div className="lkworks__row">
                     <div className="lkworks__title">
@@ -20,8 +25,20 @@ function LkWorks() {
                         </div>
                     </div>
                     <div className="lkworks__works">
+                        
                         <div className="lkworks__works-row">
-                            <Work
+                            {userModel.works &&
+                                userModel.works.map((work) => {
+                                    <Work
+                                        id={work.id}
+                                        img={work.path}
+                                        title={work.name}
+                                        //categories={"React, Js, HTML"}
+                                        //likes={"228"}
+                                        //views={"228"}
+                                    />
+                                })
+                            /* <Work
                                 img={require("../../UI/utils/img/workexample.png")}
                                 title={"Your Books From The Best Writter"}
                                 categories={"React, Js, HTML"}
@@ -55,8 +72,8 @@ function LkWorks() {
                                 categories={"React, Js, HTML"}
                                 likes={"228"}
                                 views={"228"}
-                            />
-                            <AddWork />
+                            /> */}
+                            <AddWorkButton setShowModal={setShowModal} showModal={showModal}/>
                         </div>
                     </div>
                 </div>
