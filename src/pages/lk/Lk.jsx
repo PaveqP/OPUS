@@ -5,12 +5,13 @@ import { MainFooter } from '../../moduls/mainFooter/MainFooter'
 import { Lklkpinnedwork } from '../../moduls/lkPinnedWork/LkPinnedWork'
 import { LkWorks } from '../../moduls/lkWorks/LkWorks'
 import { AddWork } from '../../moduls/addWork/AddWork'
+import { LkSwitcher } from '../../components/lkSwitcher/LkSwitcher'
 import "./Lk.scss"
 import { useState } from 'react'
 
 
 
-function Lk() {
+function Lk({profile, setProfile, projects, setProjects}) {
 
     const [showModal, setShowModal] = useState(false)
     
@@ -25,6 +26,9 @@ function Lk() {
                     <div className="lk__row">
                         <div className="mainheader">
                             <MainHeader />
+                        </div>
+                        <div>
+                            <LkSwitcher profile={profile} setProfile={setProfile} projects={projects} setProjects={setProjects}/>
                         </div>
                         <div className="lkInfo">
                             <LkInfo />
