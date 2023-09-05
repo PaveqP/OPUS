@@ -9,7 +9,7 @@ import {store} from '../store/index'
 
 export const registartion = async (name, surname, email, password) => {
     try {
-        const response = await axios.post(`http://90.156.210.196/api/v1/enter/registration`, {
+        const response = await axios.post(`http://90.156.210.196:8080/api/v1/enter/registration`, {
             firstname: name,
             lastname: surname,
             email: email,
@@ -28,7 +28,7 @@ export const authorization = async (email, password) => {
         console.log("called with: ", email, password)
 
         try {
-            const response = await axios.post(`http://90.156.210.196/api/v1/enter/auth`, {
+            const response = await axios.post(`http://90.156.210.196:8080/api/v1/enter/auth`, {
                 email: email,
                 password: password
             })
@@ -51,7 +51,7 @@ export const authorization = async (email, password) => {
 
 export const authentification = async () => {
     try {
-        const response = await axios.get(`http://90.156.210.196/api/v1/enter/trust`, 
+        const response = await axios.get(`http://90.156.210.196:8080/api/v1/enter/trust`, 
         {
             headers: {Authorization: `Bearer ${localStorage.getItem('token')}`}
         })
@@ -67,7 +67,7 @@ export const authentification = async () => {
 
 export const getInfoAboutUser = async () => {
     try {
-        const response = await axios.get(`http://90.156.210.196/api/v1/user`, 
+        const response = await axios.get(`http://90.156.210.196:8080/api/v1/user`, 
         {
             headers: {Authorization: `Bearer ${localStorage.getItem('token')}`}
         })

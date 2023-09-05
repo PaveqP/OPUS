@@ -14,7 +14,7 @@ export const setUserGeneralSettings = async (id, firstname, nickname, email) => 
         dateOfBirth: '01.05.99',
     })
     try {
-        const response = await axios.post(`http://90.156.210.196/api/v1/edit`, 
+        const response = await axios.post(`http://90.156.210.196:8080/api/v1/edit`, 
         {
             headers: {Authorization: `Bearer ${localStorage.getItem('token')}`},
             id: id,
