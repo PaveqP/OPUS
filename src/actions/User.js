@@ -12,9 +12,6 @@ export const registartion = async (name, surname, email, password) => {
             email: email,
             password: password
         })
-        //alert("Okay")
-        //setTimeout(authorization(email, password), 5000)
-        //setTimeout(authentification(), 10000)
         alert('Вы успешно зарегистрированы')
     } catch (e) {
         alert("Not okay")
@@ -56,20 +53,3 @@ export const authentification = async () => {
         alert(error, "auth")
     }
 }
-
-//https://api.vk.com/oauth/access_token?v=5.21&client_id=<app_id>&client_secret=<app_secret>&grant_type=client_credentials
-
-/*
-export const vkAuth = async () => {
-    try{
-        const response = await axios.get('http://localhost:8080/api/v1/enter/vk')
-
-        //localStorage.setItem('token', response.data.token)
-        //authentification()
-        console.log(response)
-
-    } catch (error) {
-        alert(error, 'from catch')
-    }
-}
-*/
