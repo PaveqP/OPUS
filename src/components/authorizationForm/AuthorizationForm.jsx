@@ -1,12 +1,13 @@
 import "./AuthorizationForm.scss"
 import { InputAuth } from "../../UI/inputAuth/InputAuth"
 import { MiniLogo } from "../../UI/miniLogo/MiniLogo"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { authorization } from "../../actions/User";
 import { ACCESS_TOKEN_LINK } from "../../vkActions/vkConfig";
 
 function AuthorizationForm() {
+
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -22,9 +23,11 @@ function AuthorizationForm() {
                             <div className="authform-header__logo">
                                 <MiniLogo />
                             </div>
-                            <div className="authform-header__backtomain">
-                                Главная
-                            </div>
+                            <Link to='/'>
+                                <div className="authform-header__backtomain">
+                                    Главная
+                                </div>
+                            </Link>
                         </div>
                     </div>
                     <div className="authform__main">

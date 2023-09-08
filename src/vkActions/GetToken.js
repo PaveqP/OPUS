@@ -1,5 +1,8 @@
 export const getToken = () => {
     const currentURL = window.location.href
+    if (!currentURL.includes('#')){
+        return 'no token'
+    }
     const allParams = currentURL.split('#')[1]
     const setOfParams = allParams.split('&')
     const checkToken = setOfParams[0].split('=')

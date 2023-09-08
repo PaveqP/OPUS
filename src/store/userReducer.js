@@ -1,9 +1,11 @@
 const SET_AUTH = "SET_AUTH"
 const LOGOUT = "LOGOUT"
 
+
 const defaultState = {
     currentUser: {},
     isAuth: false,
+
 }
 
 export const userReducer = (state = defaultState, action) => {
@@ -12,16 +14,18 @@ export const userReducer = (state = defaultState, action) => {
             return{
                 ...state,
                 currentUser: action.payload,
-                isAuth: true
+                isAuth: true,
             }
+
         case LOGOUT:
             localStorage.removeItem('token')
+            localStorage.removeItem('vkToken')
             return{
                 ...state,
                 currentUser: {},
-                isAuth: false
+                isAuth: false,
             }
-            
+
         default:
             return state
     }
@@ -30,3 +34,4 @@ export const userReducer = (state = defaultState, action) => {
 export const SetAuth = data => ({type: SET_AUTH, payload: data})
 
 export const logout = () => ({type: LOGOUT})
+
