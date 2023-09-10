@@ -3,6 +3,7 @@ import { LkSwitcher } from '../../components/lkSwitcher/LkSwitcher'
 import { MainHeader } from '../../moduls/mainHeader/MainHeader'
 import { ProjectFilters } from '../../components/projectFilters/ProjectFilters'
 import { ProjectSmallCard } from '../../components/projectSmallCard/ProjectSmallCard'
+import { MainFooter } from '../../moduls/mainFooter/MainFooter'
 
 import './Projects.scss'
 
@@ -32,6 +33,9 @@ function Projects({profile, setProfile, projects, setProjects}) {
         <div>
             <LkSwitcher profile={profile} setProfile={setProfile} projects={projects} setProjects={setProjects}/>
         </div>
+        <div className='projects__title'>
+          Все проекты
+        </div>
         <div>
             <ProjectFilters filterType={filterType} setFilterType={handleFilterChange} owner={owner} setOwner={setOwner} member={member} setMember={setMember}/>
         </div>
@@ -42,6 +46,7 @@ function Projects({profile, setProfile, projects, setProjects}) {
               target={'Расширить деловые связи, сделать мир лучше и проще для аудитории в возрасте 16-23 лет. Мы - будущее, хотя нет, мы - настоящее!'} 
               owner={'livermoney'} 
               tag={'Аналитика Бизнес'}
+              id='1'
             />
         </div>
         <div>
@@ -51,6 +56,7 @@ function Projects({profile, setProfile, projects, setProjects}) {
               target={'Расширить деловые связи, сделать мир лучше и проще для аудитории в возрасте 16-23 лет. Мы - будущее, хотя нет, мы - настоящее!'} 
               owner={'livermoney'} 
               tag={'Аналитика Бизнес'}
+              id='2'
             />
         </div>
         <div>
@@ -60,7 +66,11 @@ function Projects({profile, setProfile, projects, setProjects}) {
               target={'Расширить деловые связи, сделать мир лучше и проще для аудитории в возрасте 16-23 лет. Мы - будущее, хотя нет, мы - настоящее!'} 
               owner={'livermoney'} 
               tag={'Аналитика Бизнес'}
+              id='3'
             />
+        </div>
+        <div>
+            <MainFooter/>
         </div>
     </>
   )

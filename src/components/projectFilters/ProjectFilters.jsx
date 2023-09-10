@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 import './ProjectFilters.scss'
 
 function ProjectFilters({filterType, setFilterType, owner, setOwner, member, setMember}) {
@@ -18,6 +20,12 @@ function ProjectFilters({filterType, setFilterType, owner, setOwner, member, set
                   <option value="tags">Тэги</option>
                   <option value="date">Дата</option>
               </select>
+
+              <Link to='/addproject'>
+                <button className="projectfilters__row-add-project">
+                    Создать проект
+                </button>
+              </Link>
 
               <section className="projectfilters__role">
                 <div className="projectfilters____role-row">
