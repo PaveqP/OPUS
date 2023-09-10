@@ -1,0 +1,45 @@
+.newscard{}
+
+.nc__row{
+    display: flex;
+}
+
+.nc__picture{
+    margin-right: 43px;
+}
+
+.nc__main{}
+
+.nc__main-column{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nc__main-text{
+    white-space: pre-line;
+    overflow: hidden;
+    color: var(--, #000);
+    text-overflow: ellipsis;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 39.687px; 
+    margin-bottom: 20px;
+}
+
+.nc__main-button{
+    width:40%;
+    padding: 20px 32px;
+    border-radius: 25px;
+    border: 3px solid #621ED6;
+    text-align: center;
+    color: var(--material-theme-black, #000);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}

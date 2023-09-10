@@ -1,0 +1,108 @@
+.findteamcard{
+    border-radius: 20px;
+    background: var(--material-theme-white, #FFF);
+    width: 702px;
+    height: 414px;
+}
+
+.ftc__container{
+    padding: 40px;
+}
+
+.ftc__column{
+    display: flex;
+    flex-direction: column;
+}
+
+.ftc__header{
+    margin-bottom: 24px;
+}
+
+.ftc__header-row{
+    display: flex;
+}
+
+.ftc__header-avatar{
+    margin-right: 24px;
+}
+
+.ftc__header-info{}
+
+.ftc__info-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.ftc__info-nameandsurname{
+    margin-bottom: 16px;
+    color: var(--, #000);
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.ftc__info-skills{}
+
+.ftc__skills-row{
+    display: flex;
+}
+
+.ftc__skill-1{
+    margin-right: 16px;
+    color: var(--, #7200FE);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.ftc__skill-2{
+    margin-right: 16px;
+    color: var(--, #7200FE);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.ftc__skill-3{
+    color: var(--, #7200FE);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.ftc__age{
+    margin-bottom: 10px;
+    color: var(--, #000);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.ftc__city{
+    margin-bottom: 10px;
+    color: var(--, #000);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.ftc__description{
+    color: var(--, #000);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

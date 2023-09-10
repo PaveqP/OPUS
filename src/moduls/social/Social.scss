@@ -1,0 +1,36 @@
+.s__container{
+    padding-left: 100px;
+}
+
+.s__row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.s__left{
+    align-self: center;
+}
+
+.s__title{
+    color: var(--, #000);
+    font-family: Manrope;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 72px */
+    margin-bottom: 76px;
+}
+
+.s__icons-row{
+    display: flex;
+}
+
+.s__icons-vk{
+    background: #FFF;
+    margin-left: 69px;
+}
+
+.s__icons-tg{
+    background: #FFF;
+    margin-left: 167px;
+}
