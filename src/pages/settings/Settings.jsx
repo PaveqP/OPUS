@@ -13,7 +13,7 @@ function Settings() {
                     <MainHeader />
                 </div>
                 <div className="settings__main">
-                    <ProfileSettings />
+                    <PersonalSettings />
                 </div>
                 <div className="settings__footer">
                     <MainFooter />

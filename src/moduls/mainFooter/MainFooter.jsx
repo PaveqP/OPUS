@@ -4,50 +4,32 @@ import { Logo } from "../../UI/logo/Logo"
 function MainFooter() {
     return (
         <div className="mainfooter">
-            <div className="mainfooter__container">
-                <div className="mainfooter__row">
-                    <div className="mainfooter__basic">
-                        <div className="basic__row">
-                            <div className="basic__logo">
-                                <Logo />
+            <div className="mf__container">
+                <div className="mf__top">
+                    <div className="mf__top-row">
+                        <div className="mf__top-navigation">
+                            <div className="mf__navigation-row">
+                                <a href="#" className="mf__navigation-about">О нас</a>
+                                <a href="#" className="mf__navigation-spheres">Сферы</a>
+                                <a href="#" className="mf__navigation-findteam">Найти команду</a>
+                                <a href="#" className="mf__navigation-news">Новости</a>
                             </div>
-                            <div className="basic__main">
-                                <p className="basic__point"></p>
-                                <div className="basic-main">главная</div>
-                            </div>
-                            <div className="basic__lk">
-                                <p className="basic__point"></p>
-                                <div className="basic-lk">личный кабинет</div>
-                            </div>
-                            <div className="basic__information">
-                                <p className="basic__point"></p>
-                                <div className="basic-information">информация</div>
+                        </div>
+                        <div className="mf__top-logo"><Logo/></div>
+                        <div className="mf__top-contacs">
+                            <div className="mf__contacs-row">
+                                <div className="mf__contacs-text">Контакты:</div>
+                                <a href="#" className="mf__contacs-website">opus@info.ru</a>
+                                <button className="mf__contacs-vk"><img src={require("../../UI/utils/img/vkfooter.png")} alt="#"/></button>
+                                <button className="mf__contacs-tg"><img src={require("../../UI/utils/img/tgfooter.png")} alt="#"/></button>
                             </div>
                         </div>
                     </div>
-                    <div className="mainfooter__contacs">
-                        <div className="contacs__row">
-                            <div className="contacs__primary">Контакты</div>
-                            <div className="contacs__1">главная</div>
-                            <div className="contacs__2">личный кабинет</div>
-                            <div className="contacs__3">информация</div>
-                        </div>
-                    </div>
-                    <div className="mainfooter__team">
-                        <div className="team__row">
-                            <div className="team__primary">Команда</div>
-                            <div className="team__1">главная</div>
-                            <div className="team__2">личный кабинет</div>
-                            <div className="team__3">информация</div>
-                        </div>
-                    </div>
-                    <div className="mainfooter__cooperation">
-                        <div className="cooperation__row">
-                            <div className="cooperation__primary">Сотрудничество</div>
-                            <div className="cooperation__1">главная</div>
-                            <div className="cooperation__2">личный кабинет</div>
-                            <div className="cooperation__3">информация</div>
-                        </div>
+                </div>
+                <div className="mf__bottom">
+                    <div className="mf__bottom-row">
+                        <div className="mf__bottom-year">© 2023 Opus</div>
+                        <a href="#" className="mf__bottom-politics">Политика конфиденциальности</a>
                     </div>
                 </div>
             </div>
