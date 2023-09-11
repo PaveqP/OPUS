@@ -27,9 +27,12 @@ function MainHeader() {
                     </div>
                     <div className="mainheader__navigation">
                         <div className="navigation__row">
-                            <div className="navigation__backtomain">
-                                <Backtomain />
-                            </div>
+                            <Link to='/'>
+                                <div className="navigation__backtomain">
+                                    <Backtomain />
+                                </div>
+                            </Link>
+                            
                             <div className="navigation__settings">
                                 <Link to='/generalsettings' className="navigation-settings__text">Настройки</Link>
                             </div>
