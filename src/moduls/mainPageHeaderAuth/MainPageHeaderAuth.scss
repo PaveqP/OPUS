@@ -1,29 +1,29 @@
-.mph__container{
+.mpha__container{
     padding: 30px 100px 30px 100px;
 }
 
-.mph__row{
+.mpha__row{
     width:100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.mph__logo{
+.mpha__logo{
     margin-right: 40px;
 }
 
-.mph__menu{
+.mpha__menu{
     margin-right: 40px;
 }
 
-.mph-menu__row{
+.mpha-menu__row{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.mph-menu__spheres{
+.mpha-menu__spheres{
     margin-right: 32px;
     color: var(--unnamed, #F0F0F0);
     font-family: Inter;
@@ -33,7 +33,7 @@
     line-height: normal;
 }
 
-.mph-menu__find{
+.mpha-menu__find{
     margin-right: 32px;
     color: var(--unnamed, #F0F0F0);
     font-family: Inter;
@@ -43,7 +43,7 @@
     line-height: normal;
 }
 
-.mph-menu__create{
+.mpha-menu__create{
     margin-right: 32px;
     color: var(--unnamed, #F0F0F0);
     font-family: Inter;
@@ -53,7 +53,7 @@
     line-height: normal;
 }
 
-.mph-menu__news{
+.mpha-menu__news{
     margin-right: 32px;
     color: var(--unnamed, #F0F0F0);
     font-family: Inter;
@@ -63,7 +63,7 @@
     line-height: normal;
 }
 
-.mph-menu__contacs{
+.mpha-menu__contacs{
     color: var(--unnamed, #F0F0F0);
     font-family: Inter;
     font-size: 24px;
@@ -72,16 +72,16 @@
     line-height: normal;
 }
 
-.mph-lk__row{
+.mpha-lk__row{
     display: flex;
     align-items: center;
 }
 
-.mph-lk__portfolio{
+.mpha-lk__portfolio{
     margin-right: 36px;
 }
 
-.mph-lk__portfoliobutton{
+.mpha-lk__portfoliobutton{
     border-radius: 25px;
     border: 2px solid var(--unnamed, #FFF);
     color: var(--unnamed, #FFF);
@@ -95,6 +95,6 @@
     background-color: rgba(28,28,28,0);
 }
 
-.mph-lk__lkbutton{
+.mpha-lk__lkbutton{
     background-color: rgba(28,28,28,0);
 }

@@ -1,19 +1,18 @@
-.mainwelcome{
+.mainwelcomeauth{
     width: 55%;
 }
 
 
-.mw__container{
-    
+.mwa__container{
     padding:70px 0px 0px 100px;
 }
 
-.mw__column{
+.mwa__column{
     display:flex;
     flex-direction: column;
 }
 
-.mw__title{
+.mwa__title{
     width: 100%;
     margin-bottom: 60px;
     color: var(--unnamed, #FFF);
@@ -24,20 +23,20 @@
     line-height: 100%; /* 128px */
 }
 
-.mw__description{
+.mwa__description{
     width: 100%;
 }
 
-.mw-description__row{
+.mwa-description__row{
     display: flex;
     justify-content: space-between;
 }
 
-.mw-description__projects{
+.mwa-description__projects{
     width:50%;
 }
 
-.mw-description__statistics{
+.mwa-description__statistics{
     padding-top: 60px;
     width: 43%;
 }
