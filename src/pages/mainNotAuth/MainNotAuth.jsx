@@ -1,6 +1,6 @@
-import "./Main.scss"
-import { MainPageHeader } from "../../moduls/mainPageHeader/MainPageHeader"
-import { MainWelcome } from "../../moduls/mainWelcome/MainWelcome"
+import "./MainNotAuth.scss"
+import { MainPageHeaderNotAuth } from "../../moduls/mainPageHeaderNotAuth/MainPageHeaderNotAuth"
+import { MainWelcomeNotAuth } from "../../moduls/mainWelcomeNotAuth/MainWelcomeNotAuth"
 import { MainSpheres } from "../../moduls/mainSpheres/MainSpheres"
 import { FindTeam } from "../../moduls/findTeam/FindTeam"
 import { CreateTeam } from "../../moduls/createTeam/CreateTeam"
@@ -8,33 +8,33 @@ import { Social } from "../../moduls/social/Social"
 import { News } from "../../moduls/news/News"
 import { MainFooter } from "../../moduls/mainFooter/MainFooter"
 
-function Main() {
+function MainNotAuth() {
     return (
-        <div className="Main">
-            <div className="main__headerandwelcome">
-                <MainPageHeader />
-                <MainWelcome />
+        <div className="mainnotauth">
+            <div className="mna__headerandwelcome">
+                <MainPageHeaderNotAuth />
+                <MainWelcomeNotAuth />
             </div>
-            <div className="main__spheres">
+            <div className="mna__spheres">
                 <MainSpheres />
             </div>
-            <div className="main__findteam">
+            <div className="mna__findteam">
                 <FindTeam />
             </div>
-            <div className="main__createteam">
+            <div className="mna__createteam">
                 <CreateTeam />
             </div>
-            <div className="main__social">
+            <div className="mna__social">
                 <Social />
             </div>
-            <div className="main__news">
+            <div className="mna__news">
                 <News />
             </div>
-            <div className="main__footer">
+            <div className="mna__footer">
                 <MainFooter/>
             </div>
         </div>
     )
 }
 
-export { Main }
+export { MainNotAuth }

@@ -1,0 +1,86 @@
+.mainpageheadernotauth{}
+
+.mphna__container{
+    padding: 30px 100px;
+}
+
+.mphna__row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mphna__logo{}
+
+.mphna__menu{}
+
+.mphna__menu-row{
+    display: flex;
+}
+
+.mphna__menu-about{
+    margin-right: 32px;
+    color: #F0F0F0;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.mphna__menu-spheres{
+    margin-right: 32px;
+    color: #F0F0F0;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.mphna__menu-news{
+    margin-right: 32px;
+    color: #F0F0F0;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.mphna__menu-contacs{
+    color: #F0F0F0;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.mphna__buttons{}
+
+.mphna__buttons-reg{
+    margin-right: 32px;
+    padding: 20px 32px;
+    border-radius: 25px;
+    border: 2px solid #FFF;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    background: rgba(28,28,28,0);
+}
+
+.mphna__buttons-enter{
+    padding: 20px 32px;
+    border-radius: 25px;
+    background: #FFF;
+    color: #000;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
