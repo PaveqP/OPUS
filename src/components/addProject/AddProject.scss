@@ -14,6 +14,7 @@
 .addproject__row-left{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 
     &-image{
         position: relative;
@@ -58,7 +59,8 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    margin-bottom: 16px;
+    margin-top: 15px;
+    margin-bottom: 5px;
 }
 
 .addproject__row-left-tags{
@@ -95,20 +97,19 @@
 }
 
 .addproject__row-left-commerce{
-    &-no{
-
-    }
-    
-    &-no:active{
-
-    }
-
-    &-yes{
-
-    }
-    
-    &-yes:active{
-
+    &-type{
+        cursor: pointer;
+        border-radius: 10px;
+        background: #F0F0F0;
+        padding: 8px 16px;
+        color: #000;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
 }
 

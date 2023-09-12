@@ -6,9 +6,7 @@ import { authentification } from "./User";
 import {store} from '../store/index'
 
 export const addUserWork = async (data) => {
-    // for (var pair of data.entries()) {
-    //     console.log(pair[0]+ ', ' + pair[1]); 
-    // }
+
     console.log(...data, data)
     try {
         const response = await axios.post(`http://90.156.210.196:8080/api/v1/works/upload`, 

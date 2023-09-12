@@ -10,17 +10,18 @@ import { useSelector } from "react-redux"
 function BaseInfo() {
 
     const userModel = useSelector(state => state.user.currentUser)
+    const avatar = useSelector(state => state.user.userPhoto);
 
     return (
         <div className="baseinfo">
             <div className="baseinfo__row">
                 <div className="baseinfo__avatar">
-                    {userModel.photo ?
-                        <Avatar img={userModel.photo} />
-                        :
+                    {!avatar ?
                         <Avatar img={require("../../UI/utils/img/defaultavatar.png")} />
+                        :
+                        <Avatar img={avatar} />
                     }
-                    
+
                 </div>
                 <div className="baseinfo__data">
                     <UserData login={userModel.nickname ? userModel.nickname : 'defaultUser'} name={userModel.firstname} surname={userModel.lastname} />
@@ -28,9 +29,9 @@ function BaseInfo() {
                 <div className="baseinfo__contacs">
                     <LkContacs />
                 </div>
-                <div className="baseinfo__settings">
+                {/* <div className="baseinfo__settings">
                     <LkSettings />
-                </div>
+                </div> */}
                 <div className="baseinfo__edit">
                     <Link to='/generalsettings'>
                         <button className="baseinfo-edit__button">Редактировать</button>

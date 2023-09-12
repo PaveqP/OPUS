@@ -22,9 +22,13 @@ function MainHeader() {
         <div className="mainheader">
             <div className="mainheader__container">
                 <div className="mainheader__row">
-                    <div className="mainheader__logo">
-                        <Logo />
-                    </div>
+
+                    <Link to='/'>
+                        <div className="mainheader__logo">
+                            <Logo />
+                        </div>
+                    </Link>
+                    
                     <div className="mainheader__navigation">
                         <div className="navigation__row">
                             <Link to='/'>
@@ -39,9 +43,11 @@ function MainHeader() {
                             <div className="navigation__help">
                                 <a href="#" className="navigation-help__text">Справка</a>
                             </div>
-                            <div className="navigation__exit" onClick={() => Logout()}>
-                                <Exit />
-                            </div>
+                            <Link to='/'>
+                                <div className="navigation__exit" onClick={() => Logout()}>
+                                    <Exit />
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </div>

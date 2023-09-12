@@ -7,6 +7,8 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .pbc__row-left{
@@ -56,6 +58,7 @@
 .pbc__row-right{
     display: flex;
     flex-direction: column;
+    margin-left: 100px;
 }
 
 .pbc__row-right-config{
@@ -91,7 +94,7 @@
 
 .pbc__row-right-title{
     color: #000;
-    font-family: Manrope;
+    font-family: Inter;
     font-size: 44px;
     font-style: normal;
     font-weight: 800;

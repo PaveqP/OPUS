@@ -23,7 +23,7 @@ function LkWorks({setShowModal, showModal}) {
                                 Загружайте свои лучшие работы и их увидит сообщество. Добавляйте изображения, <br />
                                 описания и оригинальные обложки, тогда портфолио будет максимально эффективным!
                             </div>
-                            <button className="lkworks__description-button">Загрузить</button>
+                            <AddWorkButton className="lkworks__description-button" setShowModal={setShowModal} showModal={showModal}/>
                         </div>
                     </div>
                     <div className="lkworks__works">

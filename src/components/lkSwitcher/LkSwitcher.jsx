@@ -19,7 +19,7 @@ function LkSwitcher({profile, setProfile, projects, setProjects}) {
                 </button>
             }
             {!profile &&
-                <Link to='/'>
+                <Link to='/cabinet'>
                     <button className='lkswitcher__row-profile' onClick={() => switchProfile(!profile)}>
                         Профиль
                     </button>

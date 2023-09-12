@@ -33,7 +33,7 @@ function GeneralSettings() {
 
     const updateData = (id, firstname, nickname) => {
         if(id, nickname, firstname){
-            setUserGeneralSettings(id, firstname, nickname, userModel.email)
+            setUserGeneralSettings(id, firstname, nickname, userModel.email, userModel)
         } else{
             alert('Пожалуйста, укажите все обязательные поля')
         }
@@ -86,7 +86,7 @@ function GeneralSettings() {
                                             onChange={handleNameChange}
                                         />
                                     </div>
-                                    <div className="gsform-left__private">
+                                    {/* <div className="gsform-left__private">
                                         <div className="gsform-private__row">
                                             <div className="gsform-private__text">Профиль открыт</div>
                                             <img src={require("../../UI/utils/img/privateimg.png")} alt="" className="gsform-private__img" />
@@ -103,7 +103,7 @@ function GeneralSettings() {
                                             Подтвердите пароль: <span className="gsform__redstar">*</span>
                                         </div>
                                         <input type="text" className="gsform-confirmpass__input" />
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                             <div className="gs-form__right">
@@ -139,7 +139,7 @@ function GeneralSettings() {
                                             onClick={() => updateData(userModel.id, name, login, email)}
                                         >Сохранить</button>
                                     </div>
-                                    <div className="gsform-right__newpass">
+                                    {/* <div className="gsform-right__newpass">
                                         <div className="gsform-newpass__text">
                                             Новый пароль: <span className="gsform__redstar">*</span>
                                         </div>
@@ -147,7 +147,7 @@ function GeneralSettings() {
                                     </div>
                                     <div className="gsform-right__changepass">
                                         <button className="gsform-changepass__button">Изменить пароль</button>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>

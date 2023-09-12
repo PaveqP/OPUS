@@ -1,7 +1,29 @@
+import { useState } from "react"
 import "./PersonalSettings.scss"
 import { Link } from "react-router-dom"
+import { setUserPersonalSettings } from "../../actions/EditUser"
+import { useSelector } from "react-redux"
+
 
 function PersonalSettings() {
+    
+    const user = useSelector(state => state.user.currentUser)
+
+    const [age, setAge] = useState('')
+    const [phone, setPhone] = useState('')
+
+    function handleAgeChange(e){
+        setAge(e.target.value)
+    }
+
+    function handlePhoneChange(e){
+        setPhone(e.target.value)
+    }
+
+    const sendPersonal = (age, phone) => {
+        setUserPersonalSettings(age, phone, user)
+    }
+
     return (
         <div className="personalsettings">
             <div className="ps__container">
@@ -28,25 +50,38 @@ function PersonalSettings() {
                                         <div className="psform-age__text">
                                             Возраст:
                                         </div>
-                                        <input type="text" className="psform-age__input" />
+                                        <input 
+                                            type="text" 
+                                            className="psform-age__input" 
+                                            value={age}
+                                            onChange={handleAgeChange}
+                                        />
                                     </div>
                                     <div className="psform-left__phone">
                                         <div className="psform-phone__text">
                                             Телефон:
                                         </div>
-                                        <input type="text" className="psform-phone__input" />
+                                        <input 
+                                            type="text" 
+                                            className="psform-phone__input" 
+                                            value={phone}
+                                            onChange={handlePhoneChange}
+                                        />
                                     </div>
-                                    <div className="psform-left__contacs">
+                                    {/* <div className="psform-left__contacs">
                                         <div className="psform-contacs__text">
                                             Контакты
                                         </div>
                                         <select className="psform-contacs__select">
                                             <option selected className="psform-contacs__option">Выберите</option>
                                         </select>
+                                    </div> */}
+                                    <div className="profs-form__save">
+                                        <button className="profs-form__savebutton" onClick={() => sendPersonal(age, phone)}>Сохранить</button>
                                     </div>
                                 </div>
                             </div>
-                            <div className="ps-form__right">
+                            {/* <div className="ps-form__right">
                                 <div className="psform-right__column">
                                     <div className="psform-right__title">Загрузить резюме</div>
                                     <div className="psform-right__add">
@@ -56,7 +91,7 @@ function PersonalSettings() {
                                     </div>
                                     <div className="psform-right__description">Доступные форматы файла: .pdf, .doc, .docx</div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,66 @@
+.mainwelcomenotauth{}
+
+.mwna__container{
+    padding: 70px 100px 200px 0px;
+}
+
+.mwna__column{
+    display: flex;
+    flex-direction: column;
+}
+
+.mwna__title{
+    margin-left: 100px;
+    margin-bottom: 80px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 128px */
+}
+
+.mwna__information{
+    width: 60%;
+    padding: 60px 100px 60px 130px;
+    border-radius: 0px 20px 20px 0px;
+    background: #FFF;
+}
+
+.mwna__information-text1{
+    margin-bottom: 20px;
+    color: #000;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.mwna__information-text2{
+    margin-bottom: 48px;
+    color: #000;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.mwna__actions-row{
+    display: flex;
+    align-items: center;
+}
+
+.mwna__actions-add{
+    margin-right: 24px;
+    padding: 20px 32px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #671CE5 0%, #2F2B43 100%);
+    color: #FFF;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}

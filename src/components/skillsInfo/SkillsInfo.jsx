@@ -4,9 +4,14 @@ import { Specialization } from "../../UI/specialization/Specialization"
 import { AboutMe } from "../../UI/aboutMe/AboutMe"
 import { AddAbility } from "../../UI/addAbility/AddAbility"
 import { Ability } from "../../UI/ability/Ability"
+import { Link } from "react-router-dom"
+import { useSelector } from "react-redux"
 
 
 function SkillsInfo() {
+
+    const user = useSelector(state => state.user.currentUser)
+
     return (
         <div className="skillsinfo">
             <div className="skillsinfo__row">
@@ -16,9 +21,11 @@ function SkillsInfo() {
                             <div className="specialization-text__title">
                                 Специализация:
                             </div>
-                            <button className="specialization-text__settings">
-                                <img alt="#" src={require("../../UI/utils/img/settings.png")} />
-                            </button>
+                            <Link to='/generalsettings'>
+                                <button className="specialization-text__settings">
+                                    <img alt="#" src={require("../../UI/utils/img/settings.png")} />
+                                </button>
+                            </Link>
                         </div>
                     </div>
                     <div className="specialization__add">
@@ -32,18 +39,25 @@ function SkillsInfo() {
                         О себе
                     </div>
                     <div className="aboutme__text">
-                        <AboutMe />
+                        {user.about ?
+                            <AboutMe text={user.about}/>
+                            :
+                            <AboutMe text={"Добавьте информацию о себе в профиль"}/>
+                        }
+                        
                     </div>
                 </div>
-                <div className="skillsinfo__abilities">
+                {/* <div className="skillsinfo__abilities">
                     <div className="abilities__text">
                         <div className="abilities-text__row">
                             <div className="abilities-text__title">
                                 Навыки
                             </div>
-                            <button className="abilities-text__settings">
-                                <img alt="#" src={require("../../UI/utils/img/settings.png")} />
-                            </button>
+                            <Link to='/generalsettings'>
+                                <button className="abilities-text__settings">
+                                    <img alt="#" src={require("../../UI/utils/img/settings.png")} />
+                                </button>
+                            </Link>
                         </div>
                     </div>
                     <div className="abilities__add">
@@ -56,7 +70,7 @@ function SkillsInfo() {
                     <button className="download__button">
                         Скачать резюме
                     </button>
-                </div>
+                </div> */}
             </div>
         </div>
     )

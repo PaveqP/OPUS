@@ -4,8 +4,10 @@ import { useDispatch } from "react-redux";
 import { SetVkRequest } from "../store/userReducer";
 import { SetVkSuccess } from "../store/userReducer";
 import { SetVkFail } from "../store/userReducer";
+import { SetAvatar } from "../store/userReducer";
 
 import {store} from '../store/index'
+import { useState } from "react";
 
 export const registartion = async (name, surname, email, password) => {
     try {
@@ -56,6 +58,7 @@ export const authentification = async () => {
         store.dispatch(SetAuth(response.data))
         console.log(response.data, 'USER')
         getInfoAboutUser()
+        getUserPhoto()
         
     } catch (error) {
         alert(error, "auth")
@@ -75,6 +78,29 @@ export const getInfoAboutUser = async () => {
     } catch (error) {
         alert(error, "auth")
     }
+}
+
+export const getUserPhoto = async () => {
+
+        try {
+            const response = await fetch('http://90.156.210.196:8080/api/v1/user/photo', {
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem('token')}`,
+                },
+            });
+
+            if (response.ok) {
+                const blob = await response.blob();
+                const imageURL = URL.createObjectURL(blob);
+                
+                store.dispatch(SetAvatar(imageURL))
+            } else {
+                console.error('Failed to fetch image');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+        }
+
 }
 
 

@@ -1,10 +1,11 @@
 import { Authorization } from "./authorization/Authorization"
 import {Lk} from './lk/Lk'
 import { Settings } from "./settings/Settings"
-import { Main } from "./main/Main"
 import { Registration } from "./Registration/Registration";
 import { ReactDOM, useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { MainAuth } from "./mainAuth/MainAuth"
+import { MainNotAuth } from "./mainNotAuth/MainNotAuth";
 import "../pages/App.scss"
 import { useDispatch, useSelector } from "react-redux";
 import { SetAuth } from "../store/userReducer";
@@ -50,11 +51,12 @@ function App() {
 				<Routes>
 				<Route path="/registration" element={<Registration/>}/>
 				<Route path="/login" element={<Authorization/>}/>
-				<Route path="/" element={<Main/>} />
+				<Route path="/" element={<MainNotAuth/>} />
 				</Routes>
 				:
 				<Routes>
-				<Route exact path="/" element={<Lk profile={profile} setProfile={setProfile} projects={projects} setProjects={setProjects}/>}/>
+        <Route exact path="/" element={<MainAuth/>}/>
+				<Route exact path="/cabinet" element={<Lk profile={profile} setProfile={setProfile} projects={projects} setProjects={setProjects}/>}/>
 				<Route exact path="/projects" element={<Projects profile={profile} setProfile={setProfile} projects={projects} setProjects={setProjects}/>}/>
 				<Route exact path="/project-info/:id" element={
 					<ProjectBigCard 

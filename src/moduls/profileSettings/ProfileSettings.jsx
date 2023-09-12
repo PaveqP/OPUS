@@ -3,8 +3,56 @@ import { Avatar } from "../../UI/avatar/Avatar"
 import { Ability } from "../../UI/ability/Ability"
 import { ChooseAbility } from "../../UI/chooseAbility/ChooseAbility"
 import { Link } from "react-router-dom"
+import { useState } from "react"
+import { setUserAvatar, setUserProfileSettings } from "../../actions/EditUser"
+import { useSelector } from "react-redux"
 
 function ProfileSettings() {
+
+    const avatar = useSelector(state => state.user.userPhoto);
+    const user = useSelector(state => state.user.currentUser)
+
+    //console.log(avatar)
+
+    const [photo, setPhoto] = useState(null)
+    const [category, setCategory] = useState('');
+    const [about, setAbout] = useState('')
+
+    const handlePhotoChange = (e) => {
+        setPhoto(e.target.files[0]);
+    };
+    function handleCategoryChange(e) {
+        setCategory(e.target.value);
+    }
+    function handleAboutChange(e) {
+        setAbout(e.target.value);
+    }
+
+    const sendAvatar = () => {
+        const data = new FormData()
+        data.append('photo', photo)
+
+        setUserAvatar(data)
+    }
+
+    const sendUserProfileSettings = (specialize, about) => {
+        setUserProfileSettings(specialize, about, user)
+    }
+
+    const getLink = (ava) => {
+        let link = ava.slice(5, ava.length)
+        return link
+    }
+
+    const sendInfo = (specialize, about) => {
+        if(photo){
+            sendAvatar()
+            sendUserProfileSettings(specialize, about)
+        } else{
+            sendUserProfileSettings(specialize, about)
+        }
+    }
+
     return (
         <div className="profilesettings">
             <div className="profs__container">
@@ -30,11 +78,22 @@ function ProfileSettings() {
                                     <div className="profs-main__left">
                                         <div className="profs-main__leftcolumn">
                                             <div className="profs-main__avatar">
-                                                <Avatar img={require("../../UI/utils/img/defaultavatar.png")} />
+                                                {!avatar ?
+                                                    <Avatar img={require("../../UI/utils/img/defaultavatar.png")} />
+                                                    :
+                                                    <Avatar img={avatar} />
+                                                }
+                                                
                                             </div>
-                                            <div className="profs-main__change">
-                                                <button className="profs-main__changebutton">Изменить фото</button>
-                                            </div>
+                                            <label className="profs-main__change">
+                                                <input type="file" className="profs-main__changebutton" onChange={handlePhotoChange} name="file" multiple accept="image/*"/>
+                                                {photo ?
+                                                    <span>{photo.name}</span>
+                                                    :
+                                                    <span>Загрузите изображение</span>
+                                                }
+                                                
+                                            </label>
                                             <div className="profs-main__delete">
                                                 <button className="profs-main__deletebutton">Удалить фото</button>
                                             </div>
@@ -44,12 +103,17 @@ function ProfileSettings() {
                                         <div className="profs-main__rightcolumn">
                                             <div className="profs-main__specialization">
                                                 <div className="profs-specialization__text">Специализация: </div>
-                                                <div className="profs-specialization__subtext">Вы можете выбрать из списка 3 основные области специализации</div>
-                                                <select className="profs-specialization__select">
-                                                    <option selected className="profs-specialization__option">Выберите</option>
+                                                <div className="profs-specialization__subtext">Вы можете выбрать из списка 1 основную область специализации</div>
+                                                <select className="profs-specialization__select" value={category} onChange={handleCategoryChange}>
+                                                    <option selected className="profs-specialization__option" value='default' >Выберите</option>
+                                                    <option selected className="profs-specialization__option" value='design' >Дизайн</option>
+                                                    <option selected className="profs-specialization__option" value='development' >Разработка</option>
+                                                    <option selected className="profs-specialization__option" value='audio' >Аудио/Видео</option>
+                                                    <option selected className="profs-specialization__option" value='analytics' >Аналитика, бизнес</option>
+                                                    <option selected className="profs-specialization__option" value='texts' >Тексты, переводы</option>
                                                 </select>
                                             </div>
-                                            <div className="profs-main__experience">
+                                            {/* <div className="profs-main__experience">
                                                 <div className="profs-experience__text">Опыт:</div>
                                                 <input type="text" className="profs-experience__input" />
                                             </div>
@@ -58,14 +122,14 @@ function ProfileSettings() {
                                                 <select className="profs-team__select">
                                                     <option className="profs-team__option"></option>
                                                 </select>
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="profs-form__abilities">
                                 <div className="profs-abilities__column">
-                                    <div className="profs-abilities__title">Навыки</div>
+                                    {/* <div className="profs-abilities__title">Навыки</div>
                                     <div className="profs-abilities__ability">
                                         <div className="profs-abilities__abilityrow">
                                             <Ability text={"HTML"} />
@@ -79,19 +143,19 @@ function ProfileSettings() {
                                             <Ability text={"HTML"} />
                                             <ChooseAbility />
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                             <div className="profs-form__about">
                                 <div className="profs-about__column">
                                     <div className="profs-about__title">О себе</div>
                                     <div className="profs-about__text">
-                                        <textarea name="" id="" className="profs-about__textarea"></textarea>
+                                        <textarea name="" id="" className="profs-about__textarea" value={about} onChange={handleAboutChange} placeholder="Начните писать информацию о себе..."></textarea>
                                     </div>
                                 </div>
                             </div>
                             <div className="profs-form__save">
-                                <button className="profs-form__savebutton">Сохранить</button>
+                                <button className="profs-form__savebutton" onClick={() => sendInfo(category, about)}>Сохранить</button>
                             </div>
                         </div>
                     </div>

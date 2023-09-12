@@ -1,4 +1,5 @@
 import "./CreateTeam.scss"
+import { Link } from "react-router-dom"
 
 function CreateTeam() {
     return (
@@ -6,7 +7,13 @@ function CreateTeam() {
             <div className="ct__container">
                 <div className="ct__row">
                     <div className="ct__title">Или создай её в личном кабинете</div>
-                    <button className="ct__button">Создать команду <img src={require("../../UI/utils/img/findteamarrow.png")} alt="#" className="ct__button-arrow"/></button>
+                    {
+                        localStorage.getItem('token') ?
+                        <Link to='/addproject'><button className="ct__button">Создать команду <img src={require("../../UI/utils/img/findteamarrow.png")} alt="#" className="ct__button-arrow"/></button></Link>
+                        :
+                        <Link to='/login'><button className="ct__button">Создать команду <img src={require("../../UI/utils/img/findteamarrow.png")} alt="#" className="ct__button-arrow"/></button></Link>
+                    }
+                    
                 </div>
             </div>
         </div>

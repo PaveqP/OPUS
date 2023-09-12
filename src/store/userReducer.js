@@ -1,11 +1,11 @@
 const SET_AUTH = "SET_AUTH"
 const LOGOUT = "LOGOUT"
-
+const AVATAR = "AVATAR"
 
 const defaultState = {
     currentUser: {},
+    userPhoto: null,
     isAuth: false,
-
 }
 
 export const userReducer = (state = defaultState, action) => {
@@ -15,6 +15,12 @@ export const userReducer = (state = defaultState, action) => {
                 ...state,
                 currentUser: action.payload,
                 isAuth: true,
+            }
+
+        case AVATAR:
+            return{
+                ...state,
+                userPhoto: action.payload
             }
 
         case LOGOUT:
@@ -32,6 +38,8 @@ export const userReducer = (state = defaultState, action) => {
 }
 
 export const SetAuth = data => ({type: SET_AUTH, payload: data})
+
+export const SetAvatar = data => ({type: AVATAR, payload: data})
 
 export const logout = () => ({type: LOGOUT})
 
