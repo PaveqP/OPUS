@@ -2,12 +2,17 @@ import "./LkWorks.scss"
 import { AddWorkButton } from "../../UI/addWorkButton/AddWorkButton"
 import { Work } from "../../UI/work/Work"
 import { useSelector } from "react-redux"
+import { getUserWorkPhoto } from "../../actions/AddWork"
 
 function LkWorks({setShowModal, showModal}) {
 
     const userModel = useSelector(state => state.user.currentUser)
 
     //console.log(userModel.works[0].img)
+
+    const getWorkPhoto = (id) => {
+        getUserWorkPhoto(id)
+    }
 
     return (
         <div className="lkworks">
@@ -34,7 +39,7 @@ function LkWorks({setShowModal, showModal}) {
                                     <Work
                                         id={work.id}
                                         key={work.id}
-                                        img={work.path}
+                                        img={work.previewPhoto}
                                         title={work.name}
                                         //categories={"React, Js, HTML"}
                                         //likes={"228"}

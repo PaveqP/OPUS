@@ -9,6 +9,7 @@
     padding-bottom: 80px;
     display: flex;
     justify-content: space-between;
+    opacity: 0.5;
 }
 
 .addproject__row-left{
@@ -120,12 +121,13 @@
 .addproject__row-right{
     display: flex;
     flex-direction: column;
+    
 }
 
 .addproject__row-right-persons{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    
 
     &-person{
         cursor: pointer;
@@ -140,6 +142,7 @@
         line-height: normal;
         margin-top: 5px;
         margin-bottom: 5px;
+        
     }
 
     &-person:active{

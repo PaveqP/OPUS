@@ -44,7 +44,9 @@ function GeneralSettings() {
         <div className="generalsettings">
             <div className="gs__container">
                 <div className="gs__column">
+                
                     <div className="gs__navigation">
+                        
                         <div className="gs-navigation__row">
                             <Link className="gs-navigation__general" to='/generalsettings'>Общие</Link>
                             <Link className="gs-navigation__profile" to='/profilesettings'>Профиль</Link>

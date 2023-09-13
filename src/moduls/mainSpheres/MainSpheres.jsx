@@ -2,9 +2,10 @@ import './MainSpheres.scss'
 
 function MainSpheres() {
     return (
-        <div className="mainspheres">
+        <div className="mainspheres" id='spheres'>
             <div className="ms__container">
-                <div className="ms__title">Сферы развития</div>
+                <div className="ms__title"><b>Сферы развития</b> в разработке</div>
+                
                 <div className="ms__main">
                     <div className="ms__main-row">
                         <div className="ms__main-left">

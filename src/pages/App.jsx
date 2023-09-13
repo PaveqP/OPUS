@@ -3,7 +3,7 @@ import {Lk} from './lk/Lk'
 import { Settings } from "./settings/Settings"
 import { Registration } from "./Registration/Registration";
 import { ReactDOM, useEffect, useState } from "react";
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate, HashRouter } from "react-router-dom";
 import { MainAuth } from "./mainAuth/MainAuth"
 import { MainNotAuth } from "./mainNotAuth/MainNotAuth";
 import "../pages/App.scss"
@@ -44,44 +44,44 @@ function App() {
   
   return (
     <>
-    <BrowserRouter>
+    <HashRouter>
 
       <div className="App">
 			{ !isAuth ?
 				<Routes>
-				<Route path="/registration" element={<Registration/>}/>
-				<Route path="/login" element={<Authorization/>}/>
-				<Route path="/" element={<MainNotAuth/>} />
+					<Route path="/registration" element={<Registration/>}/>
+					<Route path="/login" element={<Authorization/>}/>
+					<Route path="/" element={<MainNotAuth/>} />
 				</Routes>
 				:
 				<Routes>
-        <Route exact path="/" element={<MainAuth/>}/>
-				<Route exact path="/cabinet" element={<Lk profile={profile} setProfile={setProfile} projects={projects} setProjects={setProjects}/>}/>
-				<Route exact path="/projects" element={<Projects profile={profile} setProfile={setProfile} projects={projects} setProjects={setProjects}/>}/>
-				<Route exact path="/project-info/:id" element={
-					<ProjectBigCard 
-						img={require('../UI/utils/img/bigProjectImage.png')} 
-						description={' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc bibendum nibh nisi, ut efficitur tortor tincidunt ut. In eget dui tellus. Phasellus eleifend vulputate lacinia. Nam ornare ornare fermentum. Curabitur nec augue lectus. Sed fermentum nisi id urna scelerisque, vitae elemen...отдтдоавя        яыв ыясумфмвмывмтывомоыюуимдыиоь]а мьдыуИМ ВОДЫБИСЮЫУБВИМДФОКЫИ МЦДУОЫИМДОЫИМЫВОДИМЫВДОИМКДЫГОВИВМДЫОВИМКТДЫВОИМТКДЫВОИМТДКЫШВОИМТДШЫВОИТМЫДОИТМЫДОИТ ФДЫАО]ИТШДФЫВАО]ТИ ДЫОКАТ]ЬИМ ДОЫАТ]ИМ дыоа]итм аоыдтм дыо]авитм доы]авьитсдыо]тишщфдкытаищкудоытаи дофваяьти '}
-						tag={'Дизайн'} 
-						type={'Некоммерческий'} 
-						date={'Старт: 24.08.2023'} 
-						title={'ОПУС: соединяем людей и бизнес'}
-						need_list={['Дизайнер', 'Видео специалист']}
-						contacts={['+792165432100', 'https://t.me/OpusIt']}
-						links={['https://t.me/OpusIt', 'https://t.me/OpusIt', 'https://t.me/OpusIt']}
-					/>}/>
-				<Route path="/addproject" element={<AddProject/>}/>
-				<Route path="/generalsettings" element={<Settings type='general'/>}/>
-				<Route path="/personalsettings" element={<Settings type='personal'/>}/>
-				<Route path="/profilesettings" element={<Settings type='profile'/>}/>
-				<Route path="/login" element={<Navigate replace to="/" />} />
-				<Route path="/registration" element={<Navigate replace to="/" />} />
+					<Route exact path="/" element={<MainAuth/>}/>
+					<Route exact path="/cabinet" element={<Lk profile={profile} setProfile={setProfile} projects={projects} setProjects={setProjects}/>}/>
+					<Route exact path="/projects" element={<Projects profile={profile} setProfile={setProfile} projects={projects} setProjects={setProjects}/>}/>
+					<Route exact path="/project-info/:id" element={
+						<ProjectBigCard 
+							img={require('../UI/utils/img/bigProjectImage.png')} 
+							description={' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc bibendum nibh nisi, ut efficitur tortor tincidunt ut. In eget dui tellus. Phasellus eleifend vulputate lacinia. Nam ornare ornare fermentum. Curabitur nec augue lectus. Sed fermentum nisi id urna scelerisque, vitae elemen...отдтдоавя        яыв ыясумфмвмывмтывомоыюуимдыиоь]а мьдыуИМ ВОДЫБИСЮЫУБВИМДФОКЫИ МЦДУОЫИМДОЫИМЫВОДИМЫВДОИМКДЫГОВИВМДЫОВИМКТДЫВОИМТКДЫВОИМТДКЫШВОИМТДШЫВОИТМЫДОИТМЫДОИТ ФДЫАО]ИТШДФЫВАО]ТИ ДЫОКАТ]ЬИМ ДОЫАТ]ИМ дыоа]итм аоыдтм дыо]авитм доы]авьитсдыо]тишщфдкытаищкудоытаи дофваяьти '}
+							tag={'Дизайн'} 
+							type={'Некоммерческий'} 
+							date={'Старт: 24.08.2023'} 
+							title={'ОПУС: соединяем людей и бизнес'}
+							need_list={['Дизайнер', 'Видео специалист']}
+							contacts={['+792165432100', 'https://t.me/OpusIt']}
+							links={['https://t.me/OpusIt', 'https://t.me/OpusIt', 'https://t.me/OpusIt']}
+						/>}/>
+					<Route path="/addproject" element={<AddProject/>}/>
+					<Route path="/generalsettings" element={<Settings type='general'/>}/>
+					<Route path="/personalsettings" element={<Settings type='personal'/>}/>
+					<Route path="/profilesettings" element={<Settings type='profile'/>}/>
+					<Route path="/login" element={<Navigate replace to="/" />} />
+					<Route path="/registration" element={<Navigate replace to="/" />} />
 				</Routes>
 			}
 		
       </div>
 
-    </BrowserRouter>
+    </HashRouter>
     </>
   );
 }

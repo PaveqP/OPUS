@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 function CreateTeam() {
     return (
-        <div className="createteam">
+        <div className="createteam" id="createTeam">
             <div className="ct__container">
                 <div className="ct__row">
                     <div className="ct__title">Или создай её в личном кабинете</div>

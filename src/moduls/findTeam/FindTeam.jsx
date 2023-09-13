@@ -3,11 +3,11 @@ import { FindTeamCard } from "../../components/findTeamCard/FindTeamCard"
 
 function FindTeam() {
     return (
-        <div className="findteam">
+        <div className="findteam" id="findTeam">
             <div className="ft__container">
                 <div className="ft__header">
                     <div className="ft__header-row">
-                        <div className="ft__header-title">Найди участников</div>
+                        <div className="ft__header-title"><b>Найди участников</b> в разработке</div>
                         <button className="ft__header-button">Найти участника <img src={require("../../UI/utils/img/findteamarrow.png")} alt="#" className="ft__button-arrow"/> </button>
                     </div>
                 </div>

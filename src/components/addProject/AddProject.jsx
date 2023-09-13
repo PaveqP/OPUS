@@ -93,33 +93,36 @@ function AddProject() {
                     Выберите один тег для проекта
                 </div>
 
-                <div className="addproject__row-left-tags">
-                    <div className="addproject__row-left-tags-tag">
+                <select className="addproject__row-left-tags" value={tag} onChange={handleTagChange}>
+                    <option className="addproject__row-left-tags-tag" value='default'>
+                        Выберите тег
+                    </option>
+                    <option className="addproject__row-left-tags-tag" value='Дизайн'>
                         Дизайн
-                    </div>
-                    <div className="addproject__row-left-tags-tag">
+                    </option>
+                    <option className="addproject__row-left-tags-tag" value='Разработка'>
                         Разработка
-                    </div>
-                    <div className="addproject__row-left-tags-tag">
+                    </option>
+                    <option className="addproject__row-left-tags-tag" value='Аудио/Видео'>
                         Аудио/Видео
-                    </div>
-                    <div className="addproject__row-left-tags-tag">
+                    </option>
+                    <option className="addproject__row-left-tags-tag" value='Аналитика/Бизнес'>
                         Аналитика Бизнес
-                    </div>
-                    <div className="addproject__row-left-tags-tag">
+                    </option>
+                    <option className="addproject__row-left-tags-tag" value='Тексты/Переводы'>
                         Тексты Переводы
-                    </div>
-                </div>
+                    </option>
+                </select>
 
                 <div className="addproject__row-subtitle">
                     Выберите вид проекта
                 </div>
 
                 <div className="addproject__row-left-commerce">
-                    <div className="addproject__row-left-commerce-type">
+                    <div className="addproject__row-left-commerce-type" onClick={() => setCommerce(false)}>
                         Некоммерческий
                     </div>
-                    <div className="addproject__row-left-commerce-type">
+                    <div className="addproject__row-left-commerce-type" onClick={() => setCommerce(false)}>
                         Коммерческий
                     </div>
                 </div>
@@ -221,23 +224,32 @@ function AddProject() {
 
                 <div className="addproject__row-right-persons">
                     <div className="addproject__row-right-persons-person">
-                        Дизайн
+                        Дизайнер
                     </div>
                     <div className="addproject__row-right-persons-person">
-                        Разработка
+                        Разработчик
                     </div>
                     <div className="addproject__row-right-persons-person">
-                        Аудио/Видео
+                        Аудио специалист
                     </div>
                     <div className="addproject__row-right-persons-person">
-                        Аналитика Бизнес
+                        Видео специалист
                     </div>
                     <div className="addproject__row-right-persons-person">
-                        Тексты Переводы
+                        Аналитик
+                    </div>
+                    <div className="addproject__row-right-persons-person">
+                        Копирайтер
+                    </div>
+                    <div className="addproject__row-right-persons-person">
+                        Переводчик
+                    </div>
+                    <div className="addproject__row-right-persons-person">
+                        Бизнес-специалист
                     </div>
                 </div>
 
-                <button className='addproject__row-right-confirm' type='submit'>
+                <button className='addproject__row-right-confirm' type='submit' disabled>
                     Добавить проект
                 </button>
             </div>

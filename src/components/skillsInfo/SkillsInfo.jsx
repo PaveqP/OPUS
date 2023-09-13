@@ -30,7 +30,15 @@ function SkillsInfo() {
                     </div>
                     <div className="specialization__add">
                         <div className="specialization-add__row">
-                            <AddSpecialization />
+                            {user.skills && (user.skills < 0 || user.skills === 'default' || user.skills === '')?
+                                <Link to='/generalsettings'>
+                                    <AddSpecialization text="Добавить"/>
+                                </Link>
+                                :
+                                <AddSpecialization text={user.skills}/>
+                                
+                            }
+                            
                         </div>
                     </div>
                 </div>

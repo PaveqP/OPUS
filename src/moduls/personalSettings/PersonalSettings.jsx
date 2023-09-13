@@ -55,6 +55,7 @@ function PersonalSettings() {
                                             className="psform-age__input" 
                                             value={age}
                                             onChange={handleAgeChange}
+                                            placeholder={user.age && user.age ? user.age : 'Введите свой возраст'}
                                         />
                                     </div>
                                     <div className="psform-left__phone">
@@ -66,6 +67,7 @@ function PersonalSettings() {
                                             className="psform-phone__input" 
                                             value={phone}
                                             onChange={handlePhoneChange}
+                                            placeholder={user.phone && user.phone ? user.phone : 'Введите номер телефона'}
                                         />
                                     </div>
                                     {/* <div className="psform-left__contacs">

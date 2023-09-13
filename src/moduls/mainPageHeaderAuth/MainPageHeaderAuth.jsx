@@ -1,8 +1,34 @@
 import "./MainPageHeaderAuth.scss"
 import { Logo } from "../../UI/logo/Logo"
 import { Link } from "react-router-dom"
+import { useEffect } from "react";
 
 function MainPageHeaderAuth() {
+
+    // useEffect(() => {
+    //     const smoothLinks = document.querySelectorAll('a[href^="#"]');
+    //         for (let smoothLink of smoothLinks) {
+    //         smoothLink.addEventListener('click', function (e) {
+    //             e.preventDefault();
+    //             const id = smoothLink.getAttribute('href');
+
+    //             console.log(id)
+        
+    //             document.querySelector(id).scrollIntoView({
+    //                 behavior: 'smooth',
+    //                 block: 'start'
+    //             });
+    //         });
+    //         };
+    // });
+
+    const ScrollToMain = (id) => {
+        document.querySelector(id).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+
     return (
         <div className="mainpageheaderauth">
             <div className="mpha__container">
@@ -12,11 +38,11 @@ function MainPageHeaderAuth() {
                     </div>
                     <div className="mpha__menu">
                         <div className="mpha-menu__row">
-                            <a href="#" className="mpha-menu__spheres">Сферы развития</a>
-                            <a href="#" className="mpha-menu__find">Найти команду</a>
-                            <a href="#" className="mpha-menu__create">Создать команду</a>
-                            <a href="#" className="mpha-menu__news">Новости</a>
-                            <a href="#" className="mpha-menu__contacs">Контакты</a>
+                            <div className="mpha-menu__spheres navigate_elem" onClick={() => ScrollToMain('#spheres')}>Сферы развития</div>
+                            <div className="mpha-menu__find navigate_elem" onClick={() => ScrollToMain('#findTeam')}>Найти команду</div>
+                            <div className="mpha-menu__create navigate_elem" onClick={() => ScrollToMain('#createTeam')}>Создать команду</div>
+                            <div className="mpha-menu__news navigate_elem" onClick={() => ScrollToMain('#news')}>Новости</div>
+                            {/* <a href="#contacts" className="mpha-menu__contacs">Контакты</a> */}
                         </div>
                     </div>
                     <div className="mpha__lk">

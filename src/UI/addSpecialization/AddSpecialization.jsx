@@ -1,9 +1,9 @@
 import "./AddSpecialization.scss"
 
-function AddSpecialization() {
+function AddSpecialization({text}) {
     return (
         <div className="addspecialization">
-            <button className="addspecialization__button">Добавить</button>
+            <button className="addspecialization__button">{text}</button>
         </div>
     )
 }

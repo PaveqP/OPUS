@@ -28,7 +28,7 @@ function ProjectSmallCard({img, title, target, owner, tag, id}) {
                     {owner}
                 </p>
                 <Link to={'/project-info/' + id}>
-                    <button className='psc__row-right-button'>
+                    <button className='psc__row-right-button' disabled>
                         Подробнее
                     </button>
                 </Link>

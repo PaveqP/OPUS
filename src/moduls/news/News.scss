@@ -1,3 +1,7 @@
+.news{
+    opacity: 0.5;
+}
+
 .n__container1{
     padding: 0px 100px;
 }
@@ -17,6 +21,18 @@
     line-height: 100%; /* 72px */
     margin-bottom: 40px;
     margin-left: 88px;
+}
+
+.n__title b{
+    color: var(--, #000);
+    font-family: Inter;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 72px */
+    margin-bottom: 40px;
+    margin-left: 88px;
+    text-decoration: line-through;
 }
 
 .n__main{}

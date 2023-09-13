@@ -7,9 +7,9 @@ import { getToken } from "../../vkActions/GetToken"
 
 function Authorization() {
 
-    useEffect(() => {
-        getToken()
-    }, [])
+    // useEffect(() => {
+    //     getToken()
+    // }, [])
 
     return (
         <div className="authorization">

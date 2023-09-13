@@ -3,6 +3,14 @@ import { Logo } from "../../UI/logo/Logo"
 import { Link } from "react-router-dom"
 
 function MainPageHeaderNotAuth() {
+
+    const ScrollToMain = (id) => {
+        document.querySelector(id).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+
     return (
         <div className="mainpageheadernotauth">
             <div className="mphna__container">
@@ -12,10 +20,10 @@ function MainPageHeaderNotAuth() {
                     </div>
                     <div className="mphna__menu">
                         <div className="mphna__menu-row">
-                            <a href="#" className="mphna__menu-about">О нас</a>
-                            <a href="#" className="mphna__menu-spheres">Сферы развития</a>
-                            <a href="#" className="mphna__menu-news">Новости</a>
-                            <a href="#" className="mphna__menu-contacs">Контакты</a>
+                            <div className="mphna__menu-about navigate_elem">О нас</div>
+                            <div className="mphna__menu-spheres navigate_elem" onClick={() => ScrollToMain('#spheres')}>Сферы развития</div>
+                            <div className="mphna__menu-news navigate_elem" onClick={() => ScrollToMain('#news')}>Новости</div>
+                            {/* <a href="#" className="mphna__menu-contacs">Контакты</a> */}
                         </div>
                     </div>
                     <div className="mphna__buttons">

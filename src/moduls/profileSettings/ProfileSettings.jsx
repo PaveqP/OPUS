@@ -4,8 +4,9 @@ import { Ability } from "../../UI/ability/Ability"
 import { ChooseAbility } from "../../UI/chooseAbility/ChooseAbility"
 import { Link } from "react-router-dom"
 import { useState } from "react"
-import { setUserAvatar, setUserProfileSettings } from "../../actions/EditUser"
+import { deleteUserAvatar, setUserAvatar, setUserProfileSettings } from "../../actions/EditUser"
 import { useSelector } from "react-redux"
+
 
 function ProfileSettings() {
 
@@ -15,7 +16,7 @@ function ProfileSettings() {
     //console.log(avatar)
 
     const [photo, setPhoto] = useState(null)
-    const [category, setCategory] = useState('');
+    const [category, setCategory] = useState('default');
     const [about, setAbout] = useState('')
 
     const handlePhotoChange = (e) => {
@@ -45,12 +46,12 @@ function ProfileSettings() {
     }
 
     const sendInfo = (specialize, about) => {
-        if(photo){
-            sendAvatar()
+        // if(photo){
+        //     sendAvatar()
+        //     sendUserProfileSettings(specialize, about)
+        // } else{
             sendUserProfileSettings(specialize, about)
-        } else{
-            sendUserProfileSettings(specialize, about)
-        }
+        // }
     }
 
     return (
@@ -90,12 +91,13 @@ function ProfileSettings() {
                                                 {photo ?
                                                     <span>{photo.name}</span>
                                                     :
-                                                    <span>Загрузите изображение</span>
+                                                    <span>В разработке</span>
                                                 }
                                                 
                                             </label>
                                             <div className="profs-main__delete">
-                                                <button className="profs-main__deletebutton">Удалить фото</button>
+                                                {/* onClick={() => deleteUserAvatar()} */}
+                                                <button className="profs-main__deletebutton" >В разработке</button>
                                             </div>
                                         </div>
                                     </div>
@@ -150,7 +152,11 @@ function ProfileSettings() {
                                 <div className="profs-about__column">
                                     <div className="profs-about__title">О себе</div>
                                     <div className="profs-about__text">
-                                        <textarea name="" id="" className="profs-about__textarea" value={about} onChange={handleAboutChange} placeholder="Начните писать информацию о себе..."></textarea>
+                                        {user.about && user.about ?
+                                            <textarea name="" id="" className="profs-about__textarea" value={about} onChange={handleAboutChange} placeholder={user.about}></textarea>
+                                            :
+                                            <textarea name="" id="" className="profs-about__textarea" value={about} onChange={handleAboutChange} placeholder="Начните писать информацию о себе..."></textarea>
+                                        }
                                     </div>
                                 </div>
                             </div>

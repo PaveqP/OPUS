@@ -22,3 +22,17 @@ export const addUserWork = async (data) => {
         alert(error, "post work")
     }
 }
+
+export const getUserWorkPhoto = async (id) => {
+    //console.log(localStorage.getItem('token'))
+    try {
+        const response = await axios.get(`http://90.156.210.196:8080/api/v1/works/${id}/previewImage`, 
+        {
+            headers: {Authorization: `Bearer ${localStorage.getItem('token')}`},
+        },)
+        authentification()
+        console.log(response.data, 'work image')
+    } catch (error) {
+        alert(error, "get work")
+    }
+}

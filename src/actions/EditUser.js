@@ -63,6 +63,20 @@ export const setUserAvatar = async (data) => {
     }
 }
 
+export const deleteUserAvatar = async () => {
+    try {
+        const response = await axios.put(`http://90.156.210.196:8080/api/v1/edit/deletePhoto`, 
+        {
+            headers: {Authorization: `Bearer ${localStorage.getItem('token')}`},
+        },)
+        authentification()
+        console.log(response.data, 'avatar deleted')
+        
+    } catch (error) {
+        alert(error, "auth")
+    }
+}
+
 export const setUserProfileSettings = async (specialize, about, user) => {
     console.log({
         specialize: specialize,

@@ -1,5 +1,6 @@
 .findteam{
     background-image: url("../../UI/utils/img/findteambackground.png");
+    opacity: 0.5;
 }
 
 .ft__container{
@@ -22,6 +23,16 @@
     font-style: normal;
     font-weight: 700;
     line-height: 100%; /* 72px */
+}
+
+.ft__header-title b{
+    color: var(--material-theme-white, #FFF);
+    font-family: Inter;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 72px */
+    text-decoration: line-through;
 }
 
 .ft__header-button{
