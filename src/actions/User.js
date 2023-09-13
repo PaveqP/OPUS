@@ -35,7 +35,7 @@ export const authorization = async (email, password) => {
             const token = response.data.token
 
             localStorage.setItem('token', token)
-            console.log(token, 'okay')
+            // console.log(token, 'okay')
 
             if (localStorage.getItem('token')){
                 authentification()
@@ -56,9 +56,9 @@ export const authentification = async () => {
         })
 
         store.dispatch(SetAuth(response.data))
-        console.log(response.data, 'USER')
+        // console.log(response.data, 'USER')
         getInfoAboutUser()
-        getUserPhoto()
+        // getUserPhoto()
         
     } catch (error) {
         alert(error, "auth")
@@ -73,35 +73,35 @@ export const getInfoAboutUser = async () => {
         })
 
         store.dispatch(SetAuth(response.data))
-        console.log(response.data, 'USER')
+        // console.log(response.data, 'USER')
         
     } catch (error) {
         alert(error, "auth")
     }
 }
 
-export const getUserPhoto = async () => {
+// export const getUserPhoto = async () => {
 
-        try {
-            const response = await fetch('http://90.156.210.196:8080/api/v1/user/photo', {
-                headers: {
-                    Authorization: `Bearer ${localStorage.getItem('token')}`,
-                },
-            });
+//         try {
+//             const response = await fetch('http://90.156.210.196:8080/api/v1/user/photo', {
+//                 headers: {
+//                     Authorization: `Bearer ${localStorage.getItem('token')}`,
+//                 },
+//             });
 
-            if (response.ok) {
-                const blob = await response.blob();
-                const imageURL = URL.createObjectURL(blob);
+//             if (response.ok) {
+//                 const blob = await response.blob();
+//                 const imageURL = URL.createObjectURL(blob);
                 
-                store.dispatch(SetAvatar(imageURL))
-            } else {
-                console.error('Failed to fetch image');
-            }
-        } catch (error) {
-            console.error('Error:', error);
-        }
+//                 store.dispatch(SetAvatar(imageURL))
+//             } else {
+//                 console.error('Failed to fetch image');
+//             }
+//         } catch (error) {
+//             console.error('Error:', error);
+//         }
 
-}
+// }
 
 
 

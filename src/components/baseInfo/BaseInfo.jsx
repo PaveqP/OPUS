@@ -16,10 +16,10 @@ function BaseInfo() {
         <div className="baseinfo">
             <div className="baseinfo__row">
                 <div className="baseinfo__avatar">
-                    {!avatar ?
+                    {!userModel.photo && !userModel.photo ?
                         <Avatar img={require("../../UI/utils/img/defaultavatar.png")} />
                         :
-                        <Avatar img={avatar} />
+                        <Avatar img={userModel.photo} />
                     }
 
                 </div>

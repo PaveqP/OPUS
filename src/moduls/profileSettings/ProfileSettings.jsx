@@ -46,12 +46,12 @@ function ProfileSettings() {
     }
 
     const sendInfo = (specialize, about) => {
-        // if(photo){
-        //     sendAvatar()
-        //     sendUserProfileSettings(specialize, about)
-        // } else{
+        if(photo){
+            sendAvatar()
             sendUserProfileSettings(specialize, about)
-        // }
+        } else{
+            sendUserProfileSettings(specialize, about)
+        }
     }
 
     return (
@@ -79,10 +79,10 @@ function ProfileSettings() {
                                     <div className="profs-main__left">
                                         <div className="profs-main__leftcolumn">
                                             <div className="profs-main__avatar">
-                                                {!avatar ?
+                                                {!user.photo && !user.photo?
                                                     <Avatar img={require("../../UI/utils/img/defaultavatar.png")} />
                                                     :
-                                                    <Avatar img={avatar} />
+                                                    <Avatar img={user.photo} />
                                                 }
                                                 
                                             </div>
@@ -91,13 +91,12 @@ function ProfileSettings() {
                                                 {photo ?
                                                     <span>{photo.name}</span>
                                                     :
-                                                    <span>В разработке</span>
+                                                    <span>Загрузить фото</span>
                                                 }
                                                 
                                             </label>
                                             <div className="profs-main__delete">
-                                                {/* onClick={() => deleteUserAvatar()} */}
-                                                <button className="profs-main__deletebutton" >В разработке</button>
+                                                <button className="profs-main__deletebutton" onClick={() => deleteUserAvatar()}>Удалить фото</button>
                                             </div>
                                         </div>
                                     </div>
