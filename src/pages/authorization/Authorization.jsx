@@ -1,5 +1,5 @@
 import { AuthorizationForm } from "../../components/authorizationForm/AuthorizationForm"
-import { AuthInfo } from "../../components/AuthInfo/AuthInfo"
+import { AuthInfo } from "../../components/authInfo/AuthInfo"
 import "./Authorization.scss"
 
 

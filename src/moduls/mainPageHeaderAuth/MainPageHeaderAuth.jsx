@@ -25,7 +25,7 @@ function MainPageHeaderAuth() {
                             </div>
                             <div className="mpha-lk__lk">
                                 <button className="mpha-lk__lkbutton">
-                                    <img src={require("../../UI/utils/img/lk.png")} alt="#" />
+                                    <img src={require("../../UI/utils/img/lkwhite.png")} alt="#" />
                                 </button>
                             </div>
                         </div>

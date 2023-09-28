@@ -1,0 +1,106 @@
+.portfoliopageprofile{
+    width: 550px;
+    border-radius: 20px;
+    border: 2px solid #DCDCDC;
+    background: #FFF;
+    margin-bottom: 64px;
+}
+
+.ppp__container{
+    padding: 40px;
+}
+
+.ppp__column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ppp__header{
+    margin-bottom: 30px;
+}
+
+.ppp__header-row{
+    display: flex;
+}
+
+.ppp__avatar{
+    margin-right: 20px;
+}
+
+.ppp__nameandsurname{
+    margin-bottom: 20px;
+    color: #000;
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.ppp__skill{
+    width: 50%;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #671CE5 0%, #2F2B43 98.75%);
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.ppp__main{
+    margin-bottom: 40px;
+}
+
+.ppp__main-age{
+    margin-bottom: 5px;
+    color: #000;
+    text-overflow: ellipsis;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.ppp__main-city{
+    margin-bottom: 5px;
+    color: #000;
+    text-overflow: ellipsis;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.ppp__main-description{
+    color: #000;
+    text-overflow: ellipsis;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.ppp__footer{
+    width: 100%;
+}
+
+.ppp__footer-button{
+    width: 100%;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #671CE5 0%, #2F2B43 100%);
+    padding: 20px 0px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
