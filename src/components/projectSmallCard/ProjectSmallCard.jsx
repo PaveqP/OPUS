@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import './ProjectSmallCard.scss'
 
-function ProjectSmallCard({img, title, target, owner, tag, id}) {
+function ProjectSmallCard({img, title, target, owner, tag, id, link}) {
   return (
     <div className='psc'>
         <div className="psc__row">
@@ -27,8 +27,8 @@ function ProjectSmallCard({img, title, target, owner, tag, id}) {
                     <p className='psc__row-right-owner-fix'> Создатель: </p>
                     {owner}
                 </p>
-                <Link to={'/project-info/' + id}>
-                    <button className='psc__row-right-button' disabled>
+                <Link to={link}>
+                    <button className='psc__row-right-button'>
                         Подробнее
                     </button>
                 </Link>

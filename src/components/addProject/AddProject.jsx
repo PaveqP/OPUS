@@ -1,6 +1,7 @@
 import React from 'react'
 import { MainHeader } from '../../moduls/mainHeader/MainHeader'
 import { MainFooter } from '../../moduls/mainFooter/MainFooter'
+import { addUserProject } from '../../actions/Projects'
 
 import './AddProject.scss'
 import { useState } from 'react'
@@ -69,6 +70,42 @@ function AddProject() {
         //selectedFile && alert(selectedFile)
     };
 
+    const sendProjectInfo = () => {
+        const links = []
+        if (link1) {
+            links.push({name: link1})
+        }
+        if (link2) {
+            links.push({name: link2})
+        }
+        if (link3) {
+            links.push({name: link3})
+        }
+
+        const textData = {
+            'name': title,
+            'description': desc,
+            'mission': target,
+            'links': links,
+            'tag': null,
+            'imageUrl': null,
+            'avatarUrl': null
+        }
+
+        const jsonData = JSON.stringify(textData)
+        const blob = new Blob([jsonData], {
+            type: 'multipart/form-data'
+        });
+
+        const data = new FormData()
+
+        data.append('avatar', selectedPreview)
+        data.append('image', selectedFile)
+        data.append('projectData', jsonData)
+
+        addUserProject(data)
+    }
+
   return (
     <div className='addproject'>
         <MainHeader/>
@@ -114,7 +151,7 @@ function AddProject() {
                     </option>
                 </select>
 
-                <div className="addproject__row-subtitle">
+                {/* <div className="addproject__row-subtitle">
                     Выберите вид проекта
                 </div>
 
@@ -125,13 +162,13 @@ function AddProject() {
                     <div className="addproject__row-left-commerce-type" onClick={() => setCommerce(false)}>
                         Коммерческий
                     </div>
-                </div>
+                </div> */}
 
-                <div className="addproject__row-subtitle">
+                {/* <div className="addproject__row-subtitle">
                     Дата начала проекта
                 </div>
 
-                <input type="text" className='addproject__row-left-datestart baseinput'/>
+                <input type="text" className='addproject__row-left-datestart baseinput'/> */}
 
             </div>
             <div className="addproject__row-right">
@@ -183,22 +220,30 @@ function AddProject() {
                     value={link1}
                     onChange={handleLink1Change}
                 />
-                <input 
+                { link1 &&
+                    <input 
                     type="text" 
                     name="link2"
                     className='addproject__row-right-name baseinput'
                     value={link2}
                     onChange={handleLink2Change}
-                />
-                <input 
+                    />
+                }
+                { link2 &&
+                    <>
+                    <input 
                     type="text" 
                     name="link3"
                     className='addproject__row-right-name baseinput'
                     value={link3}
                     onChange={handleLink3Change}
-                />
+                    />
+                    <p  className='links-moderator'>Вы можете добавить только 3 ссылки</p>
+                    </>
+                }
+                
 
-                <div className="addproject__row-subtitle">
+                {/* <div className="addproject__row-subtitle">
                     Контакты руководителя
                 </div>
                 <div className="addproject__row-right-ownercontacts">
@@ -216,9 +261,9 @@ function AddProject() {
                         value={cont2}
                         onChange={handleCont2Change}
                     />
-                </div>
+                </div> */}
 
-                <div className="addproject__row-subtitle">
+                {/* <div className="addproject__row-subtitle">
                     Кто нужен в команду?
                 </div>
 
@@ -247,11 +292,11 @@ function AddProject() {
                     <div className="addproject__row-right-persons-person">
                         Бизнес-специалист
                     </div>
-                </div>
+                </div> */}
 
-                <button className='addproject__row-right-confirm' type='submit' disabled>
+                <div className='addproject__row-right-confirm' type='submit' onClick={() => sendProjectInfo()}>
                     Добавить проект
-                </button>
+                </div>
             </div>
         </form>
 

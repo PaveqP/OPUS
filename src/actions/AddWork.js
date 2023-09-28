@@ -9,7 +9,7 @@ export const addUserWork = async (data) => {
 
     console.log(...data, data)
     try {
-        const response = await axios.post(`http://90.156.210.196:8080/api/v1/works/upload`, 
+        const response = await axios.post(`http://90.156.210.196:8080/api/v1/works/add`, 
         data,
         {
             headers: {Authorization: `Bearer ${localStorage.getItem('token')}`, "Content-Type": "multipart/form-data"},

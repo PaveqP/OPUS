@@ -27,8 +27,9 @@ function App() {
 	const vkToken = localStorage.getItem('vkToken')
 
 	// console.log(isAuth, "auth state from APP")
-	// console.log(user, 'user from APP')
+	 console.log(user, 'user from APP')
 	// console.log(vkToken, 'vktoken from app')
+	//console.log(token)
 
 	useEffect(() => {
 
