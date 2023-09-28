@@ -5,7 +5,7 @@ function Work(props) {
         <div className="work">
             <div className="work__row">
                 <div className="work__img">
-                    <img className="work_img_example" src={props.img} alt="image" />
+                    <img className="work__img-example" src={props.img} alt="image" />
                 </div>
                 <div className="work__text">
                     <div className="work__title">{props.title}</div>

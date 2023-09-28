@@ -5,9 +5,7 @@ import { Registration } from "./Registration/Registration";
 import { ReactDOM, useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes, Navigate, HashRouter } from "react-router-dom";
 import { MainAuth } from "./mainAuth/MainAuth"
-import { MainNotAuth } from "./mainNotAuth/MainNotAuth"
-import { PortfolioPage } from "./portfolioPage/PortfolioPage"
-
+import { MainNotAuth } from "./mainNotAuth/MainNotAuth";
 import "../pages/App.scss"
 import { useDispatch, useSelector } from "react-redux";
 import { SetAuth } from "../store/userReducer";
@@ -29,8 +27,9 @@ function App() {
 	const vkToken = localStorage.getItem('vkToken')
 
 	// console.log(isAuth, "auth state from APP")
-	// console.log(user, 'user from APP')
+	 console.log(user, 'user from APP')
 	// console.log(vkToken, 'vktoken from app')
+	//console.log(token)
 
 	useEffect(() => {
 
@@ -85,7 +84,6 @@ function App() {
 
     </HashRouter>
     </>
-
   );
 }
 

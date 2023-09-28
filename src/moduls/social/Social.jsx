@@ -10,7 +10,7 @@ function Social() {
                         <div className="s__icons">
                             <div className="s__icons-row">
                                 <a href="https://vk.com/opus_it" className="s__icons-vk">
-                                    <img src={require("../../UI/utils/img/vkicon.png")} alt="#"/>
+                                    <img src={require('../../UI/utils/img/vkicon.png')} alt="#"/>
                                 </a>
                                 <a href="https://t.me/OpusIt" className="s__icons-tg">
                                     <img src={require("../../UI/utils/img/tgicon.png")} alt="#"/>

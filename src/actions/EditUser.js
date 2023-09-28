@@ -48,7 +48,7 @@ export const setUserGeneralSettings = async (id, firstname, nickname, email, use
 export const setUserAvatar = async (data) => {
     console.log(...data, data)
     try {
-        const response = await axios.put(`http://90.156.210.196:8080/api/v1/edit`, 
+        const response = await axios.post(`http://90.156.210.196:8080/api/v1/edit/updatePhoto`, 
         data,
         {
             headers: {Authorization: `Bearer ${localStorage.getItem('token')}`, "Content-Type": "multipart/form-data"},

@@ -5,6 +5,7 @@
     
 }
 
+
 .work__row {
     display: flex;
     flex-direction: column;
@@ -16,11 +17,12 @@
     width: 395px;
 }
 
-.work_img_example{
+.work__img-example{
     height: 250px;
     width: 395px;
     border-radius: 9px;
 }
+
 
 .work__text {
     background: #FFFFFF;

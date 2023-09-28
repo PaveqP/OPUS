@@ -22,7 +22,7 @@ function MainWelcomeNotAuth() {
                                 <Link to='/login'><button className="mwna__actions-add">Пополнить портфолио</button></Link>
                                 <div className="mwna__actions-stat">
                                     <OpusUsers
-                                        number={"132 051"}
+                                        number={"Много"}
                                     />
                                 </div>
                             </div>
