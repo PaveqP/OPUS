@@ -2,12 +2,24 @@
     border-radius: 9px;
     margin-top: 38px;
     margin-right: 32px;
+    
 }
 
 .work__row {
     display: flex;
     flex-direction: column;
     position: relative;
+}
+
+.work__img{
+    height: 250px;
+    width: 395px;
+}
+
+.work_img_example{
+    height: 250px;
+    width: 395px;
+    border-radius: 9px;
 }
 
 .work__text {

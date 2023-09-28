@@ -3,10 +3,10 @@ import { NewsCard } from "../../components/newsCard/NewsCard"
 
 function News() {
     return (
-        <div className="news">
+        <div className="news" id="news">
             <div className="n__container1">
                 <div className="n__container2">
-                    <div className="n__title">Новости</div>
+                    <div className="n__title"><b>Новости</b> в разработке</div>
                     <div className="n__main">
                         <div className="n__main-row">
                             <button className="n__main-previous">

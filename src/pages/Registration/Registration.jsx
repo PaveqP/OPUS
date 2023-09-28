@@ -1,5 +1,5 @@
 import { RegistrationForm } from "../../components/registrationForm/RegistrationForm"
-import { AuthInfo } from "../../components/authInfo/AuthInfo"
+import { AuthInfo } from "../../components/AuthInfo/AuthInfo"
 import "./Registration.scss"
 
 

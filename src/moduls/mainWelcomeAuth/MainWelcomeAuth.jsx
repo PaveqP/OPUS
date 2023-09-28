@@ -18,8 +18,8 @@ function MainWelcomeAuth() {
                             </div>
                             <div className="mwa-description__statistics">
                                 <StatisticsMain
-                                    projectsnum={'51 324'}
-                                    usersnum={'132 051'}
+                                    projectsnum={'Много'}
+                                    usersnum={'Много'}
                                 />
                             </div>
                         </div>

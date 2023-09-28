@@ -3,9 +3,13 @@ import { UploadedWorks } from "../../UI/uploadedWorks/UploadedWorks"
 import { ProfileLikes } from "../../UI/profileLikes/ProfileLikes"
 import { PortfolioRating } from "../../UI/portfolioRating/PortfolioRating"
 import { ProfileFullness } from "../../UI/profileFullness/ProfileFullness"
+import { useSelector } from "react-redux"
 
 
 function LkStatistic() {
+
+    const user = useSelector(state => state.user.currentUser)
+
     return (
         <div className="lkstatistic">
             <div className="lkstatistic__container">
@@ -16,17 +20,21 @@ function LkStatistic() {
                     <div className="lkstatistic__statistic">
                         <div className="statistic__row">
                             <div className="statistic__upload">
-                                <UploadedWorks text={"0"} />
+                                {user.works &&
+                                    <UploadedWorks text={user.works.length} />
+                                }
                             </div>
-                            <div className="statistic__likes">
+                            {/* <div className="statistic__likes">
                                 <ProfileLikes text={"0"} />
-                            </div>
+                            </div> */}
                             <div className="statistic__rating">
-                                <PortfolioRating text={"0"} />
+                                {user.works && user.projects &&
+                                    <PortfolioRating text={(user.works.length * 0.5) + user.projects.length} />
+                                }
                             </div>
-                            <div className="statistic__fullness">
+                            {/* <div className="statistic__fullness">
                                 <ProfileFullness text={"0"} />
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div className="lkstatistic__howgenerated">

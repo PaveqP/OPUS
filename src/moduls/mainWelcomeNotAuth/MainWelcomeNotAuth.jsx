@@ -1,5 +1,6 @@
 import "./MainWelcomeNotAuth.scss"
 import {OpusUsers} from "../../UI/opusUsers/OpusUsers"
+import { Link } from "react-router-dom"
 
 function MainWelcomeNotAuth() {
     return (
@@ -18,7 +19,7 @@ function MainWelcomeNotAuth() {
                         </div>
                         <div className="mwna__information-actions">
                             <div className="mwna__actions-row">
-                                <button className="mwna__actions-add">Пополнить портфолио</button>
+                                <Link to='/login'><button className="mwna__actions-add">Пополнить портфолио</button></Link>
                                 <div className="mwna__actions-stat">
                                     <OpusUsers
                                         number={"132 051"}
