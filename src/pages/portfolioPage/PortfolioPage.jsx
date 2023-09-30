@@ -2,8 +2,9 @@ import "./PortfolioPage.scss"
 import { MainFooter } from "../../moduls/mainFooter/MainFooter"
 import { MainHeaderNew } from "../../moduls/MainHeaderNew/MainHeaderNew"
 import { PortfolioPageProfile } from "../../components/portfolioPageProfile/PortfolioPageProfile"
+import { Link } from "react-router-dom"
 
-function PortfolioPage(props) {
+function PortfolioPage({currentpage}) {
     return (
         <div className="portfoliopage">
             <div className="pp__header">
@@ -15,9 +16,9 @@ function PortfolioPage(props) {
                         <div className="pp__top-row">
                             <div className="pp__top-navigation">
                                 <div className="pp__navigation-row">
-                                    <a href="#" className="pp__navigation-main">Главная</a>
+                                    <Link to='/' className="pp__navigation-main">Главная</Link>
                                     <img src={require("../../UI/utils/img/miniarrowright.png")} alt="#" className="pp__navigation-img" />
-                                    <a href="" className="pp__navigation-current">{props.currentpage}</a>
+                                    <p href="" className="pp__navigation-current">{currentpage}</p>
                                 </div>
                             </div>
                             <div className="pp__top-filters">

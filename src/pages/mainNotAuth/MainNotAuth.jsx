@@ -18,9 +18,9 @@ function MainNotAuth() {
             <div className="mna__spheres">
                 <MainSpheres />
             </div>
-            {/* <div className="mna__findteam">
+            <div className="mna__findteam">
                 <FindTeam />
-            </div> */}
+            </div>
             <div className="mna__createteam">
                 <CreateTeam />
             </div>

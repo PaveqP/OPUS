@@ -13,6 +13,7 @@ import { authentification } from "../actions/User";
 import { Projects } from "./projects/Projects";
 import { ProjectBigCard } from "../components/projectBigCard/ProjectBigCard";
 import { AddProject } from "../components/addProject/AddProject";
+import { PortfolioPage } from "./portfolioPage/PortfolioPage";
 
 function App() {
 	const isAuth = useSelector(state => state.user.isAuth)
@@ -59,6 +60,11 @@ function App() {
 					<Route exact path="/" element={<MainAuth/>}/>
 					<Route exact path="/cabinet" element={<Lk profile={profile} setProfile={setProfile} projects={projects} setProjects={setProjects}/>}/>
 					<Route exact path="/projects" element={<Projects profile={profile} setProfile={setProfile} projects={projects} setProjects={setProjects}/>}/>
+          <Route exact path="/design" element={<PortfolioPage currentpage='design'/>}/>
+          <Route exact path="/development" element={<PortfolioPage currentpage='development'/>}/>
+          <Route exact path="/analytics" element={<PortfolioPage currentpage='analytics'/>}/>
+          <Route exact path="/media" element={<PortfolioPage currentpage='media'/>}/>
+          <Route exact path="/texts" element={<PortfolioPage currentpage='texts'/>}/>
 					<Route exact path="/project-info/:id" element={
 						<ProjectBigCard 
 							img={require('../UI/utils/img/bigProjectImage.png')} 

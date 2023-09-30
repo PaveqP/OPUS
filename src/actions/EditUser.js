@@ -39,6 +39,7 @@ export const setUserGeneralSettings = async (id, firstname, nickname, email, use
         },)
         authentification()
         console.log(response.data, 'USER')
+        alert('Информация обновлена')
         
     } catch (error) {
         alert(error, "auth")
@@ -106,6 +107,7 @@ export const setUserProfileSettings = async (specialize, about, user) => {
         //authentification()
         authentification()
         console.log(response.data, 'USER')
+        alert('Информация обновлена')
         
     } catch (error) {
         alert(error, "auth")
@@ -141,6 +143,7 @@ export const setUserPersonalSettings = async (age, phone, user) => {
         //authentification()
         authentification()
         console.log(response.data, 'USER')
+        alert('Информация обновлена')
         
     } catch (error) {
         alert(error, "auth")

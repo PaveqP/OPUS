@@ -68,6 +68,8 @@ function AddWork({setShowModal, showModal}) {
         formData.append("work", jsonData)
         
         addUserWork(formData)
+
+        setShowModal(!showModal)
     }
 
 

@@ -1,33 +1,50 @@
 import "./MainHeaderNew.scss"
 import { Logo } from "../../UI/logo/Logo"
 
+import { Link } from "react-router-dom"
+import { logout } from '../../store/userReducer'
+import { useDispatch } from 'react-redux'
+
 function MainHeaderNew() {
+
+    const ScrollToMain = (id) => {
+
+        document.querySelector(id).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+
     return (
         <div className="mainheadernew">
             <div className="mhn__container">
                 <div className="mhn__row">
-                    <div className="mhn__logo">
-                        <Logo />
-                    </div>
+                    <Link to='/'>
+                        <div className="mhn__logo">
+                            <Logo />
+                        </div>
+                    </Link>
                     <div className="mhn__menu">
                         <div className="mhn-menu__row">
-                            <a href="#" className="mhn-menu__spheres">Сферы развития</a>
-                            <a href="#" className="mhn-menu__find">Найти команду</a>
-                            <a href="#" className="mhn-menu__create">Создать команду</a>
-                            <a href="#" className="mhn-menu__news">Новости</a>
-                            <a href="#" className="mhn-menu__contacs">Контакты</a>
+                            <Link to='/'><div className="mhn-menu__spheres" onClick={async () => await ScrollToMain('#spheres')}>Сферы развития</div></Link>
+                            <Link to='/'><div className="mhn-menu__find" onClick={async () => await ScrollToMain('#findTeam')}>Найти команду</div></Link>
+                            <Link to='/'><div className="mhn-menu__create" onClick={async () => await ScrollToMain('#createTeam')}>Создать команду</div></Link>
+                            <Link to='/'><div className="mhn-menu__news" onClick={async () => await ScrollToMain('#news')}>Новости</div></Link>
+                            {/* <a href="#" className="mhn-menu__contacs">Контакты</a> */}
                         </div>
                     </div>
                     <div className="mhn__lk">
                         <div className="mhn-lk__row">
                             <div className="mhn-lk__portfolio">
-                                <button className="mhn-lk__portfoliobutton">Пополнить портфолио</button>
+                            <Link to='/cabinet'><button className="mhn-lk__portfoliobutton">Пополнить портфолио</button></Link>
                             </div>
-                            <div className="mhn-lk__lk">
-                                <button className="mhn-lk__lkbutton">
-                                    <img src={require("../../UI/utils/img/lkblack.png")} alt="#" />
-                                </button>
-                            </div>
+                            <Link to='/cabinet'>
+                                <div className="mhn-lk__lk">
+                                    <button className="mhn-lk__lkbutton">
+                                        <img src={require("../../UI/utils/img/lkblack.png")} alt="#" />
+                                    </button>
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </div>

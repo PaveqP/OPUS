@@ -18,9 +18,9 @@ function MainAuth() {
             <div className="ma__spheres">
                 <MainSpheres />
             </div>
-            {/* <div className="ma__findteam">
+            <div className="ma__findteam">
                 <FindTeam />
-            </div> */}
+            </div>
             <div className="ma__createteam">
                 <CreateTeam />
             </div>

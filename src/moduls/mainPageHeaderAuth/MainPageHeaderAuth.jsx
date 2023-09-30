@@ -21,7 +21,7 @@ function MainPageHeaderAuth() {
     //         });
     //         };
     // });
-
+    
     const ScrollToMain = (id) => {
         document.querySelector(id).scrollIntoView({
             behavior: 'smooth',

@@ -18,6 +18,7 @@ export const addUserWork = async (data) => {
         },)
         authentification()
         console.log(response.data, 'add work')
+        alert('Работа добавлена')
     } catch (error) {
         alert(error, "post work")
     }
