@@ -5,12 +5,13 @@ import { Settings } from "./settings/Settings"
 import { MainAuth } from "./mainAuth/MainAuth"
 import { MainNotAuth } from "./mainNotAuth/MainNotAuth"
 import { PortfolioPage } from "./portfolioPage/PortfolioPage"
+import { ProjectsPage } from "./projectsPage/ProjectsPage"
 import "../pages/App.scss"
 
 function App() {
   return (
     <div className="App">
-      <PortfolioPage currentpage={"Разработка"} />
+      <ProjectsPage currentpage={"Разработка"}/>
     </div>
   );
 }
