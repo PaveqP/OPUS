@@ -1,5 +1,5 @@
 .news{
-    opacity: 0.5;
+    // opacity: 0.5;
 }
 
 .n__container1{
@@ -44,9 +44,15 @@
 .n__main-previous{
     margin-right: 40px;
 }
+.n__main-previous:hover{
+    transform: scale(1.11);
+}
 
 .n__main-newscard{}
 
 .n__main-next{
     margin-left: 40px;
+}
+.n__main-next:hover{
+    transform: scale(1.11);
 }

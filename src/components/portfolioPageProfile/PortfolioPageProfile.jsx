@@ -8,7 +8,7 @@ function PortfolioPageProfile(props) {
                     <div className="ppp__header">
                         <div className="ppp__header-row">
                             <div className="ppp__avatar">
-                                <img src={props.avatar} alt="#" className="ppp__avatar-img" />
+                                <img src={props.avatar} alt="#" className="ppp__avatar-img" style={{'height': '100px'}}/>
                             </div>
                             <div className="ppp__right">
                                 <div className="ppp__nameandsurname">{props.name} {props.surname}</div>

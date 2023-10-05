@@ -8,6 +8,12 @@
     margin-right: 43px;
 }
 
+.nc__picture-example{
+    width: 556px;
+    height: 556px;
+    border-radius: 20px;
+}
+
 .nc__main{}
 
 .nc__main-column{
@@ -42,4 +48,8 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+}
+.nc__main-button:hover{
+    background-color: #621ED6;
+    color: white;
 }

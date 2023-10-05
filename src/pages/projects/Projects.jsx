@@ -61,6 +61,7 @@ function Projects({profile, setProfile, projects, setProjects}) {
               tag={project.id}
               id={project.id}
               key={project.id}
+              description={project.description}
               link={'/project-info/' + project.id}
             />
           )) :

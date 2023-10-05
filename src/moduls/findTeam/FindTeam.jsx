@@ -1,14 +1,28 @@
 import "./FindTeam.scss"
 import { FindTeamCard } from "../../components/findTeamCard/FindTeamCard"
+import { Link } from "react-router-dom"
+import { useSelector } from "react-redux"
 
 function FindTeam() {
+
+    const auth = useSelector(state => state.user.isAuth)
+
     return (
         <div className="findteam" id="findTeam">
             <div className="ft__container">
                 <div className="ft__header">
                     <div className="ft__header-row">
-                        <div className="ft__header-title"><b>Найди участников</b> в разработке</div>
-                        <button className="ft__header-button">Найти участника <img src={require("../../UI/utils/img/findteamarrow.png")} alt="#" className="ft__button-arrow"/> </button>
+                        <div className="ft__header-title">Найди участников</div>
+                        {auth ?
+                            <Link to='/allprojects'>
+                                <button className="ft__header-button">Найти участника <img src={require("../../UI/utils/img/findteamarrow.png")} alt="#" className="ft__button-arrow"/> </button>
+                            </Link>
+                            :
+                            <Link to='/login'>
+                                <button className="ft__header-button">Найти участника <img src={require("../../UI/utils/img/findteamarrow.png")} alt="#" className="ft__button-arrow"/> </button>
+                            </Link>
+                        }
+                        
                     </div>
                 </div>
                 <div className="ft__main">

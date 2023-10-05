@@ -5,7 +5,9 @@ import { Registration } from "./Registration/Registration";
 import { ReactDOM, useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes, Navigate, HashRouter } from "react-router-dom";
 import { MainAuth } from "./mainAuth/MainAuth"
-import { MainNotAuth } from "./mainNotAuth/MainNotAuth";
+import { MainNotAuth } from "./mainNotAuth/MainNotAuth"
+import { PortfolioPage } from "./portfolioPage/PortfolioPage"
+import { ProjectsPage } from "./projectsPage/ProjectsPage"
 import "../pages/App.scss"
 import { useDispatch, useSelector } from "react-redux";
 import { SetAuth } from "../store/userReducer";
@@ -13,7 +15,6 @@ import { authentification } from "../actions/User";
 import { Projects } from "./projects/Projects";
 import { ProjectBigCard } from "../components/projectBigCard/ProjectBigCard";
 import { AddProject } from "../components/addProject/AddProject";
-import { PortfolioPage } from "./portfolioPage/PortfolioPage";
 
 function App() {
 	const isAuth = useSelector(state => state.user.isAuth)
@@ -31,6 +32,7 @@ function App() {
 	 console.log(user, 'user from APP')
 	// console.log(vkToken, 'vktoken from app')
 	//console.log(token)
+	console.log(localStorage.getItem('currentProjectInfo'))
 
 	useEffect(() => {
 
@@ -60,19 +62,20 @@ function App() {
 					<Route exact path="/" element={<MainAuth/>}/>
 					<Route exact path="/cabinet" element={<Lk profile={profile} setProfile={setProfile} projects={projects} setProjects={setProjects}/>}/>
 					<Route exact path="/projects" element={<Projects profile={profile} setProfile={setProfile} projects={projects} setProjects={setProjects}/>}/>
-          <Route exact path="/design" element={<PortfolioPage currentpage='design'/>}/>
-          <Route exact path="/development" element={<PortfolioPage currentpage='development'/>}/>
-          <Route exact path="/analytics" element={<PortfolioPage currentpage='analytics'/>}/>
-          <Route exact path="/media" element={<PortfolioPage currentpage='media'/>}/>
-          <Route exact path="/texts" element={<PortfolioPage currentpage='texts'/>}/>
+					<Route exact path="/design" element={<PortfolioPage currentpage='design'/>}/>
+					<Route exact path="/development" element={<PortfolioPage currentpage='development'/>}/>
+					<Route exact path="/analytics" element={<PortfolioPage currentpage='analytics'/>}/>
+					<Route exact path="/media" element={<PortfolioPage currentpage='media'/>}/>
+					<Route exact path="/texts" element={<PortfolioPage currentpage='texts'/>}/>
+					<Route exact path="/allprojects" element={<ProjectsPage currentpage='development'/>}/>
 					<Route exact path="/project-info/:id" element={
 						<ProjectBigCard 
-							img={require('../UI/utils/img/bigProjectImage.png')} 
-							description={' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc bibendum nibh nisi, ut efficitur tortor tincidunt ut. In eget dui tellus. Phasellus eleifend vulputate lacinia. Nam ornare ornare fermentum. Curabitur nec augue lectus. Sed fermentum nisi id urna scelerisque, vitae elemen...отдтдоавя        яыв ыясумфмвмывмтывомоыюуимдыиоь]а мьдыуИМ ВОДЫБИСЮЫУБВИМДФОКЫИ МЦДУОЫИМДОЫИМЫВОДИМЫВДОИМКДЫГОВИВМДЫОВИМКТДЫВОИМТКДЫВОИМТДКЫШВОИМТДШЫВОИТМЫДОИТМЫДОИТ ФДЫАО]ИТШДФЫВАО]ТИ ДЫОКАТ]ЬИМ ДОЫАТ]ИМ дыоа]итм аоыдтм дыо]авитм доы]авьитсдыо]тишщфдкытаищкудоытаи дофваяьти '}
+							img={localStorage.getItem('currentProjectInfo') ? localStorage.getItem('currentProjectInfo').img : require('../UI/utils/img/bigProjectImage.png')} 
+							description={localStorage.getItem('currentProjectInfo') ? localStorage.getItem('currentProjectInfo').description : ''}
 							tag={'Дизайн'} 
 							type={'Некоммерческий'} 
 							date={'Старт: 24.08.2023'} 
-							title={'ОПУС: соединяем людей и бизнес'}
+							title={localStorage.getItem('currentProjectInfo') ? localStorage.getItem('currentProjectInfo').title : '1111'}
 							need_list={['Дизайнер', 'Видео специалист']}
 							contacts={['+792165432100', 'https://t.me/OpusIt']}
 							links={['https://t.me/OpusIt', 'https://t.me/OpusIt', 'https://t.me/OpusIt']}
