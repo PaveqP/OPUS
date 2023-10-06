@@ -7,36 +7,34 @@ function FindTeam() {
             <div className="ft__container">
                 <div className="ft__header">
                     <div className="ft__header-row">
-                        <div className="ft__header-title">Найди участников</div>
-                        <button className="ft__header-button">Найти участника <img src={require("../../UI/utils/img/findteamarrow.png")} alt="#" className="ft__button-arrow"/> </button>
+                        <div className="ft__header-title">Актуальные проекты</div>
+                        <button className="ft__header-button">Найти команду <img src={require("../../UI/utils/img/findteamarrow.png")} alt="#" className="ft__button-arrow"/> </button>
                     </div>
                 </div>
                 <div className="ft__main">
                     <div className="ft__main-row">
                         <div className="ft__main-card1">
                             <FindTeamCard 
-                                avatar={require("../../UI/utils/img/eugeneavatar.png")}
-                                name={"Евгений"}
-                                surname={"Никитин"}
-                                skill__1={"Бизнес"}
-                                skill__2={"Project"}
-                                skill__3={"SCRUM-мастер"}
-                                age={"19 лет"}
-                                city={"г.Санкт-Петербург"}
-                                description={"Всем привет! Я full-stack разработчика для реализации большого количества проектов. В нашей команде уже есть дизайнер и аналитики, нам не хватает только тебя!"}
+                                avatar={require("../../UI/utils/img/projectavatar1.png")}
+                                title={"NFTgo"}
+                                specialization={"Дизайн"}
+                                money={"Коммерческий"}
+                                wanted1={"Дизайнер"}
+                                wanted2={""}
+                                wanted3={""}
+                                goal={"Создать платформу для обучение начинающих 3D-дизайнеров, которые хотят попробовать себя в NFT."}
                             />
                         </div>
                         <div className="ft__main-card2">
                             <FindTeamCard 
-                                avatar={require("../../UI/utils/img/mashaavatar.png")}
-                                name={"Мария"}
-                                surname={"Лазарева"}
-                                skill__1={"Веб-дизайн"}
-                                skill__2={"Figma"}
-                                skill__3={"Tilda"}
-                                age={"18 лет"}
-                                city={"г.Санкт-Петербург"}
-                                description={"Всем привет! Хочу попасть в позитивную молодую команду с full-stack разработчиком и SCRUM-мастером)"}
+                                avatar={require("../../UI/utils/img/projectavatar2.png")}
+                                title={"DoneUni"}
+                                specialization={"Бизнес"}
+                                money={"Некоммерческий"}
+                                wanted1={"Дизайнер"}
+                                wanted2={"Frontend-разработчик"}
+                                wanted3={""}
+                                goal={"Создать туденческое приложение, где ИИ помогает студентам с курсовыми, исходя из данных университета прошлых лет."}
                             />
                         </div>
                     </div>

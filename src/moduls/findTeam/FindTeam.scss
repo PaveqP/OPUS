@@ -16,8 +16,8 @@
 }
 
 .ft__header-title{
-    color: var(--material-theme-white, #FFF);
-    font-family: Manrope;
+    color: #FFF;
+    font-family: Inter;
     font-size: 72px;
     font-style: normal;
     font-weight: 700;
@@ -27,10 +27,10 @@
 .ft__header-button{
     padding: 20px 32px;
     border-radius: 25px;
-    border: 2px solid var(--material-theme-white, #FFF);
+    border: 2px solid  #FFF;
     background-color: rgba(28,28,28,0);
     text-align: center;
-    color: var(--material-theme-white, #FFF);
+    color:  #FFF;
     font-family: Inter;
     font-size: 24px;
     font-style: normal;
@@ -52,11 +52,9 @@
 
 .ft__main-card1{
     margin-left: auto;
-    margin-right: 23px;
-
+    margin-right: 25px;
 }
 
 .ft__main-card2{
-
     align-self: flex-end;
 }

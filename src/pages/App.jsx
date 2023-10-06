@@ -11,7 +11,7 @@ import "../pages/App.scss"
 function App() {
   return (
     <div className="App">
-      <ProjectsPage currentpage={"Разработка"}/>
+      <MainAuth />
     </div>
   );
 }

@@ -1,41 +1,30 @@
 .findteamcard{
+    width: 700px;
     border-radius: 20px;
-    background: var(--material-theme-white, #FFF);
-    width: 702px;
-    height: 414px;
+    background: #FFF;
 }
 
 .ftc__container{
-    padding: 40px;
+    padding: 40px 40px 50px 40px;
 }
 
-.ftc__column{
-    display: flex;
-    flex-direction: column;
+.ftc__top{
+    margin-bottom: 30px;
 }
 
-.ftc__header{
-    margin-bottom: 24px;
-}
-
-.ftc__header-row{
+.ftc__top-row{
     display: flex;
 }
 
-.ftc__header-avatar{
-    margin-right: 24px;
+.ftc__top-avatar{
+    margin-right: 30px;
 }
 
-.ftc__header-info{}
+.ftc__top-right{}
 
-.ftc__info-column{
-    display: flex;
-    flex-direction: column;
-}
-
-.ftc__info-nameandsurname{
-    margin-bottom: 16px;
-    color: var(--, #000);
+.ftc__right-title{
+    margin-bottom: 12px;
+    color:  #000;
     font-family: Inter;
     font-size: 36px;
     font-style: normal;
@@ -43,44 +32,54 @@
     line-height: normal;
 }
 
-.ftc__info-skills{}
+.ftc__right-filtres{
+    margin-bottom: 30px;
+}
 
-.ftc__skills-row{
+.ftc__filtres-row{
     display: flex;
 }
 
-.ftc__skill-1{
-    margin-right: 16px;
-    color: var(--, #7200FE);
+.ftc__filtres-specialization{
+    margin-right: 14px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #671CE5 0%, #2F2B43 98.75%);
+    color: #FFF;
     font-family: Inter;
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
 }
 
-.ftc__skill-2{
-    margin-right: 16px;
-    color: var(--, #7200FE);
+.ftc__filtres-money{
+    padding: 8px 16px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #671CE5 0%, #2F2B43 98.75%);
+    color: #FFF;
     font-family: Inter;
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
 }
 
-.ftc__skill-3{
-    color: var(--, #7200FE);
-    font-family: Inter;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
+.ftc__right-wanted{}
 
-.ftc__age{
+.ftc__wanted-title{
     margin-bottom: 10px;
-    color: var(--, #000);
+    color: #000;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.ftc__wanted-1{
+    margin-left: 20px;
+    color: #000;
     font-family: Inter;
     font-size: 24px;
     font-style: normal;
@@ -88,9 +87,9 @@
     line-height: normal;
 }
 
-.ftc__city{
-    margin-bottom: 10px;
-    color: var(--, #000);
+.ftc__wanted-2{
+    margin-left: 20px;
+    color: #000;
     font-family: Inter;
     font-size: 24px;
     font-style: normal;
@@ -98,11 +97,53 @@
     line-height: normal;
 }
 
-.ftc__description{
-    color: var(--, #000);
+.ftc__wanted-3{
+    margin-left: 20px;  
+    color: #000;
     font-family: Inter;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
+    line-height: normal;
+}
+
+.ftc__goal{
+    margin-bottom: 30px;
+}
+
+.ftc__goal-text{
+    color: #000;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.ftc__goal-span{
+    margin-left: 5px;
+    color: #000;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.ftc__join{
+    width: 100%;
+}
+
+.ftc__join-button{
+    width: 100%;
+    padding: 20px 0px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #671CE5 0%, #2F2B43 100%);
+    text-align: center;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
     line-height: normal;
 }
