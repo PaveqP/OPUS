@@ -15,6 +15,7 @@ function PortfolioPage({currentpage}) {
     }, [])
 
     const users = useSelector(state => state.user.allUsers)
+    const userModel = useSelector(state => state.user.currentUser)
 
     console.log(users)
 
@@ -43,18 +44,23 @@ function PortfolioPage({currentpage}) {
                     </div>
                     <div className="pp__main">
                         <div className="pp__row">
-                            {users && users.map((user) => (
-                                <PortfolioPageProfile
-                                    avatar={user.photo}
-                                    name={user.nickname}
-                                    surname={""}
-                                    skill={user.skills}
-                                    age={""}
-                                    city={""}
-                                    description={""}
-                                    id={user.id}
-                                />
-                            ))
+                            {users && users.map((user) => {
+                                if (userModel.id !== user.id){
+                                    return (
+                                        <PortfolioPageProfile
+                                            avatar={user.photo}
+                                            name={user.nickname ? user.nickname : user.firstname}
+                                            surname={""}
+                                            skill={user.skills}
+                                            age={""}
+                                            city={""}
+                                            description={""}
+                                            id={user.id}
+                                        /> 
+                                    )
+                                }
+                            }
+                            )
 
                             }
                             

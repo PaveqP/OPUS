@@ -1,3 +1,4 @@
+import { getInfoAboutUserById } from "../../actions/User"
 import "./PortfolioPageProfile.scss"
 import { Link } from "react-router-dom"
 
@@ -23,9 +24,9 @@ function PortfolioPageProfile(props) {
                         <div className="ppp__main-description">{props.description}</div>
                     </div>
                     <div className="ppp__footer">
-                        <Link to={`/cabinet/` + props.id}>
-                            <button className="ppp__footer-button">
-                                Смотреть закрепленную работу
+                        <Link to={`/user/` + props.id}>
+                            <button className="ppp__footer-button" onClick={() => getInfoAboutUserById(props.id)}>
+                                Смотреть профиль
                             </button>
                         </Link>
                     </div>

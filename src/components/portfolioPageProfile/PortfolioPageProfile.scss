@@ -21,21 +21,27 @@
 }
 
 .ppp__header-row{
+    width: 550px;
     display: flex;
+    justify-content: flex-start;
+    padding-left: 36px;
+}
+
+.ppp__right{
+    margin-left: 20px;
 }
 
 .ppp__avatar{
     // margin-right: 20px;
-    // height: 100px;
-    // width: 100px;
-    // border-radius: 200px;
+    
 }
 
 .ppp__avatar-img{
     // display: none;
-    // height: 100px;
-    // width: 100px;
-    // border-radius: 200px;
+    min-height: 180px;
+    width: 180px;
+    border-radius: 200px;
+    
 }
 
 .ppp__nameandsurname{
@@ -49,9 +55,9 @@
 }
 
 .ppp__skill{
-    width: 50%;
+    width: 100%;
     text-align: center;
-    padding: 8px 0;
+    padding: 8px 30px;
     border-radius: 20px;
     background: linear-gradient(90deg, #671CE5 0%, #2F2B43 98.75%);
     color: #FFF;

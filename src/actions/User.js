@@ -1,5 +1,5 @@
 import axios from "axios";
-import { SetAllUsers, SetAuth, SetVkAuth } from "../store/userReducer";
+import { SetAllUsers, SetAnyUser, SetAuth, SetVkAuth } from "../store/userReducer";
 import { useDispatch } from "react-redux";
 import { SetVkRequest } from "../store/userReducer";
 import { SetVkSuccess } from "../store/userReducer";
@@ -73,6 +73,22 @@ export const getInfoAboutUser = async () => {
         })
 
         store.dispatch(SetAuth(response.data))
+        // console.log(response.data, 'USER')
+        
+    } catch (error) {
+        alert(error, "auth")
+    }
+}
+
+export const getInfoAboutUserById = async (id) => {
+    try {
+        const response = await axios.get(`http://90.156.210.196:8080/api/v1/user/${id}`, 
+        {
+            headers: {Authorization: `Bearer ${localStorage.getItem('token')}`}
+        })
+
+        store.dispatch(SetAnyUser(response.data))
+        authentification()
         // console.log(response.data, 'USER')
         
     } catch (error) {

@@ -4,6 +4,7 @@ const AVATAR = "AVATAR"
 const PROJECTS = "PROJECTS"
 const CURRENTPROJECT = "CURRENTPROJECT"
 const ALLUSERS = "ALLUSERS"
+const ANYUSER = "ANYUSER"
 
 const defaultState = {
     currentUser: {},
@@ -11,7 +12,8 @@ const defaultState = {
     isAuth: false,
     projects: [],
     currentProject: {},
-    allUsers: []
+    allUsers: [],
+    anyUser: {}
 }
 
 export const userReducer = (state = defaultState, action) => {
@@ -47,6 +49,12 @@ export const userReducer = (state = defaultState, action) => {
                 allUsers: action.payload
             }
 
+        case ANYUSER:
+            return{
+                ...state,
+                anyUser: action.payload
+            }
+
         case LOGOUT:
             localStorage.removeItem('token')
             localStorage.removeItem('vkToken')
@@ -70,6 +78,8 @@ export const SetProjects = data => ({type: PROJECTS, payload: data})
 export const SetCurrentProject = data => ({type: CURRENTPROJECT, payload: data})
 
 export const SetAllUsers = data => ({type: ALLUSERS, payload: data})
+
+export const SetAnyUser = data => ({type: ANYUSER, payload: data})
 
 export const logout = () => ({type: LOGOUT})
 

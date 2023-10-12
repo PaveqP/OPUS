@@ -15,6 +15,7 @@ import { authentification } from "../actions/User";
 import { Projects } from "./projects/Projects";
 import { ProjectBigCard } from "../components/projectBigCard/ProjectBigCard";
 import { AddProject } from "../components/addProject/AddProject";
+import { AnyLk } from "./anyLk/AnyLk";
 
 function App() {
 	const isAuth = useSelector(state => state.user.isAuth)
@@ -61,6 +62,7 @@ function App() {
 				<Routes>
 					<Route exact path="/" element={<MainAuth/>}/>
 					<Route exact path="/cabinet/:id" element={<Lk profile={profile} setProfile={setProfile} projects={projects} setProjects={setProjects}/>}/>
+					<Route exact path="/user/:id" element={<AnyLk profile={profile} setProfile={setProfile} projects={projects} setProjects={setProjects}/>}/>
 					<Route exact path="/projects" element={<Projects profile={profile} setProfile={setProfile} projects={projects} setProjects={setProjects}/>}/>
 					<Route exact path="/design" element={<PortfolioPage currentpage='design'/>}/>
 					<Route exact path="/development" element={<PortfolioPage currentpage='development'/>}/>
