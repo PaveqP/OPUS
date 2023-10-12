@@ -44,7 +44,7 @@ function GeneralSettings() {
         <div className="generalsettings">
             <div className="gs__container">
                 <div className="gs__column">
-                <Link to='/cabinet' className="settings__backtolk">ЛК</Link>
+                <Link to={userModel && `/cabinet/` + userModel.id} className="settings__backtolk">ЛК</Link>
                     <div className="gs__navigation">
                         
                         <div className="gs-navigation__row">

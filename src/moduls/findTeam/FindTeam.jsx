@@ -2,17 +2,53 @@ import "./FindTeam.scss"
 import { FindTeamCard } from "../../components/findTeamCard/FindTeamCard"
 import { Link } from "react-router-dom"
 import { useSelector } from "react-redux"
+import { useEffect, useState } from "react"
+import { getUsersProjects } from "../../actions/Projects"
 
 function FindTeam() {
 
     const auth = useSelector(state => state.user.isAuth)
+
+    useEffect(() => {
+        auth &&
+        getUsersProjects()
+    }, [])
+
+    const projects = useSelector(state => state.user.projects)
+
+    const [index, setIndex] = useState(1)
+    const [index2, setIndex2] = useState(2)
+
+    function setIntervalIndex(currentIndex){
+        if (currentIndex + 1 > projects.length){
+            setIndex(1)
+        }
+        
+    }
+    function setIntervalIndex2(currentIndex){
+        if (currentIndex + 1 > projects.length){
+            setIndex2(2)
+        }
+        
+    }
+
+    useEffect(() => {
+        setIntervalIndex(index)
+        setIntervalIndex2(index2)
+        let slider = setInterval(() => setIndex(index + 1), 20000)
+        let slider2 = setInterval(() => setIndex2(index2 + 1), 20000)
+        return () => {
+            clearInterval(slider)
+            clearInterval(slider2)
+        }
+    }, [index, index2])
 
     return (
         <div className="findteam" id="findTeam">
             <div className="ft__container">
                 <div className="ft__header">
                     <div className="ft__header-row">
-                        <div className="ft__header-title">Найди участников</div>
+                        <div className="ft__header-title">Актуальные проекты</div>
                         {auth ?
                             <Link to='/allprojects'>
                                 <button className="ft__header-button">Найти участника <img src={require("../../UI/utils/img/findteamarrow.png")} alt="#" className="ft__button-arrow"/> </button>
@@ -28,30 +64,79 @@ function FindTeam() {
                 <div className="ft__main">
                     <div className="ft__main-row">
                         <div className="ft__main-card1">
-                            <FindTeamCard 
-                                avatar={require("../../UI/utils/img/eugeneavatar.png")}
-                                name={"Евгений"}
-                                surname={"Никитин"}
-                                skill__1={"Бизнес"}
-                                skill__2={"Project"}
-                                skill__3={"SCRUM-мастер"}
-                                age={"19 лет"}
-                                city={"г.Санкт-Петербург"}
-                                description={"Всем привет! Я full-stack разработчика для реализации большого количества проектов. В нашей команде уже есть дизайнер и аналитики, нам не хватает только тебя!"}
-                            />
+                            {projects.length > 0 ?
+                                projects.map((element, elementIndex) => {
+                                    if(elementIndex + 1 === index){
+                                        return(
+                                        <FindTeamCard 
+                                            avatar={element.imageUrl}
+                                            title={element.name}
+                                            //specialization={"Дизайн"}
+                                            //money={"Коммерческий"}
+                                            wanted1={"Дизайнер"}
+                                            //wanted2={""}
+                                            //wanted3={""}
+                                            goal={element.mission}
+                                            id={element.id}
+                                            key={element.id}
+                                        />
+                                        )
+                                    }
+                                })
+                                :
+                                (
+                                    <FindTeamCard 
+                                        avatar={require('../../UI/utils/img/projectavatar1.png')}
+                                        title={'NFTgo'}
+                                        //specialization={"Дизайн"}
+                                        //money={"Коммерческий"}
+                                        wanted1={"Дизайнер"}
+                                        //wanted2={""}
+                                        //wanted3={""}
+                                        goal={'Создать платформу для обучения начинающиъ 3D-дизайнеров, которые хотят попробовать себя в NFT'}
+                                        id={null}
+                                        key={1}
+                                    />
+                                )
+                            }
+                            
                         </div>
                         <div className="ft__main-card2">
-                            <FindTeamCard 
-                                avatar={require("../../UI/utils/img/mashaavatar.png")}
-                                name={"Мария"}
-                                surname={"Лазарева"}
-                                skill__1={"Веб-дизайн"}
-                                skill__2={"Figma"}
-                                skill__3={"Tilda"}
-                                age={"18 лет"}
-                                city={"г.Санкт-Петербург"}
-                                description={"Всем привет! Хочу попасть в позитивную молодую команду с full-stack разработчиком и SCRUM-мастером)"}
-                            />
+                            {projects.length > 0 ?
+                                projects.map((element, elementIndex) => {
+                                    if(elementIndex + 1 === index2){
+                                        return(
+                                        <FindTeamCard 
+                                            avatar={element.imageUrl}
+                                            title={element.name}
+                                            //specialization={"Дизайн"}
+                                            //money={"Коммерческий"}
+                                            wanted1={"Дизайнер"}
+                                            //wanted2={""}
+                                            //wanted3={""}
+                                            goal={element.mission}
+                                            id={element.id}
+                                            key={element.id}
+                                        />
+                                        )
+                                    }
+                                })
+                                :
+                                (
+                                    <FindTeamCard 
+                                            avatar={require('../../UI/utils/img/projectavatar2.png')}
+                                            title={'DoneUNI'}
+                                            //specialization={"Дизайн"}
+                                            //money={"Коммерческий"}
+                                            wanted1={"Дизайнер"}
+                                            //wanted2={""}
+                                            //wanted3={""}
+                                            goal={'Создать приложение, где ИИ помогает студентам с курсовыми, исходя из данных университета прошлых лет'}
+                                            id={null}
+                                            key={2}
+                                        />
+                                )
+                            }
                         </div>
                     </div>
                 </div>

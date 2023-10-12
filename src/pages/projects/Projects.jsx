@@ -54,7 +54,8 @@ function Projects({profile, setProfile, projects, setProjects}) {
           user.projects && user.projects.length > 0 ? user.projects.map((project) => (
 
             <ProjectSmallCard 
-              img={require('../../UI/utils/img/project_placeholder.png')} 
+              img={project.imageUrl} 
+              avatar={project.avatarUrl}
               title={project.name} 
               target={project.mission} 
               owner={user.nickname ? user.nickname : user.firstname} 

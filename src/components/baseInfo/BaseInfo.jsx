@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 import { useSelector } from "react-redux"
 
 
-function BaseInfo() {
+function BaseInfo(props) {
 
     const userModel = useSelector(state => state.user.currentUser)
     const avatar = useSelector(state => state.user.userPhoto);
@@ -33,9 +33,11 @@ function BaseInfo() {
                     <LkSettings />
                 </div> */}
                 <div className="baseinfo__edit">
-                    <Link to='/generalsettings'>
-                        <button className="baseinfo-edit__button">Редактировать</button>
-                    </Link>
+                    {
+                        <Link to='/generalsettings'>
+                            <button className="baseinfo-edit__button">Редактировать</button>
+                        </Link>
+                    }
                 </div>
             </div>
         </div>

@@ -21,9 +21,9 @@ function MainWelcomeNotAuth() {
                             <div className="mwna__actions-row">
                                 <Link to='/login'><button className="mwna__actions-add">Пополнить портфолио</button></Link>
                                 <div className="mwna__actions-stat">
-                                    <OpusUsers
+                                    {/* <OpusUsers
                                         number={"Много"}
-                                    />
+                                    /> */}
                                 </div>
                             </div>
                         </div>

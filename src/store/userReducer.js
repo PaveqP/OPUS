@@ -2,12 +2,16 @@ const SET_AUTH = "SET_AUTH"
 const LOGOUT = "LOGOUT"
 const AVATAR = "AVATAR"
 const PROJECTS = "PROJECTS"
+const CURRENTPROJECT = "CURRENTPROJECT"
+const ALLUSERS = "ALLUSERS"
 
 const defaultState = {
     currentUser: {},
     userPhoto: null,
     isAuth: false,
-    projects: []
+    projects: [],
+    currentProject: {},
+    allUsers: []
 }
 
 export const userReducer = (state = defaultState, action) => {
@@ -30,6 +34,18 @@ export const userReducer = (state = defaultState, action) => {
                 ...state,
                 projects: action.payload
             }
+        
+        case CURRENTPROJECT:
+            return{
+                ...state,
+                currentProject: action.payload
+            }
+
+        case ALLUSERS:
+            return{
+                ...state,
+                allUsers: action.payload
+            }
 
         case LOGOUT:
             localStorage.removeItem('token')
@@ -50,6 +66,10 @@ export const SetAuth = data => ({type: SET_AUTH, payload: data})
 export const SetAvatar = data => ({type: AVATAR, payload: data})
 
 export const SetProjects = data => ({type: PROJECTS, payload: data})
+
+export const SetCurrentProject = data => ({type: CURRENTPROJECT, payload: data})
+
+export const SetAllUsers = data => ({type: ALLUSERS, payload: data})
 
 export const logout = () => ({type: LOGOUT})
 

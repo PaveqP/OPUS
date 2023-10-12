@@ -7,13 +7,22 @@ import { LkWorks } from '../../moduls/lkWorks/LkWorks'
 import { AddWork } from '../../moduls/addWork/AddWork'
 import { LkSwitcher } from '../../components/lkSwitcher/LkSwitcher'
 import "./Lk.scss"
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
 
 
 
 function Lk({profile, setProfile, projects, setProjects}) {
 
     const [showModal, setShowModal] = useState(false)
+    const [currentId, setCurrentId] = useState(0)
+    const user = useSelector(state => state.user.currentUser)
+
+    useEffect(() => {
+        let currentUrl = window.location.href
+        let parseId = currentUrl.split('/')
+        setCurrentId(parseId[5])
+    }, [])
     
     return (
         <>
@@ -31,7 +40,7 @@ function Lk({profile, setProfile, projects, setProjects}) {
                             <LkSwitcher profile={profile} setProfile={setProfile} projects={projects} setProjects={setProjects}/>
                         </div>
                         <div className="lkInfo">
-                            <LkInfo />
+                            <LkInfo id={currentId}/>
                         </div>
                         <div className="lkseparator">
                             <img className="lkseparator__img" src={require("../../UI/utils/img/separator.png")} alt="#" ></img>

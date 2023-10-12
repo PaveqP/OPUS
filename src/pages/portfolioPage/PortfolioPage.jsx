@@ -3,8 +3,21 @@ import { MainFooter } from "../../moduls/mainFooter/MainFooter"
 import { MainHeaderNew } from "../../moduls/MainHeaderNew/MainHeaderNew"
 import { PortfolioPageProfile } from "../../components/portfolioPageProfile/PortfolioPageProfile"
 import { Link } from "react-router-dom"
+import { getListOfUsers } from "../../actions/User"
+import { useEffect } from "react"
+import { useSelector } from "react-redux"
+import { User } from "@vkontakte/superappkit"
 
 function PortfolioPage({currentpage}) {
+
+    useEffect(() => {
+        getListOfUsers()
+    }, [])
+
+    const users = useSelector(state => state.user.allUsers)
+
+    console.log(users)
+
     return (
         <div className="portfoliopage">
             <div className="pp__header">
@@ -30,76 +43,22 @@ function PortfolioPage({currentpage}) {
                     </div>
                     <div className="pp__main">
                         <div className="pp__row">
-                            <PortfolioPageProfile
-                                avatar={require("../../UI/utils/img/eugeneavatar.png")}
-                                name={"Евгений"}
-                                surname={"Никитин"}
-                                skill={"Разработка"}
-                                age={"19 лет"}
-                                city={"г.Санкт-Петербург"}
-                                description={"Всем привет! ищу в команду full-stack разработчика для реализации большого количества проектов. В нашей команде уже есть дизайнер и аналитики, нам не хватает только тебя!\
-                                В нашей команде уже есть дизайнер и аналитики, нам не хватает только тебя!"}
-                            />
-                            <PortfolioPageProfile
-                                avatar={require("../../UI/utils/img/eugeneavatar.png")}
-                                name={"Евгений"}
-                                surname={"Никитин"}
-                                skill={"Разработка"}
-                                age={"19 лет"}
-                                city={"г.Санкт-Петербург"}
-                                description={"Всем привет! ищу в команду full-stack разработчика для реализации большого количества проектов. В нашей команде уже есть дизайнер и аналитики, нам не хватает только тебя!\
-                                В нашей команде уже есть дизайнер и аналитики, нам не хватает только тебя!"}
-                            />
-                            <PortfolioPageProfile
-                                avatar={require("../../UI/utils/img/eugeneavatar.png")}
-                                name={"Евгений"}
-                                surname={"Никитин"}
-                                skill={"Разработка"}
-                                age={"19 лет"}
-                                city={"г.Санкт-Петербург"}
-                                description={"Всем привет! ищу в команду full-stack разработчика для реализации большого количества проектов. В нашей команде уже есть дизайнер и аналитики, нам не хватает только тебя!\
-                                В нашей команде уже есть дизайнер и аналитики, нам не хватает только тебя!"}
-                            />
-                            <PortfolioPageProfile
-                                avatar={require("../../UI/utils/img/eugeneavatar.png")}
-                                name={"Евгений"}
-                                surname={"Никитин"}
-                                skill={"Разработка"}
-                                age={"19 лет"}
-                                city={"г.Санкт-Петербург"}
-                                description={"Всем привет! ищу в команду full-stack разработчика для реализации большого количества проектов. В нашей команде уже есть дизайнер и аналитики, нам не хватает только тебя!\
-                                В нашей команде уже есть дизайнер и аналитики, нам не хватает только тебя!"}
-                            />
-                            <PortfolioPageProfile
-                                avatar={require("../../UI/utils/img/eugeneavatar.png")}
-                                name={"Евгений"}
-                                surname={"Никитин"}
-                                skill={"Разработка"}
-                                age={"19 лет"}
-                                city={"г.Санкт-Петербург"}
-                                description={"Всем привет! ищу в команду full-stack разработчика для реализации большого количества проектов. В нашей команде уже есть дизайнер и аналитики, нам не хватает только тебя!\
-                                В нашей команде уже есть дизайнер и аналитики, нам не хватает только тебя!"}
-                            />
-                            <PortfolioPageProfile
-                                avatar={require("../../UI/utils/img/eugeneavatar.png")}
-                                name={"Евгений"}
-                                surname={"Никитин"}
-                                skill={"Разработка"}
-                                age={"19 лет"}
-                                city={"г.Санкт-Петербург"}
-                                description={"Всем привет! ищу в команду full-stack разработчика для реализации большого количества проектов. В нашей команде уже есть дизайнер и аналитики, нам не хватает только тебя!\
-                                В нашей команде уже есть дизайнер и аналитики, нам не хватает только тебя!"}
-                            />
-                            <PortfolioPageProfile
-                                avatar={require("../../UI/utils/img/eugeneavatar.png")}
-                                name={"Евгений"}
-                                surname={"Никитин"}
-                                skill={"Разработка"}
-                                age={"19 лет"}
-                                city={"г.Санкт-Петербург"}
-                                description={"Всем привет! ищу в команду full-stack разработчика для реализации большого количества проектов. В нашей команде уже есть дизайнер и аналитики, нам не хватает только тебя!\
-                                В нашей команде уже есть дизайнер и аналитики, нам не хватает только тебя!"}
-                            />
+                            {users && users.map((user) => (
+                                <PortfolioPageProfile
+                                    avatar={user.photo}
+                                    name={user.nickname}
+                                    surname={""}
+                                    skill={user.skills}
+                                    age={""}
+                                    city={""}
+                                    description={""}
+                                    id={user.id}
+                                />
+                            ))
+
+                            }
+                            
+                            
                         </div>
                     </div>
                 </div>

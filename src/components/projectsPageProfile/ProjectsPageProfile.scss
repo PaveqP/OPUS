@@ -23,6 +23,12 @@
     margin-right: 24px;
 }
 
+.ppp1__avatar-img{
+    width: 180px;
+    height: 180px;
+    border-radius: 200px;
+}
+
 .ppp1__top-title{
     color: #000;
     font-family: Inter;
@@ -92,7 +98,7 @@
 }
 
 .ppp1__buttons-details{
-    width: 45%;
+    width: 100%;
     padding: 20px 0px;
     border-radius: 20px;
     border: 2px solid #671CE5;
@@ -103,4 +109,13 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+}
+
+.link__button{
+    width: 100%;
+}
+
+.ppp1__buttons-details:hover{
+    background-color: #671CE5;
+    color: white;
 }

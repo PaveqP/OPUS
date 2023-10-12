@@ -3,9 +3,11 @@ import { Logo } from "../../UI/logo/Logo"
 
 import { Link } from "react-router-dom"
 import { logout } from '../../store/userReducer'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 function MainHeaderNew() {
+
+    const user = useSelector(state => state.user.currentUser)
 
     const ScrollToMain = (id) => {
 
@@ -36,9 +38,9 @@ function MainHeaderNew() {
                     <div className="mhn__lk">
                         <div className="mhn-lk__row">
                             <div className="mhn-lk__portfolio">
-                            <Link to='/cabinet'><button className="mhn-lk__portfoliobutton">Пополнить портфолио</button></Link>
+                            <Link to={user && `/cabinet/` + user.id}><button className="mhn-lk__portfoliobutton">Пополнить портфолио</button></Link>
                             </div>
-                            <Link to='/cabinet'>
+                            <Link to={user && `/cabinet/` + user.id}>
                                 <div className="mhn-lk__lk">
                                     <button className="mhn-lk__lkbutton">
                                         <img src={require("../../UI/utils/img/lkblack.png")} alt="#" />

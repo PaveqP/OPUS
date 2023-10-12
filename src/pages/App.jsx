@@ -60,7 +60,7 @@ function App() {
 				:
 				<Routes>
 					<Route exact path="/" element={<MainAuth/>}/>
-					<Route exact path="/cabinet" element={<Lk profile={profile} setProfile={setProfile} projects={projects} setProjects={setProjects}/>}/>
+					<Route exact path="/cabinet/:id" element={<Lk profile={profile} setProfile={setProfile} projects={projects} setProjects={setProjects}/>}/>
 					<Route exact path="/projects" element={<Projects profile={profile} setProfile={setProfile} projects={projects} setProjects={setProjects}/>}/>
 					<Route exact path="/design" element={<PortfolioPage currentpage='design'/>}/>
 					<Route exact path="/development" element={<PortfolioPage currentpage='development'/>}/>
@@ -70,15 +70,7 @@ function App() {
 					<Route exact path="/allprojects" element={<ProjectsPage currentpage='development'/>}/>
 					<Route exact path="/project-info/:id" element={
 						<ProjectBigCard 
-							img={localStorage.getItem('currentProjectInfo') ? localStorage.getItem('currentProjectInfo').img : require('../UI/utils/img/bigProjectImage.png')} 
-							description={localStorage.getItem('currentProjectInfo') ? localStorage.getItem('currentProjectInfo').description : ''}
-							tag={'Дизайн'} 
-							type={'Некоммерческий'} 
-							date={'Старт: 24.08.2023'} 
-							title={localStorage.getItem('currentProjectInfo') ? localStorage.getItem('currentProjectInfo').title : '1111'}
 							need_list={['Дизайнер', 'Видео специалист']}
-							contacts={['+792165432100', 'https://t.me/OpusIt']}
-							links={['https://t.me/OpusIt', 'https://t.me/OpusIt', 'https://t.me/OpusIt']}
 						/>}/>
 					<Route path="/addproject" element={<AddProject/>}/>
 					<Route path="/generalsettings" element={<Settings type='general'/>}/>

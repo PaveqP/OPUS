@@ -2,8 +2,11 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import './LkSwitcher.scss'
+import { useSelector } from 'react-redux'
 
 function LkSwitcher({profile, setProfile, projects, setProjects}) {
+
+    const user = useSelector(state => state.user.currentUser)
 
     const switchProfile = () => {
         setProfile(!profile)
@@ -19,7 +22,7 @@ function LkSwitcher({profile, setProfile, projects, setProjects}) {
                 </button>
             }
             {!profile &&
-                <Link to='/cabinet'>
+                <Link to={user && `/cabinet/` + user.id}>
                     <button className='lkswitcher__row-profile' onClick={() => switchProfile(!profile)}>
                         Профиль
                     </button>

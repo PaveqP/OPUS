@@ -18,6 +18,7 @@
     &-image{
         width: 960px;
         height: 540px;
+        border-radius: 30px;
     }
 
     &-title{
@@ -134,6 +135,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    cursor: pointer;
 }
 
 .pbc__row-right-link{
@@ -145,4 +147,5 @@
     font-weight: 400;
     line-height: normal;
     text-decoration-line: underline;
+    cursor: pointer;
 }

@@ -10,9 +10,11 @@ function ProjectsPage(props) {
 
     useEffect(() => {
         getUsersProjects()
-    })
+    }, [])
 
     const projects = useSelector(state => state.user.projects)
+
+    //console.log(projects)
 
     return (
         <div className="projectspage`">
@@ -44,9 +46,10 @@ function ProjectsPage(props) {
                                 {projects && projects.map((project) => (
                                     <ProjectsPageProfile
                                     avatar={project.imageUrl}
-                                    title={project.title}
+                                    title={project.name}
                                     goal={project.mission}
                                     creator={"livermoney"}
+                                    id={project.id}
                                 />
                                 ))
                                 }

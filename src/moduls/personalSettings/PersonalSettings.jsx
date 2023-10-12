@@ -28,7 +28,7 @@ function PersonalSettings() {
         <div className="personalsettings">
             <div className="ps__container">
                 <div className="ps__column">
-                <Link to='/cabinet' className="settings__backtolk">ЛК</Link>
+                <Link to={user && `/cabinet/` + user.id} className="settings__backtolk">ЛК</Link>
                     <div className="ps__navigation">
                         <div className="ps-navigation__row">
                             <Link className="ps-navigation__general" to='/generalsettings'>Общие</Link>

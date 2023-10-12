@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { authentification, getInfoAboutUser } from "./User";
 import {store} from '../store/index'
 import { SetProjects } from "../store/userReducer";
+import { SetCurrentProject } from "../store/userReducer";
 
 export const addUserProject = async (data) => {
     console.log(...data, data)
@@ -33,6 +34,22 @@ export const getUsersProjects = async () => {
         authentification()
         store.dispatch(SetProjects(response.data))
         console.log(response.data, 'projects received')
+        
+    } catch (error) {
+        alert(error, "projects not received")
+    }
+}
+
+export const getProjectById = async (id) => {
+    try {
+        const response = await axios.get(`http://90.156.210.196:8080/api/v1/project/${id}`,
+        {
+            headers: {Authorization: `Bearer ${localStorage.getItem('token')}`},
+        })
+        store.dispatch(SetCurrentProject(response.data))
+        authentification()
+        console.log(response.data, 'project received')
+        return
         
     } catch (error) {
         alert(error, "projects not received")

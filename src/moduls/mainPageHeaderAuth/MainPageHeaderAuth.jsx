@@ -2,8 +2,11 @@ import "./MainPageHeaderAuth.scss"
 import { Logo } from "../../UI/logo/Logo"
 import { Link } from "react-router-dom"
 import { useEffect } from "react";
+import { useSelector } from "react-redux";
 
 function MainPageHeaderAuth() {
+
+    const user = useSelector(state => state.user.currentUser)
 
     // useEffect(() => {
     //     const smoothLinks = document.querySelectorAll('a[href^="#"]');
@@ -48,13 +51,13 @@ function MainPageHeaderAuth() {
                     <div className="mpha__lk">
                         <div className="mpha-lk__row">
                             <div className="mpha-lk__portfolio">
-                                <Link to='/cabinet'><button className="mpha-lk__portfoliobutton">Пополнить портфолио</button></Link>
+                                <Link to={user && `/cabinet/` + user.id}><button className="mpha-lk__portfoliobutton">Пополнить портфолио</button></Link>
                             </div>
                             <div className="mpha-lk__lk">
                                 {/* <button className="mpha-lk__lkbutton">
                                     <img src={require("../../UI/utils/img/lkwhite.png")} alt="#" />
                                 </button> */}
-                                <Link to='/cabinet'>
+                                <Link to={user && `/cabinet/` + user.id}>
                                     <button className="mpha-lk__lkbutton">
                                         <img src={require("../../UI/utils/img/lkwhite.png")} alt="#" />
                                     </button>

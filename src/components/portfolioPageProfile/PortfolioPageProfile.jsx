@@ -1,4 +1,5 @@
 import "./PortfolioPageProfile.scss"
+import { Link } from "react-router-dom"
 
 function PortfolioPageProfile(props) {
     return (
@@ -8,7 +9,7 @@ function PortfolioPageProfile(props) {
                     <div className="ppp__header">
                         <div className="ppp__header-row">
                             <div className="ppp__avatar">
-                                <img src={props.avatar} alt="#" className="ppp__avatar-img" style={{'height': '100px'}}/>
+                                <img className="ppp__avatar-img" src={props.avatar} alt="#" style={{'height': '100px'}}/>
                             </div>
                             <div className="ppp__right">
                                 <div className="ppp__nameandsurname">{props.name} {props.surname}</div>
@@ -22,9 +23,11 @@ function PortfolioPageProfile(props) {
                         <div className="ppp__main-description">{props.description}</div>
                     </div>
                     <div className="ppp__footer">
-                        <button className="ppp__footer-button">
-                            Смотреть закрепленную работу
-                        </button>
+                        <Link to={`/cabinet/` + props.id}>
+                            <button className="ppp__footer-button">
+                                Смотреть закрепленную работу
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>

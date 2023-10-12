@@ -1,8 +1,22 @@
 import "./MainWelcomeAuth.scss"
 import { UserProjectsMain } from "../../components/userProjectsMain/UserProjectsMain"
 import { StatisticsMain } from "../../components/statisticsMain/StatisticsMain"
+import { getUsersProjects } from "../../actions/Projects"
+import { useEffect } from "react"
+import { useSelector } from "react-redux"
+import { getListOfUsers } from "../../actions/User"
+
 
 function MainWelcomeAuth() {
+
+    useEffect(() => {
+        getUsersProjects()
+        getListOfUsers()
+    }, [])
+
+    const projects = useSelector(state => state.user.projects)
+    const users = useSelector(state => state.user.allUsers)
+
     return (
         <div className="mainwelcomeauth">
             <div className="mwa__container">
@@ -18,8 +32,8 @@ function MainWelcomeAuth() {
                             </div>
                             <div className="mwa-description__statistics">
                                 <StatisticsMain
-                                    projectsnum={'Много'}
-                                    usersnum={'Много'}
+                                    projectsnum={projects && projects.length}
+                                    usersnum={users && users.length}
                                 />
                             </div>
                         </div>

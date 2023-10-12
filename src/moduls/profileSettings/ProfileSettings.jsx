@@ -58,7 +58,7 @@ function ProfileSettings() {
         <div className="profilesettings">
             <div className="profs__container">
                 <div className="profs__column">
-                <Link to='/cabinet' className="settings__backtolk">ЛК</Link>
+                <Link to={user && `/cabinet/` + user.id} className="settings__backtolk">ЛК</Link>
                     <div className="profs__navigation">
                         <div className="profs-navigation__row">
                             <Link className="profs-navigation__general" to='/generalsettings'>Общие</Link>
