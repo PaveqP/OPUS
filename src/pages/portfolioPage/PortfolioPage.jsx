@@ -17,6 +17,8 @@ function PortfolioPage({currentpage}) {
     const users = useSelector(state => state.user.allUsers)
     const userModel = useSelector(state => state.user.currentUser)
 
+    const listOfSkills = ['design', 'development', 'analytics', 'texts', 'audio'] 
+
     console.log(users)
 
     return (
@@ -36,16 +38,28 @@ function PortfolioPage({currentpage}) {
                                 </div>
                             </div>
                             <div className="pp__top-filters">
-                                <select name="" id="" className="pp__filters-select">
+                                {/* <select name="" id="" className="pp__filters-select">
                                     <option value="" className="pp__filters-option" selected>Фильтровать по категориям</option>
-                                </select>
+                                </select> */}
+                                {listOfSkills.map((skill) => {
+                                    if (skill !== currentpage) {
+                                        return (
+                                            <Link to={'/'+skill}>
+                                                <button value="" className="pp__filters-select" selected>{skill}</button>
+                                            </Link>
+                                        )
+                                    }
+                                })
+
+                                }
+                                
                             </div>
                         </div>
                     </div>
                     <div className="pp__main">
                         <div className="pp__row">
                             {users && users.map((user) => {
-                                if (userModel.id !== user.id){
+                                if ((userModel.id !== user.id) && (currentpage === user.skills)){
                                     return (
                                         <PortfolioPageProfile
                                             avatar={user.photo}

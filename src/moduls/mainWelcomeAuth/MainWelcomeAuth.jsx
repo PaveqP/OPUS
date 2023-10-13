@@ -21,7 +21,7 @@ function MainWelcomeAuth() {
         <div className="mainwelcomeauth">
             <div className="mwa__container">
                 <div className="mwa__column">
-                    <div className="mwa__title">Рады просто рады</div>
+                    <div className="mwa__title">Рады вас видеть!</div>
                     <div className="mwa__description">
                         <div className="mwa-description__row">
                             <div className="mwa-description__projects">

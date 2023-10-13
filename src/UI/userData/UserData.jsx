@@ -7,7 +7,8 @@ function UserData(props) {
                 {props.login}
             </div>
             <div className="userdata__nameandsurname">
-                {props.name} {props.surname}
+                {props.name} 
+                {/* {props.surname} */}
             </div>
         </div>
     )

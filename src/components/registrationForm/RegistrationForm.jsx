@@ -87,7 +87,7 @@ function RegistrationForm() {
                                     <div className="regform-actions__or">
                                         ИЛИ
                                     </div>
-                                    <a href={ACCESS_TOKEN_LINK}>
+                                    {/* <a href={ACCESS_TOKEN_LINK}>
                                     <button className="regform-actions__buttonvk">
                                         <div className="buttonvk__row">
 
@@ -103,7 +103,7 @@ function RegistrationForm() {
                                     </a>
                                     <div className="regform-actions__or">
                                         ИЛИ
-                                    </div>
+                                    </div> */}
                                     <Link to='/login'>
                                     <button className="regform-actions__buttonenter">Войти</button>
                                     </Link>

@@ -61,7 +61,7 @@ function AuthorizationForm() {
                                         ИЛИ
                                     </div>
 
-                                    <a href={ACCESS_TOKEN_LINK}>
+                                    {/* <a href={ACCESS_TOKEN_LINK}>
                                         <button className="authform-actions__buttonvk">
 
                                             <div className="buttonvk__row">
@@ -77,7 +77,7 @@ function AuthorizationForm() {
 
                                     <div className="authform-actions__or">
                                         ИЛИ
-                                    </div>
+                                    </div> */}
 
                                     <Link to='/registration'>
                                         <button className="authform-actions__buttonreg">Зарегистрироваться</button>

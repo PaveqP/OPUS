@@ -67,7 +67,7 @@ function App() {
 					<Route exact path="/design" element={<PortfolioPage currentpage='design'/>}/>
 					<Route exact path="/development" element={<PortfolioPage currentpage='development'/>}/>
 					<Route exact path="/analytics" element={<PortfolioPage currentpage='analytics'/>}/>
-					<Route exact path="/media" element={<PortfolioPage currentpage='media'/>}/>
+					<Route exact path="/audio" element={<PortfolioPage currentpage='audio'/>}/>
 					<Route exact path="/texts" element={<PortfolioPage currentpage='texts'/>}/>
 					<Route exact path="/allprojects" element={<ProjectsPage currentpage='development'/>}/>
 					<Route exact path="/project-info/:id" element={
