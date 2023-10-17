@@ -1,0 +1,39 @@
+.createteam{
+    background: #F0F0F0;
+}
+
+.ct__container{
+    padding: 80px 100px;
+}
+
+.ct__row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.ct__title{
+    color: var(--material-theme-black, #000);
+    font-family: Manrope;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 72px */
+}
+
+.ct__button{
+    border-radius: 25px;
+    background: linear-gradient(90deg, #671CE5 0%, #2F2B43 100%), #FFF;
+    text-align: center;
+    padding: 20px 32px;
+    color: var(--material-theme-white, #FFF);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.ct__button-arrow{
+    padding-left: 16px;
+    padding-top: 6px;
+}

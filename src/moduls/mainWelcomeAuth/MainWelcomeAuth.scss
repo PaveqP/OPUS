@@ -1,0 +1,42 @@
+.mainwelcomeauth{
+    width: 55%;
+}
+
+
+.mwa__container{
+    padding:70px 0px 0px 100px;
+}
+
+.mwa__column{
+    display:flex;
+    flex-direction: column;
+}
+
+.mwa__title{
+    width: 100%;
+    margin-bottom: 60px;
+    color: var(--unnamed, #FFF);
+    font-family: Manrope;
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 128px */
+}
+
+.mwa__description{
+    width: 100%;
+}
+
+.mwa-description__row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mwa-description__projects{
+    width:50%;
+}
+
+.mwa-description__statistics{
+    padding-top: 60px;
+    width: 43%;
+}

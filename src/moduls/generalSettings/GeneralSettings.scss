@@ -1,0 +1,328 @@
+.gs__container {
+    padding: 50px 240px;
+    width: 100%;
+}
+
+.gs__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gs__navigation {
+    width: 100%;
+    border-radius: 236px;
+    background: #FFF;
+    box-shadow: 0px 1px 4px 0px #641FD9;
+    padding: 18px 40px;
+    margin-bottom: 50px;
+}
+
+.gs-navigation__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gs-navigation__general {
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration-line: underline;
+    background: linear-gradient(90deg, #322B4A 0%, #641DDC 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gs-navigation__profile {
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.gs-navigation__personal {
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.gs-description__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gs__description {
+    width: 90%;
+    border-radius: 31px;
+    background: linear-gradient(90deg, #671DE2 0%, #302B45 100%);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.45);
+    padding: 30px 0px 55px 0px;
+    margin-bottom: 55px;
+}
+
+.gs-description__title {
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+.gs-description__subtext1 {
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+.gs-description__subtext2 {
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.gs__form {
+    width: 90%;
+}
+
+.gs-form__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gs-form__left {
+    width: 40%;
+}
+
+.gsform-left__column {
+    display: flex;
+    flex-direction: column;
+}
+
+.gsform-left__login {
+    margin-bottom: 40px;
+}
+
+.gsform-login__text {
+    margin-bottom: 13px;
+    color: #312B48;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.gsform-login__input {
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15) inset;
+}
+
+.gsform__redstar {
+    color: #D8051F;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.gsform-left__name {
+    margin-bottom: 80px;
+}
+
+.gsform-name__text {
+    margin-bottom: 13px;
+    color: #312B48;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.gsform-name__input {
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15) inset;
+}
+
+.gsform-left__private {
+    margin-bottom: 92px;
+}
+
+.gsform-private__row {
+    display: flex;
+    align-items: center;
+}
+
+.gsform-private__text {
+    color: #162938;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-right: 10px;
+}
+
+.gsform-left__oldpass {
+    margin-bottom: 50px;
+}
+
+.gsform-oldpass__text {
+    margin-bottom: 13px;
+    color: #312B48;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.gsform-oldpass__input {
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15) inset;
+}
+
+.gsform-left__confirmpass {}
+
+.gsform-confirmpass__text {
+    margin-bottom: 13px;
+    color: #312B48;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.gsform-confirmpass__input {
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15) inset;
+}
+
+.gs-form__right {
+    width: 40%;
+}
+
+.gsform-right__column {
+    display: flex;
+    flex-direction: column;
+}
+
+.gsform-right__email {
+    margin-bottom: 40px;
+}
+
+.gsform-email__text {
+    margin-bottom: 13px;
+    color: #312B48;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.gsform-email__input {
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15) inset;
+}
+
+.gsform-right__city {
+    margin-bottom: 67px;
+}
+
+.gsform-city__text {
+    margin-bottom: 13px;
+    color: #312B48;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.gsform-city__input {
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15) inset;
+}
+
+.gsform-right__save {
+    margin-bottom: 90px;
+    align-self: flex-end;
+}
+
+.gsform-save__button {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #671CE5 0%, #2F2B43 100%);
+    padding: 16px 66px;
+}
+
+.gsform-right__newpass {
+    margin-bottom: 85px;
+}
+
+.gsform-newpass__text {
+    margin-bottom: 13px;
+    color: #312B48;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.gsform-newpass__input {
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15) inset;
+}
+
+.gsform-right__changepass {
+    align-self: flex-end;
+}
+
+.gsform-changepass__button {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #671CE5 0%, #2F2B43 100%);
+    padding: 16px 66px;
+}
