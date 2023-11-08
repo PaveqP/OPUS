@@ -1,6 +1,6 @@
 import "./AddWorkImage.scss"
 
-function AddWorkImage() {
+function AddWorkImage(handleFileChange) {
     return (
         <div className="addworkimage">
             <button className="addworkimage__button">

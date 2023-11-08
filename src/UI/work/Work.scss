@@ -2,6 +2,7 @@
     border-radius: 9px;
     margin-top: 38px;
     margin-right: 32px;
+    
 }
 
 
@@ -9,6 +10,17 @@
     display: flex;
     flex-direction: column;
     position: relative;
+}
+
+.work__img{
+    height: 250px;
+    width: 395px;
+}
+
+.work__img-example{
+    height: 250px;
+    width: 395px;
+    border-radius: 9px;
 }
 
 

@@ -9,12 +9,12 @@ function Social() {
                         <div className="s__title">Подпишись, чтобы ничего не пропустить</div>
                         <div className="s__icons">
                             <div className="s__icons-row">
-                                <button className="s__icons-vk">
-                                    <img src={require("../../UI/utils/img/vkicon.png")} alt="#"/>
-                                </button>
-                                <button className="s__icons-tg">
+                                <a href="https://vk.com/opus_it" className="s__icons-vk">
+                                    <img src={require('../../UI/utils/img/vkicon.png')} alt="#"/>
+                                </a>
+                                <a href="https://t.me/OpusIt" className="s__icons-tg">
                                     <img src={require("../../UI/utils/img/tgicon.png")} alt="#"/>
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>

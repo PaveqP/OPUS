@@ -113,9 +113,14 @@
     box-shadow: 0px 0px 4px #272626;
     border-radius: 5px;
     background: linear-gradient(91.7deg, #322C4C 1.47%, #681BE6 98.59%);
-    padding: 19px 0px 19px 0px;
+    padding: 20px 158px 20px 129px;
     width: 100%;
     margin-bottom: 19px;
+}
+
+.authform-actions__buttonenter:hover{
+    color: #681BE6;
+    background: white;
 }
 
 .authform-actions__or {
@@ -170,6 +175,13 @@
     line-height: 24px;
     text-align: center;
     color: #000000;
-    padding: 17px 0px 17px 0px;
+    padding: 20px 158px 20px 129px;
     width: 100%;
+}
+
+.authform-actions__buttonreg:hover {
+    background: linear-gradient(91.7deg, #322C4C 1.47%, #681BE6 98.59%);
+
+    color: white;
+
 }

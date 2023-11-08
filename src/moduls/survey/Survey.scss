@@ -1,0 +1,62 @@
+.survey{
+    background-image: url("../../UI/utils/img/findteambackground.png");
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.survey__row{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.survey__row-mark{
+    font-family: Inter;
+    color: white;
+    font-size: 80px;
+    line-height: 40px;
+}
+
+.survey__row-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}   
+
+.survey__row-right-title{
+    font-family: Inter;
+    color: white;
+    font-size: 30px;
+    line-height: 20px;
+}
+
+.survey__row-right-rezults{
+    font-family: Inter;
+    color: white;
+    padding-top: 15px;
+    text-decoration: underline;
+}
+
+.survey__row-right-part{
+    font-family: Inter;
+    color: #761DE2;
+    background-color: white;
+    border-radius: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 20px;
+    padding-top: 18px;
+}
+
+.survey__row-right-part:hover{
+    font-family: Inter;
+    color: white;
+    background-color: #761DE2;
+    border-radius: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 20px;
+    padding-top: 18px;
+}

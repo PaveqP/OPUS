@@ -7,6 +7,7 @@ import { CreateTeam } from "../../moduls/createTeam/CreateTeam"
 import { Social } from "../../moduls/social/Social"
 import { News } from "../../moduls/news/News"
 import { MainFooter } from "../../moduls/mainFooter/MainFooter"
+import { Survey } from "../../moduls/survey/Survey"
 
 function MainAuth() {
     return (
@@ -27,6 +28,9 @@ function MainAuth() {
             <div className="ma__social">
                 <Social />
             </div>
+            <div className="ma__survey">
+                <Survey />
+            </div>
             <div className="ma__news">
                 <News />
             </div>
@@ -36,5 +40,6 @@ function MainAuth() {
         </div>
     )
 }
+
 
 export { MainAuth }

@@ -20,8 +20,8 @@ function MainFooter() {
                             <div className="mf__contacs-row">
                                 <div className="mf__contacs-text">Контакты:</div>
                                 <a href="#" className="mf__contacs-website">opus@info.ru</a>
-                                <button className="mf__contacs-vk"><img src={require("../../UI/utils/img/vkfooter.png")} alt="#"/></button>
-                                <button className="mf__contacs-tg"><img src={require("../../UI/utils/img/tgfooter.png")} alt="#"/></button>
+                                <a href="https://vk.com/opus_it" className="mf__contacs-vk"><img src={require("../../UI/utils/img/vkfooter.png")} alt="#"/></a>
+                                <a href="https://t.me/OpusIt" className="mf__contacs-tg"><img src={require("../../UI/utils/img/tgfooter.png")} alt="#"/></a>
                             </div>
                         </div>
                     </div>

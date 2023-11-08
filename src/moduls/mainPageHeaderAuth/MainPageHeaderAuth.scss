@@ -23,6 +23,15 @@
     justify-content: space-between;
 }
 
+.navigate_elem{
+    cursor: pointer;
+}
+
+.navigate_elem:hover{
+    text-decoration: underline;
+    
+}
+
 .mpha-menu__spheres{
     margin-right: 32px;
     color: var(--unnamed, #F0F0F0);
@@ -31,6 +40,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    cursor: pointer;
 }
 
 .mpha-menu__find{

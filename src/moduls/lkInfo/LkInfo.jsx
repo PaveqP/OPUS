@@ -2,13 +2,13 @@ import "./LkInfo.scss"
 import { BaseInfo } from "../../components/baseInfo/BaseInfo"
 import { SkillsInfo } from "../../components/skillsInfo/SkillsInfo"
 
-function LkInfo() {
+function LkInfo(props) {
     return (
         <div className="lkinfo">
             <div className="lkinfo__container">
                 <div className="lkinfo__row">
                     <div className="lkinfo__base">
-                        <BaseInfo />
+                        <BaseInfo id={props.id}/>
                     </div>
                     <div className="lkinfo__skills">
                         <SkillsInfo />
